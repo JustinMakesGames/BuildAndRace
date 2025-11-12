@@ -168,14 +168,13 @@ public class ArcadeCarController : MonoBehaviour
     private void CancelDrift()
     {
         if (!_isDrifting) return;
-        _usedBoost = boostTypes[currentBoostingIndex];
+        StartBoost(boostTypes[currentBoostingIndex]);
         _isDrifting = false;
         steeringStrength = _normalSteeringSpeed;
         driftingTime = 0;
         boostTypes[currentBoostingIndex].boostParticles.SetActive(false);
         currentBoostingIndex = -1;
         dragCoefficient = _normalDragCoefficient;
-        StartBoost();
     }
 
     private void HandleGravity()
@@ -359,8 +358,9 @@ public class ArcadeCarController : MonoBehaviour
 
 
 
-    private void StartBoost()
+    public void StartBoost(BoostType boostType)
     {
+        _usedBoost = boostType;
         _boostTimer = 0;
         _isBoosting = true;
 

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ public class PlayerPlacementHandler : MonoBehaviour
 {
     [SerializeField] private List<Transform> waypoints = new List<Transform>();
     [SerializeField] private TMP_Text placementText;
-
+    [SerializeField] private TMP_Text lapText;
     [SerializeField] private int _currentLap;
     private Transform _currentWaypoint;
     private int _currentIndex;
@@ -18,8 +19,6 @@ public class PlayerPlacementHandler : MonoBehaviour
 
     private void GetNextCheckpoint()
     {
-        print("GOT CHECKPOINTTT");
-
         _currentIndex = (_currentIndex + 1 < waypoints.Count) ? _currentIndex + 1 : 0;
         _currentWaypoint = waypoints[_currentIndex];
     }
@@ -27,7 +26,7 @@ public class PlayerPlacementHandler : MonoBehaviour
     {
         if (other.CompareTag("FinishLine") && other.transform.parent == _currentWaypoint)
         {
-            _currentLap++;
+            SetLap();
         }
 
         if ((other.CompareTag("WaypointTrigger") || other.CompareTag("FinishLine")) && other.transform.parent == _currentWaypoint)
@@ -35,6 +34,24 @@ public class PlayerPlacementHandler : MonoBehaviour
             GetNextCheckpoint();
         }
 
+    }
+
+    private void SetLap()
+    {
+
+        if (!RaceManager.Instance) return;
+        print("NEW LAPPPP");
+        _currentLap++;
+
+        if (_currentLap > RaceManager.Instance.GetMaxLapCount())
+        {
+            RaceManager.Instance.FinishPlayer(transform);
+        }
+
+        else
+        {
+            
+        }
     }
 
     public void SetList(List<Transform> waypointList)

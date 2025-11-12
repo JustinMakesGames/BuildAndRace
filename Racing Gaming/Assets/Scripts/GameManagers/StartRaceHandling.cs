@@ -26,7 +26,7 @@ public class StartRaceHandling : MonoBehaviour
     private IEnumerator StartCountdown()
     {
 
-        TurnCarsOff();
+        StartGettingCarsReady();
         yield return new WaitForSeconds(2);
         countdownText.gameObject.SetActive(true);
 
@@ -38,25 +38,27 @@ public class StartRaceHandling : MonoBehaviour
         }
 
         countdownText.text = "GO!";
-        TurnCarsOn();
+        MakeCarsReady();
         yield return new WaitForSeconds(1);
         countdownText.gameObject.SetActive(false);
     }
 
-    private void TurnCarsOff()
+    private void StartGettingCarsReady()
     {
         foreach (Transform car in cars)
         {
             car.GetComponent<ArcadeCarController>().SetVerhicleOff();
             car.GetComponent<StartBoostBehaviour>().ActivateBoostSlider();
+            
         }
     }
 
-    private void TurnCarsOn()
+    private void MakeCarsReady()
     {
         foreach (Transform car in cars)
         {
             car.GetComponent<ArcadeCarController>().SetVerhicleOn();
+            car.GetComponent<StartBoostBehaviour>().GiveBoost();
         }
     }
 }

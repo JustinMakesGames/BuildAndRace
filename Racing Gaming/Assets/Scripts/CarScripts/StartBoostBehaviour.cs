@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class StartBoostBehaviour : MonoBehaviour
 {
+
+    public BoostType boostType;
     [SerializeField] private Slider boostSlider;
     [SerializeField] private float sliderMultiplier;
     [SerializeField] private RectTransform greenPanel;
@@ -36,6 +38,7 @@ public class StartBoostBehaviour : MonoBehaviour
         {
             if (_isMovingSlider)
             {
+                print("yay workie");
                 boostSlider.value += sliderMultiplier * Time.deltaTime;
             }
 
@@ -48,22 +51,32 @@ public class StartBoostBehaviour : MonoBehaviour
 
     public void GiveBoost()
     {
+
+        if (!boostSlider) return;
         RectTransform rectTransform = boostSlider.transform.GetComponent<RectTransform>();
 
         float width = rectTransform.rect.width;
-        float minimumBoostValue = rectTransform.anchoredPosition.x - rectTransform.rect.width / 2;
-        float maximumBoostValue = rectTransform.anchoredPosition.x + rectTransform.rect.width / 2;
+        float minimumBoostValue = greenPanel.anchoredPosition.x - greenPanel.rect.width / 2;
+        float maximumBoostValue = greenPanel.anchoredPosition.x + greenPanel.rect.width / 2;
         float sliderMinimumBoost = minimumBoostValue / width;
         float sliderMaximumBoost = maximumBoostValue / width;
 
         if (boostSlider.value >= sliderMinimumBoost && boostSlider.value <= sliderMaximumBoost)
         {
             print("WOOOSHHHHHH");
+            
+            if (TryGetComponent(out ArcadeCarController carController))
+            {
+                carController.StartBoost(boostType);
+            }
+
         }
 
         else
         {
             print("NO I DO NOT HAVE THE BOOST WAAAAA");
         }
+
+        boostSlider.gameObject.SetActive(false);
     }
 }
