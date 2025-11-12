@@ -56,10 +56,7 @@ public class PlacementManagement : MonoBehaviour
         List<CarPlacementData> carPlacementDataList = new List<CarPlacementData>();
         carPlacementDataList = ReturnCarPlacementDataList(carPlacementDataList);
         carPlacementDataList = SortThePlacementList(carPlacementDataList);
-        SendPlacementsToPlayers(carPlacementDataList);
-
-        
-        
+        SendPlacementsToPlayers(carPlacementDataList);   
     }
 
     private List<CarPlacementData> ReturnCarPlacementDataList(List<CarPlacementData> carPlacementDataList)
@@ -80,7 +77,7 @@ public class PlacementManagement : MonoBehaviour
     private List<CarPlacementData> SortThePlacementList(List<CarPlacementData> carPlacementDataList)
     {
         carPlacementDataList = carPlacementDataList.OrderByDescending(c => c.lapCount)
-            .ThenByDescending(c => c.currentIndex)
+            .ThenByDescending(c => c.currentIndex == 0 ? int.MaxValue : c.currentIndex)
             .ThenBy(c => c.currentDistance)
             .ToList();
 
@@ -91,10 +88,7 @@ public class PlacementManagement : MonoBehaviour
     {
         for (int i = 0; i < carPlacementDataList.Count; i++)
         {
-            print($"{i + 1}: {carPlacementDataList[i].car.name}");
-            print($"CurrentLap: {carPlacementDataList[i].lapCount}");
-            print($"CurrentIndex: {carPlacementDataList[i].currentIndex}");
-            print($"CurrentDistance: {carPlacementDataList[i].currentDistance}");
+            
             if (carPlacementDataList[i].car.TryGetComponent(out PlayerPlacementHandler handler))
             {
                 handler.SetPlacement(i + 1);

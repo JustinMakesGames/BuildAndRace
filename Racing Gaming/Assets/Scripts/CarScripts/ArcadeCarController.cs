@@ -28,7 +28,7 @@ public class ArcadeCarController : MonoBehaviour
     [SerializeField] private float springTravel; //How far the spring could travel
     [SerializeField] private float wheelRadius; //The radius of the wheel
 
-    private bool[] _isWheelGrounded = new bool[4];
+    private bool[] _isWheelGrounded = new bool[8];
     [Header("Car Velocity Check")]
     [SerializeField] private Vector3 currentCarLocalVelocity;
     [SerializeField] private float velocityRatio;
@@ -56,6 +56,8 @@ public class ArcadeCarController : MonoBehaviour
 
     [SerializeField] private float minSteeringStrength;
     [SerializeField] private float maxSteeringStrength;
+    [SerializeField] private float driftDragCoefficient;
+    [SerializeField] private float driftDragCoefficientMultiplier;
     private int _direction = 1;
     private bool _isDrifting;
 
@@ -71,6 +73,7 @@ public class ArcadeCarController : MonoBehaviour
     private float _normalAccelerationSpeed;
     private float _normalMaxSpeed;
     private float _normalSteeringSpeed;
+    private float _normalDragCoefficient;
 
     private BoostType _usedBoost;
     private bool _isBoosting;
@@ -83,6 +86,18 @@ public class ArcadeCarController : MonoBehaviour
     [SerializeField] private float maxSteerSpeed;
     [SerializeField] private bool shouldRandomizeValues;
 
+    [Header("StartHandling")]
+    [SerializeField] private bool canDrive;
+
+    public void SetVerhicleOn()
+    {
+        canDrive = true;
+    }
+
+    public void SetVerhicleOff()
+    {
+        canDrive = false;
+    }
     private void Start()
     {
         if (shouldRandomizeValues)
@@ -92,10 +107,12 @@ public class ArcadeCarController : MonoBehaviour
         _normalAccelerationSpeed = accelerationSpeed;
         _normalMaxSpeed = maxSpeed;
         _normalSteeringSpeed = steeringStrength;
+        _normalDragCoefficient = dragCoefficient;
     }
 
     private void Update()
     {
+
         CheckIfGrounded();
         CalculateCarVelocity();
         HandleDrifting();
@@ -121,6 +138,7 @@ public class ArcadeCarController : MonoBehaviour
 
     public void SetInput(float accelerationInput, float steeringInput)
     {
+        if (!canDrive) return;
         _accelerationInput = accelerationInput;
         _steeringInput = steeringInput;
 
@@ -138,10 +156,11 @@ public class ArcadeCarController : MonoBehaviour
 
     private void StartDrift()
     {
-        if (currentCarLocalVelocity.z >= mininumDriftSpeed && _steeringInput != 0)
+        if (currentCarLocalVelocity.magnitude >= mininumDriftSpeed && _steeringInput != 0)
         {
             _isDrifting = true;
             _direction = (int)Mathf.Sign(_steeringInput);
+            dragCoefficient = driftDragCoefficient;
 
         }
     }
@@ -155,6 +174,7 @@ public class ArcadeCarController : MonoBehaviour
         driftingTime = 0;
         boostTypes[currentBoostingIndex].boostParticles.SetActive(false);
         currentBoostingIndex = -1;
+        dragCoefficient = _normalDragCoefficient;
         StartBoost();
     }
 
@@ -172,6 +192,7 @@ public class ArcadeCarController : MonoBehaviour
             float timeMultiplier = 1.25f + 0.75f * (_steeringInput * _direction);
 
             driftingTime += timeMultiplier * Time.deltaTime;
+            dragCoefficient += driftDragCoefficientMultiplier * Time.deltaTime;
 
             if (currentBoostingIndex + 1 < boostTypes.Count && driftingTime >= boostTypes[currentBoostingIndex + 1].boostEndTime)
             {
@@ -193,7 +214,7 @@ public class ArcadeCarController : MonoBehaviour
     {
         if (_isDrifting)
         {
-            if (currentCarLocalVelocity.z < mininumDriftSpeed)
+            if (currentCarLocalVelocity.magnitude < mininumDriftSpeed)
             {
                 CancelDrift();
                 return;
