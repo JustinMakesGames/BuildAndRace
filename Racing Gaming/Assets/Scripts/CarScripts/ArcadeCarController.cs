@@ -13,9 +13,17 @@ public struct BoostType
     public GameObject boostParticles;
 }
 
+public enum PlayerState
+{
+    Player,
+    CPU
+}
+
 public class ArcadeCarController : MonoBehaviour
 {
+    
 
+    public PlayerState state;
     [Header("Reference Variables")]
     [SerializeField] private Rigidbody carRB; //Rigidbody of the car
     [SerializeField] private List<Transform> wheelRaycasts = new List<Transform>(); //Raycasts that are supposed to be the wheels
@@ -100,6 +108,7 @@ public class ArcadeCarController : MonoBehaviour
     }
     private void Start()
     {
+        SetPlayer(state);
         if (shouldRandomizeValues)
         {
             InitializeRandomVariables();
@@ -110,6 +119,20 @@ public class ArcadeCarController : MonoBehaviour
         _normalDragCoefficient = dragCoefficient;
     }
 
+    public void SetPlayer(PlayerState state)
+    {
+        if (state == PlayerState.Player)
+        {
+            GetComponent<PlayerCarController>().enabled = true;
+            GetComponent<AICarController>().enabled = false;
+        }
+
+        else
+        {
+            GetComponent<PlayerCarController>().enabled = false;
+            GetComponent<AICarController>().enabled = true;
+        }
+    }
     private void Update()
     {
 

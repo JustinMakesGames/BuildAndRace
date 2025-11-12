@@ -1,17 +1,22 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class PlayerPlacementHandler : MonoBehaviour
 {
+    [Header("Checkpoint Handling")]
     [SerializeField] private List<Transform> waypoints = new List<Transform>();
     [SerializeField] private TMP_Text placementText;
     [SerializeField] private TMP_Text lapText;
     [SerializeField] private int _currentLap;
     private Transform _currentWaypoint;
     private int _currentIndex;
+    
+
+    [Header("Finish Handling")]
+    [SerializeField] private GameObject finishText;
+    private bool _hasFinished;
 
     
 
@@ -39,19 +44,31 @@ public class PlayerPlacementHandler : MonoBehaviour
     private void SetLap()
     {
 
-        if (!RaceManager.Instance) return;
+        if (!RaceManager.Instance || _hasFinished) return;
         print("NEW LAPPPP");
+
         _currentLap++;
 
+        
         if (_currentLap > RaceManager.Instance.GetMaxLapCount())
         {
+            _hasFinished = true;
             RaceManager.Instance.FinishPlayer(transform);
+            StartCoroutine(HandleFinish());
         }
 
         else
         {
-            
+            lapText.text = $"Lap: {_currentLap}/{RaceManager.Instance.GetMaxLapCount()}";
         }
+    }
+
+    private IEnumerator HandleFinish()
+    {
+        if (!finishText) yield break;
+        finishText.SetActive(true);
+        yield return new WaitForSeconds(1);
+        finishText.SetActive(false);
     }
 
     public void SetList(List<Transform> waypointList)
