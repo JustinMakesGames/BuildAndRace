@@ -1050,7 +1050,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4234713079018324115}
   serializedVersion: 5
-  m_Mass: 1000
+  m_Mass: 800
   m_LinearDamping: 0
   m_AngularDamping: 10
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1066,7 +1066,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &6165721115797852682
@@ -1186,6 +1186,7 @@ MonoBehaviour:
   wayPointFolder: {fileID: 0}
   wayPoints: []
   maxWayPointDistance: 10
+  miniWayPointDistance: 10
   reverseDistance: 25
   minimumAngleDrift: 30
   normalDriftAngle: 15
@@ -1214,8 +1215,8 @@ MonoBehaviour:
   bonkLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  bonkForce: 12
-  bonkUpwards: 1.2
+  bonkForce: 8
+  bonkUpwards: 0
   bonkCooldown: 0.2
   selfRecoil: 0
   carRB: {fileID: 5900071378268209900}

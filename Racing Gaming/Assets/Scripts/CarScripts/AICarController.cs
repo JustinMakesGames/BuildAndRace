@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 [RequireComponent(typeof(ArcadeCarController))]
 public class AICarController : MonoBehaviour
@@ -10,6 +11,9 @@ public class AICarController : MonoBehaviour
     [SerializeField] private List<Transform> wayPoints = new List<Transform>();
     [SerializeField] private float maxWayPointDistance;
 
+    [SerializeField] private float miniWayPointDistance;
+    private float _offset;
+    private Vector3 _destination;
     private Transform _wayPoint;
     private float _wayPointDistance;
     private int _currentIndex;
@@ -28,9 +32,13 @@ public class AICarController : MonoBehaviour
     [SerializeField] private float normalDriftAngle;
     [SerializeField] private float minimumAngleCancelDrift;
 
+    private bool _stayDrifting;
+
     [Header("Avoidance Handling")]
-    [SerializeField] private float detectionRange = 10f;
+    [SerializeField] private float detectionDistance;
     [SerializeField] private LayerMask obstacleLayer;
+
+    private float _avoidanceDir;
 
     private Transform _previousWayPoint;
     private bool _isAvoiding;
@@ -67,17 +75,65 @@ public class AICarController : MonoBehaviour
     private void Update()
     {
         DrawWayPointLines();
-        CheckWayPoints();
+        CheckWayPointsDistance();
+        HandleMiniWayPoints();
         HandleReversing();
         HandleAccelerating();
         HandleSteering();
-        HandleObstacles();
         Reverse();
         //HandleAvoidance();
         _carController.SetInput(_accelerationInput, _steeringInput);
-        HandleDrifting();
+
+        if (!_stayDrifting)
+        {
+            HandleNormalDrifting();
+        }
+
+        else
+        {
+            HandleAlwaysDrifting();
+        }
+        
 
 
+    }
+
+    private void HandleMiniWayPoints()
+    {
+        Vector3 dirToWayPoint = (_wayPoint.position - transform.position).normalized;
+
+        // Raycast offsets
+        float sideOffset = 0.5f; // how far left/right the side rays are
+
+        // Cast rays
+        bool obstacleLeft = Physics.Raycast(transform.position + Vector3.up, transform.forward - transform.right * sideOffset, detectionDistance, obstacleLayer);
+        bool obstacleRight = Physics.Raycast(transform.position + Vector3.up, transform.forward + transform.right * sideOffset, detectionDistance, obstacleLayer);
+        Debug.DrawRay(transform.position + Vector3.up, (transform.forward - transform.right * sideOffset).normalized * detectionDistance, obstacleLeft ? Color.red : Color.green);
+        Debug.DrawRay(transform.position + Vector3.up, (transform.forward + transform.right * sideOffset).normalized * detectionDistance, obstacleRight ? Color.red : Color.green);
+
+        // Decide avoidance direction
+        if (obstacleLeft && !obstacleRight)
+        {
+            _avoidanceDir = 1; // steer right
+        }
+        else if (!obstacleLeft && obstacleRight)
+        {
+            _avoidanceDir = -1; // steer left
+        }
+        else if (!obstacleLeft && !obstacleRight)
+        {
+            // Clear path, reset avoidance
+            _avoidanceDir = 0;
+        }
+
+        // Apply avoidance offset
+        float avoidanceStrength = 10f; // lateral movement
+        Vector3 offset = transform.right * _avoidanceDir * avoidanceStrength;
+
+        _destination = transform.position + dirToWayPoint * miniWayPointDistance + offset;
+
+        // Optional: draw destination line
+        Debug.DrawLine(transform.position, _destination, Color.blue);
     }
 
     private void HandleReversing()
@@ -135,35 +191,41 @@ public class AICarController : MonoBehaviour
         }
     }
 
-    
 
-    private void CheckWayPoints()
+
+    private void CheckWayPointsDistance()
     {
         _wayPointDistance = Vector3.Distance(transform.position, _wayPoint.position);
 
         if (_wayPointDistance < maxWayPointDistance)
         {
-            if (_isAvoiding)
-            {
-                _wayPoint = _previousWayPoint;
-                _isAvoiding = false;
-                return;
-            }
-            if (_currentIndex + 1 < wayPoints.Count)
-            {
-                _currentIndex++;
-                
-            }
-            else
-            {
-                _currentIndex = 0;
-            }
-
-            GetWayPoint();
+            CheckWayPoints();
 
         }
 
 
+    }
+
+    private void CheckWayPoints()
+    {
+
+        if (_isAvoiding)
+        {
+            _wayPoint = _previousWayPoint;
+            _isAvoiding = false;
+            return;
+        }
+        if (_currentIndex + 1 < wayPoints.Count)
+        {
+            _currentIndex++;
+
+        }
+        else
+        {
+            _currentIndex = 0;
+        }
+
+        GetWayPoint();
     }
 
     private void GetWayPoint()
@@ -173,30 +235,38 @@ public class AICarController : MonoBehaviour
             _wayPoint = wayPoints[_currentIndex];
             return;
         }
+        _wayPoint = wayPoints[_currentIndex].GetComponent<WayPointHandler>().ReturnWayPoint(transform);
+        CheckNewCPUBehaviour(wayPoints[_currentIndex].GetComponent<WayPointHandler>().GetCPUBehaviour());
 
-        float smallestDistance = Mathf.Infinity;
-        int index = 0;
-        for (int i = 0; i < wayPoints[_currentIndex].childCount; i++)
+        if (_isDrifting && !_stayDrifting)
         {
-            if (Vector3.Distance(transform.position, wayPoints[_currentIndex].GetChild(i).position) < smallestDistance)
-            {
-                index = i;
-                smallestDistance = Vector3.Distance(transform.position, wayPoints[_currentIndex].GetChild(i).position);
-            }
+            _isDrifting = false;
+            _carController.CancelDriftInput();
         }
+    }
 
-        _wayPoint = wayPoints[_currentIndex].GetChild(index);
+    private void CheckNewCPUBehaviour(CPUBehaviour state)
+    {
+        switch (state)
+        {
+            case CPUBehaviour.NoDifference:
+                _stayDrifting = false;
+                break;
+            case CPUBehaviour.Drift:
+                _stayDrifting = true;
+                break;
+        }
     }
     private void HandleAccelerating()
     {
 
         if (_isReversing) return;
-        Vector3 dirToMove = (_wayPoint.position - transform.position).normalized;
+        Vector3 dirToMove = (_destination - transform.position).normalized;
         float dot = Vector3.Dot(transform.forward, dirToMove);
 
         if (dot > 0)
         {
-            _accelerationInput = Physics.Raycast(transform.position + Vector3.up, transform.forward, out RaycastHit hit, detectionRange, obstacleLayer) 
+            _accelerationInput = Physics.Raycast(transform.position + Vector3.up, transform.forward, out RaycastHit hit, detectionDistance, obstacleLayer) 
                 ? 0.5f : 1;
         }
 
@@ -210,12 +280,8 @@ public class AICarController : MonoBehaviour
     private void HandleSteering()
     {
 
-        if (_isReversing)
-        {
-            _steeringInput = 0;
-            return;
-        }
-        Vector3 dirToMove = (_wayPoint.position - transform.position).normalized;
+        
+        Vector3 dirToMove = (_destination - transform.position).normalized;
 
         Vector3 flatDir = Vector3.ProjectOnPlane(dirToMove, transform.up).normalized;
 
@@ -253,11 +319,13 @@ public class AICarController : MonoBehaviour
                 _steeringInput = _angleToDir > 0 ? 1 : -1;
             }
         }
+
+        if (_isReversing) _steeringInput *= -1;
         
         
     }
 
-    private void HandleDrifting()
+    private void HandleNormalDrifting()
     {
         if (!_isDrifting && Mathf.Abs(_angleToDir) > minimumAngleDrift)
         {
@@ -300,7 +368,7 @@ public class AICarController : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position + Vector3.up, transform.forward, out hit, detectionRange, obstacleLayer) && !_isAvoiding)
+        if (Physics.Raycast(transform.position + Vector3.up, transform.forward, out hit, detectionDistance, obstacleLayer) && !_isAvoiding)
         {
             _isAvoiding = true;
 
@@ -322,6 +390,16 @@ public class AICarController : MonoBehaviour
             _wayPoint = hit.transform.GetChild(index);
         }
     }
+
+    private void HandleAlwaysDrifting()
+    {
+        if (!_isDrifting && Mathf.Abs(_angleToDir) > minimumAngleDrift)
+        {
+            _isDrifting = true;
+            _carController.StartDriftInput();
+        }
+    }
+
 
     private void OnDrawGizmos()
     {
@@ -348,6 +426,18 @@ public class AICarController : MonoBehaviour
             Gizmos.DrawLine(tempWaypoints[tempWaypoints.Count - 1].position, tempWaypoints[0].position);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("WaypointTrigger") || other.CompareTag("FinishLine"))
+        {
+            if (other.transform.parent == wayPoints[_currentIndex])
+            {
+                CheckWayPoints();
+            }
+        }
+    }
+
 }
 
 

@@ -71,6 +71,7 @@ public class ArcadeCarController : MonoBehaviour
 
     [Header("Gravity")]
     [SerializeField] private float gravityForce;
+    private Vector3 _gravityDirection;
 
     [Header("Boost")]
     [SerializeField] private float boostAccelerationSpeed;
@@ -108,6 +109,7 @@ public class ArcadeCarController : MonoBehaviour
     }
     private void Start()
     {
+        _gravityDirection = -transform.up;
         SetPlayer(state);
         if (shouldRandomizeValues)
         {
@@ -150,6 +152,7 @@ public class ArcadeCarController : MonoBehaviour
         SteeringHandling();
         SideDrag();
         ChargeDriftingBoost();
+
     }
 
     private void InitializeRandomVariables()
@@ -202,9 +205,12 @@ public class ArcadeCarController : MonoBehaviour
 
     private void HandleGravity()
     {
-        Vector3 gravityDirection = -transform.up;
+        if (_isGrounded)
+        {
+            _gravityDirection = -transform.up;
+        }
 
-        carRB.AddForce(gravityDirection * gravityForce, ForceMode.Acceleration);
+        carRB.AddForce(_gravityDirection * gravityForce, ForceMode.Acceleration);
     }
 
     private void ChargeDriftingBoost()
@@ -268,7 +274,7 @@ public class ArcadeCarController : MonoBehaviour
             }
         }
 
-        if (groundedWheelsAmount > 1)
+        if (groundedWheelsAmount > 3)
         {
             _isGrounded = true;
         }
@@ -434,6 +440,43 @@ public class ArcadeCarController : MonoBehaviour
         cam.Lens.FieldOfView = 60;
     }
 
+    private void AlignToGround()
+    {
+        if (!_isGrounded) return;
+
+        // Average ground normal from all grounded wheels
+        Vector3 averageNormal = Vector3.zero;
+        int groundedCount = 0;
+
+        for (int i = 0; i < wheelRaycasts.Count; i++)
+        {
+            RaycastHit hit;
+            float maxDistance = restLength + springTravel + wheelRadius;
+
+            if (Physics.Raycast(wheelRaycasts[i].position, -wheelRaycasts[i].up, out hit, maxDistance, groundLayer))
+            {
+                averageNormal += hit.normal;
+                groundedCount++;
+            }
+        }
+
+        if (groundedCount == 0) return;
+        averageNormal.Normalize();
+
+        // Smoothly rotate the car to match the ground normal
+        Quaternion targetRotation = Quaternion.FromToRotation(transform.up, averageNormal) * transform.rotation;
+
+        // Prevent small tilting when roughly upright
+        float angleFromUp = Vector3.Angle(Vector3.up, averageNormal);
+        if (angleFromUp < 10f)
+        {
+            // Blend back toward upright orientation
+            targetRotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, 0.1f);
+        }
+
+        // Smooth rotation for stability
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * 5f);
+    }
 
 }
 
