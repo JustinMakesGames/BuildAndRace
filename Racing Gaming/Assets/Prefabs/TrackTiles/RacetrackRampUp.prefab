@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3312520238614150689}
   - component: {fileID: 7781180290559545477}
   - component: {fileID: 2231724566398683683}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: CameraPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 6744327205628285267}
   - component: {fileID: 8910801204238149265}
   - component: {fileID: 4787997464049091527}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ConnectionPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 1727013703594062060}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000068545336, y: -0.00000001637896, z: -0.00000027864897, w: 1}
-  m_LocalPosition: {x: 0.051024094, y: -98.515854, z: 100.106224}
+  m_LocalPosition: {x: -0.059746936, y: -98.723236, z: 98.24989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 4762989918714959655}
   - component: {fileID: 1093882521526673016}
   - component: {fileID: 2295726513572663146}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ConnectionPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 3595930737453544986}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0.068394676, y: 0.00014090538, z: 2.5937443}
+  m_LocalPosition: {x: 0.05972649, y: -0.20764923, z: 0.73780787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -471,15 +471,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e064b7b8a5ecaab42af0a188929e3d42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.059746742
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e064b7b8a5ecaab42af0a188929e3d42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 98.7233
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e064b7b8a5ecaab42af0a188929e3d42, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 148.24992
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e064b7b8a5ecaab42af0a188929e3d42, type: 3}
       propertyPath: m_LocalRotation.w
@@ -509,6 +509,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e064b7b8a5ecaab42af0a188929e3d42, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3306236422476701754, guid: ddc7a68963e5ef441b221db5f544d9ea, type: 3}
+    - target: {fileID: -2324755000168965904, guid: e064b7b8a5ecaab42af0a188929e3d42, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3306236422476701754, guid: ddc7a68963e5ef441b221db5f544d9ea, type: 3}
     - target: {fileID: 919132149155446097, guid: e064b7b8a5ecaab42af0a188929e3d42, type: 3}
       propertyPath: m_Name
       value: RacetrackRampUp
