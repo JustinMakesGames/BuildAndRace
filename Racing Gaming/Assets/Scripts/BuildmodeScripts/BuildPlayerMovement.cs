@@ -1,10 +1,36 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class BuildPlayerMovement : MonoBehaviour
 {
-    public void CameraRotate(InputAction.CallbackContext context)
+    [SerializeField] private CinemachineOrbitalFollow cameraRotating;
+    [SerializeField] private float scrollSpeed;
+
+    [SerializeField] private float _scrollInput;
+   
+
+    public void Scrolling(InputAction.CallbackContext context)
     {
-        print(context.ReadValue<Vector2>());
+        _scrollInput = context.ReadValue<float>();
     }
+
+    public void Rotate(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            BuildManager.Instance.Rotate();
+        }
+    }
+
+    public void DeleteInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            BuildManager.Instance.RemovePiece();
+        }
+    }
+
+  
+
+    
 }

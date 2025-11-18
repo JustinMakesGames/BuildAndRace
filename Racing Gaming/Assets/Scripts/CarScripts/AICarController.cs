@@ -429,6 +429,7 @@ public class AICarController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!this.enabled) return;
         if (other.CompareTag("WaypointTrigger") || other.CompareTag("FinishLine"))
         {
             if (other.transform.parent == wayPoints[_currentIndex])

@@ -98,8 +98,13 @@ public class ArcadeCarController : MonoBehaviour
     [Header("StartHandling")]
     [SerializeField] private bool canDrive;
 
+    [Header("TeleporterHandling")]
+    public CinemachineFollow cameraFollow;
+
+
     public void SetVerhicleOn()
     {
+        
         canDrive = true;
     }
 
@@ -137,7 +142,6 @@ public class ArcadeCarController : MonoBehaviour
     }
     private void Update()
     {
-
         CheckIfGrounded();
         CalculateCarVelocity();
         HandleDrifting();
