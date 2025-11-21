@@ -1426,7 +1426,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.0,
+    "m_Value": 247.1300048828125,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2856,7 +2856,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "X",
     "m_StageCapability": 3,
-    "m_Value": 1.100000023841858,
+    "m_Value": 1.2000000476837159,
     "m_DefaultValue": 0.0,
     "m_Labels": []
 }
@@ -3882,7 +3882,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 0.5,
+    "m_Value": 1.0299999713897706,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -4588,7 +4588,7 @@
     "m_PerRendererData": false,
     "m_customAttributes": [],
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"296329ba75e65f540a0320d48136e890\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"d9605b07950924647b31b9dd5a9c17d2\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -5016,7 +5016,7 @@
     "m_PerRendererData": false,
     "m_customAttributes": [],
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"89926e8c139af294b9b3c60694151756\",\"type\":3}}",
+        "m_SerializedTexture": "",
         "m_Guid": ""
     },
     "isMainTexture": false,
