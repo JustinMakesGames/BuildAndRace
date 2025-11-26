@@ -1,37 +1,31 @@
-using UnityEngine;
-using System.Runtime.Serialization.Formatters.Binary;
+﻿using UnityEngine;
 using System.IO;
 
 public static class BuildSaveSystem
 {
+    private static string path = Application.persistentDataPath + "/saveData.json";
     public static void SaveBuild(BuildGameplay build)
     {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/saveData.epic";
-        FileStream stream = new FileStream(path, FileMode.Create);
-
         BuildData data = new BuildData(build);
 
-        formatter.Serialize(stream, data);
-        stream.Close();
+        string json = JsonUtility.ToJson(data, true);
+        File.WriteAllText(path, json);
+
+        Debug.Log("Saved Data");
     }
 
     public static BuildData LoadBuild()
     {
-        string path = Application.persistentDataPath + "/saveData.epic";
-
-        if (File.Exists(path))
+        if (!File.Exists(path))
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
-
-            BuildData data = formatter.Deserialize(stream) as BuildData;
-            stream.Close();
-
-            return data;
+            Debug.Log("No save file found at: " + path);
+            return null;
         }
 
-        return null;
+        string json = File.ReadAllText(path);
+        BuildData data = JsonUtility.FromJson<BuildData>(json);
 
+        Debug.Log("Loaded Savedata");
+        return data;
     }
 }

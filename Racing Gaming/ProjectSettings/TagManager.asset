@@ -8,6 +8,9 @@ TagManager:
   - WaypointTrigger
   - FinishLine
   - Portal
+  - TrackCollider
+  - Receiver
+  - PortalCamera
   layers:
   - Default
   - TransparentFX

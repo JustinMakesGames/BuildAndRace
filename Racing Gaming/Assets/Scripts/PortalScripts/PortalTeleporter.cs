@@ -6,10 +6,16 @@ using UnityEngine;
 public class PortalTeleporter : MonoBehaviour
 {
     [SerializeField] private Transform receiver;  // The paired portal
+    [SerializeField] private Transform portalRenderer;
 
     // Track which players have already teleported so we don't double teleport
     private HashSet<Transform> teleportedPlayers = new HashSet<Transform>();
 
+    private void Awake()
+    {
+        receiver = GameObject.FindGameObjectWithTag("Receiver").transform;
+        GameObject.FindGameObjectWithTag("PortalCamera").GetComponent<PortalCamera>().SetOtherPortal(portalRenderer);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !teleportedPlayers.Contains(other.transform))
@@ -73,6 +79,9 @@ public class PortalTeleporter : MonoBehaviour
             StartCoroutine(PutCameraToNormal(camera, originalSettings));
 
         }
+
+        player.GetComponent<AICarController>().ResetWaypoint();
+        player.GetComponent<PlayerPlacementHandler>().ResetLap();
     }
 
     private IEnumerator PutCameraToNormal(CinemachineFollow camera, Vector3 originalSettings)

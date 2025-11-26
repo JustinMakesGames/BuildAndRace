@@ -109,45 +109,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1523552601798015058}
     m_Modifications:
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: state
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: accelerationSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: shouldRandomizeValues
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370708462432187163, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_Name
       value: Car7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -189,66 +153,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5900071378268209900, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6165721115797852682, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionRange
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: reverseInterval
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: randomnessInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: steeringRandomness
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxWayPointDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: miniWayPointDistance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: avoidanceSteerStrength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: obstacleDetectionRange
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.0099945
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4500003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -19
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -267,45 +171,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1523552601798015058}
     m_Modifications:
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: state
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: accelerationSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: shouldRandomizeValues
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370708462432187163, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_Name
       value: Car5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -347,66 +215,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5900071378268209900, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6165721115797852682, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionRange
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: reverseInterval
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: randomnessInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: steeringRandomness
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxWayPointDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: miniWayPointDistance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: avoidanceSteerStrength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: obstacleDetectionRange
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.0099945
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4500003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -14.110001
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -425,45 +233,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1523552601798015058}
     m_Modifications:
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: state
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: accelerationSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: shouldRandomizeValues
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370708462432187163, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_Name
       value: Car6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -505,66 +277,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5900071378268209900, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6165721115797852682, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionRange
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: reverseInterval
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: randomnessInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: steeringRandomness
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxWayPointDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: miniWayPointDistance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: avoidanceSteerStrength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: obstacleDetectionRange
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.5900116
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4500003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -14.110001
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -583,57 +295,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1523552601798015058}
     m_Modifications:
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1337899299273450864, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 201.90356
-      objectReference: {fileID: 0}
-    - target: {fileID: 1337899299273450864, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 78.6333
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: state
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: dragCoefficient
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: accelerationSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: shouldRandomizeValues
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370708462432187163, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3941436069442766346, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_Name
       value: Car2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -645,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.92
+      value: -21.718718
       objectReference: {fileID: 0}
     - target: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_LocalRotation.w
@@ -675,69 +339,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5900071378268209900, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6165721115797852682, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6165721115797852682, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_DefaultControlScheme
       value: Controller
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionRange
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: reverseInterval
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: randomnessInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: steeringRandomness
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxWayPointDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: miniWayPointDistance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: avoidanceSteerStrength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: obstacleDetectionRange
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.5900116
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4500003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -757,50 +361,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1523552601798015058}
     m_Modifications:
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1337899299273450864, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 201.90356
-      objectReference: {fileID: 0}
-    - target: {fileID: 1337899299273450864, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 78.633545
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: state
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: dragCoefficient
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: accelerationSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: shouldRandomizeValues
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370708462432187163, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3941436069442766346, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_Name
       value: Car1
@@ -845,82 +405,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5900071378268209900, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6044911514195730120, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: greenPanel
       value: 
-      objectReference: {fileID: 5184123288128490950}
+      objectReference: {fileID: 3791839364539164565}
     - target: {fileID: 6044911514195730120, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: boostSlider
       value: 
-      objectReference: {fileID: 3522342872298545383}
-    - target: {fileID: 6165721115797852682, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionRange
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: reverseInterval
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: randomnessInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: steeringRandomness
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxWayPointDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: miniWayPointDistance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: avoidanceSteerStrength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: obstacleDetectionRange
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.8000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6629460573830008931}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
---- !u!114 &3522342872298545383 stripped
+--- !u!224 &3791839364539164565 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5047151194977190861, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
+  m_PrefabInstance: {fileID: 8256299379476849752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5319306856566760480 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
+  m_PrefabInstance: {fileID: 8256299379476849752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6629460573830008931 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4788914805618836671, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3356544905339384891, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
   m_PrefabInstance: {fileID: 8256299379476849752}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -929,16 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
---- !u!224 &5184123288128490950 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3847745491052030366, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-  m_PrefabInstance: {fileID: 8256299379476849752}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5319306856566760480 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-  m_PrefabInstance: {fileID: 8256299379476849752}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9000691603277838562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -947,45 +447,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1523552601798015058}
     m_Modifications:
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: state
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: accelerationSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: shouldRandomizeValues
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370708462432187163, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_Name
       value: Car4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1027,66 +491,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5900071378268209900, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6165721115797852682, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionRange
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: reverseInterval
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: randomnessInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: steeringRandomness
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxWayPointDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: miniWayPointDistance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: avoidanceSteerStrength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: obstacleDetectionRange
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.5900116
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4500003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.859985
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1105,45 +509,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1523552601798015058}
     m_Modifications:
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 30154346083600546, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: state
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: accelerationSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1376901385271714923, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: shouldRandomizeValues
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2370708462432187163, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_Name
       value: Car8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4234713079018324115, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1184,66 +552,6 @@ PrefabInstance:
     - target: {fileID: 4271028649585066104, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5900071378268209900, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6165721115797852682, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionRange
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: reverseInterval
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: detectionDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: randomnessInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: steeringRandomness
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: maxWayPointDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: miniWayPointDistance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: avoidanceSteerStrength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7264802008160787901, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: obstacleDetectionRange
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.5900116
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4500003
-      objectReference: {fileID: 0}
-    - target: {fileID: 7585897699893791184, guid: 50ac1ac67fc54b74a9bb11975ebd08ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -72,6 +72,22 @@ public class AICarController : MonoBehaviour
         StartCoroutine(HandleRandomness());
     }
 
+    public void SetWaypoints()
+    {
+        wayPoints.Clear();
+        for (int i = 0; i < wayPointFolder.childCount; i++)
+        {
+            wayPoints.Add(wayPointFolder.GetChild(i));
+        }
+
+        
+    }
+
+    public void ResetWaypoint()
+    {
+        _currentIndex = 0;
+        GetWayPoint();
+    }
     private void Update()
     {
         DrawWayPointLines();

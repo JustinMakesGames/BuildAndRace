@@ -362,6 +362,7 @@ public class ArcadeCarController : MonoBehaviour
         for (int i = 0; i < wheelRaycasts.Count; i++)
         {
             RaycastHit hit;
+            
             float maxDistance = restLength + springTravel;
 
             if (Physics.Raycast(wheelRaycasts[i].position, -wheelRaycasts[i].up, out hit, maxDistance + wheelRadius, groundLayer))
@@ -376,6 +377,8 @@ public class ArcadeCarController : MonoBehaviour
                 float netForce = springForce - dampForce;
 
                 carRB.AddForceAtPosition(netForce * hit.normal, wheelRaycasts[i].position);
+
+
 
                 _isWheelGrounded[i] = true;
                 Debug.DrawLine(wheelRaycasts[i].position, wheelRaycasts[i].position + -wheelRaycasts[i].up * (maxDistance + wheelRadius), Color.green);

@@ -6,8 +6,14 @@ public class PortalCamera : MonoBehaviour
     [SerializeField] private Transform portal;
     [SerializeField] private Transform otherPortal;
 
+    public void SetOtherPortal(Transform newPortal)
+    {
+        otherPortal = newPortal;
+    }
+
     private void Update()
     {
+        if (!otherPortal) return;
         // Get player pos in otherPortal local space
         Vector3 localPos = otherPortal.InverseTransformPoint(playerCamera.position);
 

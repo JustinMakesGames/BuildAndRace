@@ -63,6 +63,12 @@ public class PlayerPlacementHandler : MonoBehaviour
         }
     }
 
+    public void ResetLap()
+    {
+        _currentIndex = 0;
+        _currentWaypoint = waypoints[_currentIndex];
+    }
+
     private IEnumerator HandleFinish()
     {
         if (!finishText) yield break;

@@ -36,8 +36,10 @@ public class StartBoostBehaviour : MonoBehaviour
     {
         if (_canMoveSlider)
         {
+            print("can move slider");
             if (_isMovingSlider)
             {
+                print("is moving slider");
                 boostSlider.value += sliderMultiplier * Time.deltaTime;
             }
 

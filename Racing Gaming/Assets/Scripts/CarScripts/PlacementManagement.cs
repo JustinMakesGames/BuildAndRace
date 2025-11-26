@@ -27,11 +27,6 @@ public class PlacementManagement : MonoBehaviour
     [SerializeField] private List<Transform> waypoints = new List<Transform>();
     private void Awake()
     {
-        for (int i = 0; i < waypointFolder.childCount; i++)
-        {
-            waypoints.Add(waypointFolder.GetChild(i));
-        }
-
         for (int i = 0; i < carFolder.childCount; i++)
         {
             cars.Add(carFolder.GetChild(i));
@@ -40,6 +35,12 @@ public class PlacementManagement : MonoBehaviour
 
     private void Start()
     {
+        Ticker.Instance.onTick += HandlePlacements;
+    }
+
+    public void SetPlacement(List<Transform> waypoints)
+    {
+        this.waypoints = waypoints;
 
         for (int i = 0; i < cars.Count; i++)
         {
@@ -47,8 +48,13 @@ public class PlacementManagement : MonoBehaviour
             {
                 placementHandler.SetList(waypoints);
             }
+
+            if (cars[i].TryGetComponent(out AICarController carController))
+            {
+                carController.SetWaypoints();
+            }
         }
-        Ticker.Instance.onTick += HandlePlacements;
+
     }
 
     private void HandlePlacements()

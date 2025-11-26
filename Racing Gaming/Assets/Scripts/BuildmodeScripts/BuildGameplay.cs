@@ -63,6 +63,8 @@ public class BuildGameplay : MonoBehaviour
 
         for (int i = 0; i < spawnedTiles.Count; i++)
         {
+            Debug.Log($"TrackConnectionPoint {trackTileConnectionPoints[i]}");
+            Debug.Log($"SpawnedTile {spawnedTiles[i]}");
             BuildManager.Instance.SpawnTileInGame(spawnedTiles[i], trackTileConnectionPoints[i]);
         }
     }

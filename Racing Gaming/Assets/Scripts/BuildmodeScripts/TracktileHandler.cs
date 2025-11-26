@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,11 @@ public class TracktileHandler : MonoBehaviour
 
     private Transform _connectedPoint;
     private int _usedConnectionPointIndex;
+
+    [SerializeField] private Transform colliderFolder;
+    [SerializeField] private Transform waypointFolder;
+
+    [SerializeField] private Transform deathFolder;
 
 
     //Setters
@@ -49,5 +55,34 @@ public class TracktileHandler : MonoBehaviour
     public int GetUsedConnectionPointIndex()
     {
         return _usedConnectionPointIndex;
+    }
+
+    public Transform GetWaypointFolder()
+    {
+        return waypointFolder;
+    }
+
+    public List<Transform> ReturnColliderTransforms()
+    {
+        List<Transform> colliderTransforms = new List<Transform>();
+
+        for (int i = 0; i < colliderFolder.childCount; i++)
+        {
+            colliderTransforms.Add(colliderFolder.GetChild(i));
+        }
+
+        return colliderTransforms;
+    }
+
+    public List<Transform> ReturnDeathTriggers()
+    {
+        List<Transform> deathTransforms = new List<Transform>();
+
+        for (int i = 0; i < deathFolder.childCount; i++)
+        {
+            deathTransforms.Add(deathFolder.GetChild(i));
+        }
+
+        return deathTransforms;
     }
 }

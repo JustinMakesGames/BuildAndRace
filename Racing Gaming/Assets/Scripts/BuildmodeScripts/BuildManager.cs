@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,16 +9,19 @@ public class BuildManager : MonoBehaviour
 
     public static BuildManager Instance;
 
+    [Header("Lists and Folders")]
     //Lists and Folders
     [SerializeField] private List<TrackTile> spawnedTrackTiles = new List<TrackTile>();
     [SerializeField] private List<GameObject> spawnedObjects = new List<GameObject>();
     [SerializeField] private Transform trackFolder;
     [SerializeField] private GameObject uiList;
 
+    [Header("Camera")]
     //Camera
     [SerializeField] private Transform cameraTracker;
     [SerializeField] private bool needCamera;
 
+    [Header("Current Tracktile Variables")]
     //Current Tracktile Variables
     [SerializeField] private bool isInRaceScene;
     private TrackTile _currentTrackTile;
@@ -25,22 +29,32 @@ public class BuildManager : MonoBehaviour
     private List<Transform> _currentConnectionTiles = new List<Transform>();
     private int _currentConnectionIndex;
 
+    [Header("Previous Tracktile Variables")]
     //Previous Tracktile Variables
     [SerializeField] private Transform starterConnectionTile;
     private Transform _previousConnectionTile;
 
+    [Header("Handle Position And Rotation")]
     //Handle Position And Rotation
     private GameObject _connectionTileParent;
 
+    [Header("Collider Variables")]
+    //Check Colliders
+    [SerializeField] private List<Transform> colliderTransforms = new List<Transform>();
+
+    
+
     private void Awake()
     {
-        if (Instance == null)
+        Debug.Log("Hello there I am using this here woohoo come on step it up let's go");
+        if (Instance != this)
         {
             Instance = this;
         }
 
         Cursor.lockState = CursorLockMode.Locked;
         _previousConnectionTile = starterConnectionTile;
+        
     }
 
     public void ShowNewTile(TrackTile tile, bool hasNewTile)
@@ -51,6 +65,11 @@ public class BuildManager : MonoBehaviour
         if (_shownTracktile.TryGetComponent(out TracktileHandler trackTileHandler))
         {
             _currentConnectionTiles = trackTileHandler.GetConnectionPoints();
+
+            if (_currentConnectionTiles.Count == 1)
+            {
+                _currentConnectionIndex = 0;
+            }
                       
         }
         RotateAndPositionTrackTile(_currentConnectionTiles[_currentConnectionIndex]);
@@ -60,9 +79,15 @@ public class BuildManager : MonoBehaviour
             cameraTracker.position = trackTileHandler.GetCameraPoint().position;
             cameraTracker.rotation = Quaternion.FromToRotation(cameraTracker.up, _previousConnectionTile.up) * cameraTracker.rotation;
         }
+
+        GetNewColliders();
         
     }
 
+    private void GetNewColliders()
+    {
+        colliderTransforms = _shownTracktile.GetComponent<TracktileHandler>().ReturnColliderTransforms();
+    }
     public void RemovePiece()
     {
         if (spawnedObjects.Count <= 0) return;
@@ -93,13 +118,14 @@ public class BuildManager : MonoBehaviour
 
     public void SpawnNewTile(int index)
     {
+        if (!CanTheTrackSpawn()) return;
         spawnedTrackTiles.Add(_currentTrackTile);
         spawnedObjects.Add(_shownTracktile);
 
         _shownTracktile.GetComponent<TracktileHandler>().SetConnectedPoint(_previousConnectionTile);
         _shownTracktile.GetComponent<TracktileHandler>().SetConnectionPointIndex(_currentConnectionIndex);
         _shownTracktile.transform.parent = trackFolder;
-        _previousConnectionTile = _currentConnectionTiles[ReturnNumber(index)];
+        
 
         if (_shownTracktile.GetComponent<TracktileHandler>().CheckIfFinishLine())
         {
@@ -108,24 +134,50 @@ public class BuildManager : MonoBehaviour
                 BuildGameplay.Instance.SaveBuild(spawnedTrackTiles, spawnedObjects);
                 SceneManager.LoadScene("RaceScene");
             }
+
+            else
+            {
+                WaypointBuildHandler.Instance.SetWaypointFolder();
+            }
             
         }
 
         else
         {
+            _previousConnectionTile = _currentConnectionTiles[ReturnNumber(index)];
             ShowNewTile(_currentTrackTile, true);
         }
     }
 
-    public void SpawnTileInGame(TrackTile trackTile, int connectionPoint)
+    private bool CanTheTrackSpawn()
+    {
+        for (int i = 0; i < colliderTransforms.Count; i++)
+        {
+            Collider[] colliders = Physics.OverlapBox(colliderTransforms[i].position, colliderTransforms[i].localScale / 2, Quaternion.identity);
+
+            for (int j = 0; j < colliders.Length; j++)
+            {
+                if (colliders[j].CompareTag("TrackCollider") && colliders[j].transform.parent != colliderTransforms[i].parent)
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+    public void SpawnTileInGame(TrackTile trackTile, int connectionPointIndex)
     {
         ShowNewTile(trackTile, false);
-        RotateAndPositionTrackTile(_currentConnectionTiles[connectionPoint]);
-        SpawnNewTile(connectionPoint);
+        RotateAndPositionTrackTile(_currentConnectionTiles[connectionPointIndex]);
+        RotateDeathTrigger(connectionPointIndex);
+        WaypointBuildHandler.Instance.MakeWaypointFolder(_shownTracktile.GetComponent<TracktileHandler>().GetWaypointFolder(), connectionPointIndex);
+        SpawnNewTile(connectionPointIndex);
     }
 
     public void Rotate()
     {
+        if (_currentConnectionTiles.Count == 1) return;
         _currentConnectionIndex = ReturnNumber(_currentConnectionIndex);
         RotateAndPositionTrackTile(_currentConnectionTiles[_currentConnectionIndex]);
     }
@@ -149,6 +201,23 @@ public class BuildManager : MonoBehaviour
 
         _connectionTileParent.transform.position = _previousConnectionTile.position;
         _connectionTileParent.transform.rotation = _previousConnectionTile.rotation * Quaternion.Euler(0, 180, 0);
+    }
+
+    private void RotateDeathTrigger(int number)
+    {
+        if (number == 1)
+        {
+            List<Transform> deathTriggers = _shownTracktile.GetComponent<TracktileHandler>().ReturnDeathTriggers();
+
+            foreach (Transform t in deathTriggers)
+            {
+                if (t.TryGetComponent(out SetRespawnScript respawnScript))
+                {
+                    t.localEulerAngles += new Vector3(0, 180, 0);
+                }
+                
+            }
+        }
     }
 
 
