@@ -1,0 +1,1360 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7794894156621251892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449498477419490599}
+  - component: {fileID: 6175723180056881188}
+  - component: {fileID: 7760052055757301182}
+  m_Layer: 0
+  m_Name: Space Building
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &449498477419490599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7794894156621251892}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 200, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2952949960049550892}
+  - {fileID: 4835589845396601129}
+  - {fileID: 3305572117000861160}
+  - {fileID: 5268532122836232284}
+  - {fileID: 7065237804341219759}
+  - {fileID: 6665945732236187325}
+  - {fileID: 1563622036314997359}
+  - {fileID: 2070492014295055354}
+  - {fileID: 2829981125051949249}
+  - {fileID: 7619159162497898927}
+  - {fileID: 328666619181717598}
+  - {fileID: 363776773352461897}
+  - {fileID: 4928413028142253017}
+  - {fileID: 1941212416994495883}
+  - {fileID: 2093329695714116573}
+  - {fileID: 310077808047974690}
+  - {fileID: 2338902891321480539}
+  - {fileID: 4462288413703136487}
+  - {fileID: 8582740165288878763}
+  - {fileID: 6881516935357949008}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6175723180056881188
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7794894156621251892}
+  m_Mesh: {fileID: -3314306578219449400, guid: 5f0d1de7f977af340ab0a48e247adda8, type: 3}
+--- !u!23 &7760052055757301182
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7794894156621251892}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 881b0ce584419c54d9bb7a0bb1faed7e, type: 2}
+  - {fileID: 2100000, guid: 1f8707709a478c4498280524ce9bcf14, type: 2}
+  - {fileID: 2100000, guid: 437225cac17130d48a763f47a326fc1a, type: 2}
+  - {fileID: 2100000, guid: c939afea96b495c4081082708a9c97b7, type: 2}
+  - {fileID: 2100000, guid: a7b3e29175f48454c975ea2b829b60da, type: 2}
+  - {fileID: 2100000, guid: 812bf7af98ac2394c8be5c4109834433, type: 2}
+  - {fileID: 2100000, guid: 437225cac17130d48a763f47a326fc1a, type: 2}
+  - {fileID: 2100000, guid: 437225cac17130d48a763f47a326fc1a, type: 2}
+  - {fileID: 2100000, guid: 812bf7af98ac2394c8be5c4109834433, type: 2}
+  - {fileID: 2100000, guid: 812bf7af98ac2394c8be5c4109834433, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &682578133992233626
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.66363525
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 624.937
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6021309
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &6665945732236187325 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 682578133992233626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &755263678725367927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder NoAnimation (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3272705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2145.4187
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2042627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+--- !u!4 &6881516935357949008 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+  m_PrefabInstance: {fileID: 755263678725367927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1269468537330978814
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder NoAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3272705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1385.1781
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2042627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+--- !u!4 &4928413028142253017 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+  m_PrefabInstance: {fileID: 1269468537330978814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1648392475417507086
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 190.51357
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &4835589845396601129 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 1648392475417507086}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2082533762735088763
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.33181763
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 407.72525
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.80106544
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &5268532122836232284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 2082533762735088763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2515040308408037004
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder NoAnimation (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3272705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1710.9956
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2042627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+--- !u!4 &8582740165288878763 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+  m_PrefabInstance: {fileID: 2515040308408037004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4032963813918449032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.33181763
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 516.3312
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.80106544
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &7065237804341219759 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 4032963813918449032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4343584963383252360
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9954529
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1059.3605
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.4031963
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &7619159162497898927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 4343584963383252360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4631999032035708488
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.66363525
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 733.5429
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6021309
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &1563622036314997359 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 4631999032035708488}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5257445850135089146
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder NoAnimation (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3272705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1602.3898
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2042627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+--- !u!4 &2093329695714116573 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+  m_PrefabInstance: {fileID: 5257445850135089146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5278481432533055453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.66363525
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 842.1488
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6021309
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &2070492014295055354 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 5278481432533055453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5695823216610541996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder NoAnimation (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3272705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1819.6014
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2042627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+--- !u!4 &1941212416994495883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+  m_PrefabInstance: {fileID: 5695823216610541996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5834226870123518574
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3272705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1276.5723
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2042618
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &363776773352461897 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 5834226870123518574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5869487657925252217
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9954529
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1167.9663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.4031963
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &328666619181717598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 5869487657925252217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5888084321869767941
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder NoAnimation (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3272705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2036.8132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2042627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+--- !u!4 &310077808047974690 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+  m_PrefabInstance: {fileID: 5888084321869767941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7500191895892240576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder NoAnimation (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3272705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1928.2073
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2042627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+--- !u!4 &4462288413703136487 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+  m_PrefabInstance: {fileID: 7500191895892240576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8267816958011796710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9954529
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 950.75464
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.4031963
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &2829981125051949249 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 8267816958011796710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8470779041789483388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder NoAnimation (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3272705
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1493.7839
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2042627
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+--- !u!4 &2338902891321480539 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 0634948a40a87f74d8e43322fda2b68c, type: 3}
+  m_PrefabInstance: {fileID: 8470779041789483388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8657311782080346575
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.33181763
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 299.11942
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.80106544
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &3305572117000861160 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 8657311782080346575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9007708564004252171
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 449498477419490599}
+    m_Modifications:
+    - target: {fileID: 2924304769594278382, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_Name
+      value: Space Tube Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 81.907684
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+--- !u!4 &2952949960049550892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6195602204854209575, guid: 94de160cfadb69948abdad1a8acc29c2, type: 3}
+  m_PrefabInstance: {fileID: 9007708564004252171}
+  m_PrefabAsset: {fileID: 0}
