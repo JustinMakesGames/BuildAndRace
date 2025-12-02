@@ -23,6 +23,7 @@ public class StartRaceHandling : MonoBehaviour
         StartCoroutine(StartCountdown());
     }
 
+    //Handles the countdown
     private IEnumerator StartCountdown()
     {
 

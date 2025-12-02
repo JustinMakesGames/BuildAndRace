@@ -9,7 +9,7 @@ public class BuildGameplay : MonoBehaviour
     public int[] trackTileConnectionPoints;
     [SerializeField] private List<TrackTile> tiles = new List<TrackTile>();
     [SerializeField] private bool shouldLoad;
-    private List<TrackTile> spawnedTiles = new List<TrackTile>();
+    private List<TrackTile> _spawnedTiles = new List<TrackTile>();
 
 
     private void Awake()
@@ -55,17 +55,17 @@ public class BuildGameplay : MonoBehaviour
             {
                 if (trackTiles[i] == tiles[j].index)
                 {
-                    spawnedTiles.Add(tiles[j]);
+                    _spawnedTiles.Add(tiles[j]);
                     break;
                 }
             }
         }
 
-        for (int i = 0; i < spawnedTiles.Count; i++)
+        for (int i = 0; i < _spawnedTiles.Count; i++)
         {
             Debug.Log($"TrackConnectionPoint {trackTileConnectionPoints[i]}");
-            Debug.Log($"SpawnedTile {spawnedTiles[i]}");
-            BuildManager.Instance.SpawnTileInGame(spawnedTiles[i], trackTileConnectionPoints[i]);
+            Debug.Log($"SpawnedTile {_spawnedTiles[i]}");
+            BuildManager.Instance.SpawnTileInGame(_spawnedTiles[i], trackTileConnectionPoints[i]);
         }
     }
 }

@@ -863,9 +863,9 @@ MonoBehaviour:
     boostEndTime: 1.5
     boostTime: 0
     boostParticles: {fileID: 0}
-  boostSlider: {fileID: 0}
+  boostSlider: {fileID: 3356544905339384891}
   sliderMultiplier: 0.4
-  greenPanel: {fileID: 0}
+  greenPanel: {fileID: 5047151194977190861}
 --- !u!114 &6033817569790457256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1784,9 +1784,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc49f03013e14a04a9af09d372554318, type: 3}
+--- !u!114 &3356544905339384891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 76989536038106543, guid: fc49f03013e14a04a9af09d372554318, type: 3}
+  m_PrefabInstance: {fileID: 3424233655258546580}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1 &3716682755869965243 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2022429712553179695, guid: fc49f03013e14a04a9af09d372554318, type: 3}
+  m_PrefabInstance: {fileID: 3424233655258546580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &5047151194977190861 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7606094991795044953, guid: fc49f03013e14a04a9af09d372554318, type: 3}
   m_PrefabInstance: {fileID: 3424233655258546580}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &7112682694221193616 stripped

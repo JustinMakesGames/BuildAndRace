@@ -115,7 +115,7 @@ public class ArcadeCarController : MonoBehaviour
     private void Start()
     {
         _gravityDirection = -transform.up;
-        SetPlayer(state);
+        //SetPlayer(state);
         if (shouldRandomizeValues)
         {
             InitializeRandomVariables();
@@ -126,6 +126,7 @@ public class ArcadeCarController : MonoBehaviour
         _normalDragCoefficient = dragCoefficient;
     }
 
+    //Sets player to Player or CPU
     public void SetPlayer(PlayerState state)
     {
         if (state == PlayerState.Player)
@@ -159,6 +160,7 @@ public class ArcadeCarController : MonoBehaviour
 
     }
 
+    //Make Random Variables
     private void InitializeRandomVariables()
     {
         maxSpeed = UnityEngine.Random.Range(minMaxSpeed, maxMaxSpeed);
@@ -184,6 +186,7 @@ public class ArcadeCarController : MonoBehaviour
         CancelDrift();
     }
 
+    //Calculates the direction of the drift
     private void StartDrift()
     {
         if (currentCarLocalVelocity.magnitude >= mininumDriftSpeed && _steeringInput != 0)
@@ -195,6 +198,7 @@ public class ArcadeCarController : MonoBehaviour
         }
     }
 
+    //Cancels the drift and gets the boost
     private void CancelDrift()
     {
         if (!_isDrifting) return;
@@ -207,6 +211,7 @@ public class ArcadeCarController : MonoBehaviour
         dragCoefficient = _normalDragCoefficient;
     }
 
+    //Handles the gravity
     private void HandleGravity()
     {
         if (_isGrounded)
@@ -217,6 +222,7 @@ public class ArcadeCarController : MonoBehaviour
         carRB.AddForce(_gravityDirection * gravityForce, ForceMode.Acceleration);
     }
 
+    //Calculates the charging of the driftingboost depending on how far the player is drifting to the direction they are going.
     private void ChargeDriftingBoost()
     {
         if (_isDrifting)
@@ -233,6 +239,7 @@ public class ArcadeCarController : MonoBehaviour
         }
     }
 
+    //Handles the boost change.
     private void HandleBoostChange()
     {
         if (currentBoostingIndex != -1) boostTypes[currentBoostingIndex].boostParticles.SetActive(false);
@@ -241,7 +248,7 @@ public class ArcadeCarController : MonoBehaviour
 
     }
 
-
+    //Calculates the drifting physics.
     private void HandleDrifting()
     {
         if (_isDrifting)
@@ -357,6 +364,7 @@ public class ArcadeCarController : MonoBehaviour
 
     }
 
+    //Calculates the suspension by using raycasts.
     private void CheckSuspension()
     {
         for (int i = 0; i < wheelRaycasts.Count; i++)
@@ -393,7 +401,7 @@ public class ArcadeCarController : MonoBehaviour
     }
 
 
-
+    //Start by giving the player the boost speed stats.
     public void StartBoost(BoostType boostType)
     {
         _usedBoost = boostType;
@@ -405,6 +413,7 @@ public class ArcadeCarController : MonoBehaviour
 
     }
 
+    //Handle the feeling of the boost.
     private void BoostHandling()
     {
         if (_isBoosting)

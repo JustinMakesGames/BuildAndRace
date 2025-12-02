@@ -31,6 +31,7 @@ public class RaceManager : MonoBehaviour
         return maxLapCount;
     }
 
+    //Handles the finished player
     public void FinishPlayer(Transform car)
     {
 
@@ -40,8 +41,6 @@ public class RaceManager : MonoBehaviour
         int carIndex = _finishedCars.IndexOf(car);
 
         results[carIndex].text = car.name;
-
-        print("GAMING");
         car.GetComponent<ArcadeCarController>().SetPlayer(PlayerState.CPU);
         if (allCars.Count == _finishedCars.Count)
         {
@@ -49,6 +48,7 @@ public class RaceManager : MonoBehaviour
         }
     }
 
+    //Handles the end of the race and shows the results screen doing this.
     private void EndRace()
     {
         StartCoroutine(HandleResultsScreen());

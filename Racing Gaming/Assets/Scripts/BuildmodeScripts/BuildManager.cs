@@ -46,7 +46,7 @@ public class BuildManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Hello there I am using this here woohoo come on step it up let's go");
+        Debug.Log(SceneManager.GetActiveScene().name);
         if (Instance != this)
         {
             Instance = this;
