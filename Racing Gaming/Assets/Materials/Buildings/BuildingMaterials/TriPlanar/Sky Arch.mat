@@ -129,7 +129,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Invert: 0
-    - _MaxBrightness: 0.92
+    - _MaxBrightness: 1.5
     - _Metallic: 0
     - _MinBrightness: 0.3
     - _OcclusionStrength: 1

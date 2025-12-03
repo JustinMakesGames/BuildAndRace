@@ -108,7 +108,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _MaxBrightness: 1.2
+    - _MaxBrightness: 1.5
     - _Metallic: 0
     - _MinBrightness: 0.35
     - _NormalStrength: 0.5
