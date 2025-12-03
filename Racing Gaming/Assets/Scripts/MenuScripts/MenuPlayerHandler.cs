@@ -103,6 +103,7 @@ public class MenuPlayerHandler : MonoBehaviour
             _selections.Add(selectionFolder.GetChild(i));
         }
 
+        _currentLocationIndex = 0;
         SetPosition();
         StartCoroutine(MakeCanSelectFrameLater());
     }

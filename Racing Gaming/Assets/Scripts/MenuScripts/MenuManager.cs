@@ -44,13 +44,13 @@ public class MenuManager : MonoBehaviour
 
   
 
-    public void ShowPlayerSelectScreen(Transform selectFolder)
+    public void ShowPlayerSelectScreen()
     {
         for (int i = 0; i < players.Count; i++)
         {
             playerSelectionCursors[i].gameObject.SetActive(true);
 
-            players[i].GetComponent<MenuPlayerHandler>().SetPlayerUI(selectFolder, i, playerSelectionCursors[i]);
+            players[i].GetComponent<MenuPlayerHandler>().SetPlayerUI(characterSelectionFolder.transform, i, playerSelectionCursors[i]);
 
             
         }
@@ -131,5 +131,13 @@ public class MenuManager : MonoBehaviour
     public void HandleSelectionScreen()
     {
         _isInCharacterSelectScreen = true;
+
+        for (int i = 0; i < players.Count; i++)
+        {
+            if (players[i].TryGetComponent(out MenuPlayerHandler playerHandler))
+            {
+                playerHandler.SetPlayerUI(characterSelectionFolder.transform, i, playerSelectionCursors[i]);
+            }
+        }
     }
 }

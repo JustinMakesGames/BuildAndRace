@@ -7,5 +7,6 @@ public class GoToSelection : SwitchPages, IPressButton
         base.Press(player);
 
         MenuManager.Instance.HandleSelectionScreen();
+        MenuManager.Instance.ShowPlayerSelectScreen();
     }
 }
