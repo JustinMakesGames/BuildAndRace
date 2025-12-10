@@ -118,10 +118,11 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _Float: 0.02
+    - _Float: 0.08
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GradientThresshold: 0.02
     - _MaxBrightness: 1
     - _Metallic: 0
     - _MinBrightness: 0.3

@@ -1448,10 +1448,10 @@
     "m_Guid": {
         "m_GuidSerialized": "14fd65e7-6620-4588-9d26-b139e2f5caaa"
     },
-    "m_Name": "Float",
+    "m_Name": "GradientThresshold",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Float",
-    "m_DefaultReferenceName": "_Float",
+    "m_RefNameGeneratedByDisplayName": "GradientThresshold",
+    "m_DefaultReferenceName": "_GradientThresshold",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2075,7 +2075,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "5adb9ceebdaf4cc888f418745d41ebe2",
     "m_Id": 0,
-    "m_DisplayName": "Float",
+    "m_DisplayName": "GradientThresshold",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2235,10 +2235,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 788.666748046875,
-            "y": 214.6667022705078,
-            "width": 209.3333740234375,
-            "height": 304.0
+            "x": 744.6666259765625,
+            "y": 340.0000305175781,
+            "width": 209.33331298828126,
+            "height": 303.9999084472656
         }
     },
     "m_Slots": [
@@ -2931,10 +2931,10 @@
     "m_Guid": {
         "m_GuidSerialized": "0605c70e-933c-47ef-bc24-09530f1699e4"
     },
-    "m_Name": "Color",
+    "m_Name": "GradientColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Color",
-    "m_DefaultReferenceName": "_Color",
+    "m_RefNameGeneratedByDisplayName": "GradientColor",
+    "m_DefaultReferenceName": "_GradientColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -3812,7 +3812,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "ab84f50cc1b94981b843930a67b86e1e",
     "m_Id": 0,
-    "m_DisplayName": "Color",
+    "m_DisplayName": "GradientColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
