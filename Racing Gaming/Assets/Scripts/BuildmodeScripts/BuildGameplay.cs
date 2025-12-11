@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class BuildGameplay : MonoBehaviour
@@ -7,6 +9,12 @@ public class BuildGameplay : MonoBehaviour
     public static BuildGameplay Instance;
     public int[] trackTiles;
     public int[] trackTileConnectionPoints;
+    public int[] propAmountPerTracktile;
+    public int[] propIndexes;
+    public float[] positionsX;
+    public float[] positionsY;
+    public float[] positionsZ;
+
     [SerializeField] private List<TrackTile> tiles = new List<TrackTile>();
     [SerializeField] private bool shouldLoad;
     private List<TrackTile> _spawnedTiles = new List<TrackTile>();
@@ -24,19 +32,46 @@ public class BuildGameplay : MonoBehaviour
         if (shouldLoad) LoadBuild();
     }
 
-    public void SaveBuild(List<TrackTile> trackTileList, List<GameObject> trackTileGameObjects)
+    public void SaveBuild(List<TrackTile> trackTileList, List<GameObject> trackTileGameObjects, List<PropPlacement> props, List<int> propAmountPerTracktile)
     {
         List<int> trackTileIndexes = new List<int>();
         List<int> trackTileConnectionPointList = new List<int>();
+        List<int> propIndexes = new List<int>();
+        List<Vector3> positions = new List<Vector3>();
+        
 
         for (int i = 0; i < trackTileList.Count; i++)
         {
             trackTileIndexes.Add(trackTileList[i].index);
             trackTileConnectionPointList.Add(trackTileGameObjects[i].GetComponent<TracktileHandler>().GetUsedConnectionPointIndex());
+            
+        }
+
+        for (int i = 0; i < props.Count; i++)
+        {
+            propIndexes.Add(props[i].prop.index);
+            positions.Add(props[i].position);
         }
 
         trackTiles = trackTileIndexes.ToArray();
         trackTileConnectionPoints = trackTileConnectionPointList.ToArray();
+        this.propIndexes = propIndexes.ToArray();
+        this.propAmountPerTracktile = propAmountPerTracktile.ToArray();
+
+
+        positionsX = new float[positions.Count];
+        positionsY = new float[positions.Count];
+        positionsZ = new float[positions.Count];
+
+
+        for (int i = 0; i < positions.Count; i++)
+        {
+            positionsX[i] = positions[i].x;
+            positionsY[i] = positions[i].y;
+            positionsZ[i] = positions[i].z;
+        }
+
+
         BuildSaveSystem.SaveBuild(this);
     }
 
@@ -67,5 +102,8 @@ public class BuildGameplay : MonoBehaviour
             Debug.Log($"SpawnedTile {_spawnedTiles[i]}");
             BuildManager.Instance.SpawnTileInGame(_spawnedTiles[i], trackTileConnectionPoints[i]);
         }
+
+        BuildManager.Instance.SendDataToPropSpawner();
+
     }
 }

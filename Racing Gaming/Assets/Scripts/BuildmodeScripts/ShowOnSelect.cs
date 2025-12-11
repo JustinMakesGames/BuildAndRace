@@ -13,11 +13,7 @@ public class ShowOnSelect : MonoBehaviour, ISelectHandler, IDeselectHandler
             _image = image;
         }
 
-        if (TryGetComponent(out Button button)) 
-        {
-            button.onClick.AddListener(BuildManager.Instance.GetSpawnNewTileInput);
-            button.onClick.AddListener(BuildPlayerManagement.Instance.GiveTurnToNextPlayer);
-        }
+        
     }
     public void OnSelect(BaseEventData eventData)
     {

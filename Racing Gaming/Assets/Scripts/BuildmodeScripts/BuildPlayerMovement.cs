@@ -51,6 +51,8 @@ public class BuildPlayerMovement : MonoBehaviour
 
         cameraRotating.VerticalAxis.Value = Mathf.Clamp(cameraRotating.VerticalAxis.Value,
             cameraRotating.VerticalAxis.Range.x, cameraRotating.VerticalAxis.Range.y);
+
+        cameraRotating.Radius -= _scrollInput * scrollSpeed;
     }
     public void Scrolling(InputAction.CallbackContext context)
     {

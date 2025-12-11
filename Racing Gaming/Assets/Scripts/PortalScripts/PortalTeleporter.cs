@@ -13,6 +13,11 @@ public class PortalTeleporter : MonoBehaviour
 
     private void Awake()
     {
+        
+    }
+
+    private void Start()
+    {
         receiver = GameObject.FindGameObjectWithTag("Receiver").transform;
         GameObject.FindGameObjectWithTag("PortalCamera").GetComponent<PortalCamera>().SetOtherPortal(portalRenderer);
     }

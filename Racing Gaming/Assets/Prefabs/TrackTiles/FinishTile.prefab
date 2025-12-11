@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5045529714249221936}
   - component: {fileID: 9080044654606480419}
+  - component: {fileID: 781131628324372112}
   m_Layer: 0
   m_Name: FinishTile
   m_TagString: Untagged
@@ -233,6 +234,20 @@ MonoBehaviour:
   colliderFolder: {fileID: 7666793430655993278}
   waypointFolder: {fileID: 6525651352263700021}
   deathFolder: {fileID: 1783208685068178489}
+  spawnCollider: {fileID: 0}
+--- !u!114 &781131628324372112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879871799421254736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f8426970d2be0344b11f6bdac115cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PropTracktileManager
+  maxPropAmount: 3
 --- !u!1 &6545906282070229617
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,8 +342,8 @@ Transform:
   m_GameObject: {fileID: 8085041563910853017}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.351878, z: 0}
-  m_LocalScale: {x: 31, y: 17.729538, z: 95}
+  m_LocalPosition: {x: 0, y: 12, z: 0}
+  m_LocalScale: {x: 31, y: 23, z: 95}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7666793430655993278}
@@ -650,6 +665,10 @@ PrefabInstance:
     - target: {fileID: 2255359825569085917, guid: 97821ed2f6056c34e9432c2b63bef602, type: 3}
       propertyPath: m_Center.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502900940228274987, guid: 97821ed2f6056c34e9432c2b63bef602, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6488876984828656623, guid: 97821ed2f6056c34e9432c2b63bef602, type: 3}
       propertyPath: m_LocalPosition.x

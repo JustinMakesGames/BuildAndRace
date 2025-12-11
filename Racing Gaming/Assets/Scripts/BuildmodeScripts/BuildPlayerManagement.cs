@@ -11,6 +11,7 @@ public class BuildPlayerManagement : MonoBehaviour
     [SerializeField] private Transform playerFolder;
     [SerializeField] private List<Transform> buildPlayerPrefabs = new List<Transform>();
     [SerializeField] private List<Transform> spawnedBuildPlayers = new List<Transform>();
+    private bool _hasPlayersSpawned;
 
     private int _currentPlayerIndex;
 
@@ -21,27 +22,52 @@ public class BuildPlayerManagement : MonoBehaviour
             Instance = this;
         }
     }
+
+    private void Start()
+    {
+        if (!_hasPlayersSpawned)
+        {
+            SpawnPlayer(0);
+            GiveFirstPlayerTurn();
+        }
+    }
     public void SpawnPlayers(List<InputDevice> players)
     {
+        _hasPlayersSpawned = true;
         for (int i = 0; i < players.Count; i++)
         {
-            Transform spawnedPlayer = Instantiate(buildPlayerPrefabs[i], Vector3.zero, Quaternion.identity, playerFolder);
-            spawnedBuildPlayers.Add(spawnedPlayer);
-
-            if (spawnedBuildPlayers[i].TryGetComponent(out PlayerInput playerInput))
-            {
-                ConnectPlayerDevice(playerInput, players[i]);
-            }
+            SpawnPlayer(i);
+            ConnectDevice(players[i], i);
             
         }
 
+        GiveFirstPlayerTurn();
+
+        
+        
+    }
+
+    private void GiveFirstPlayerTurn()
+    {
         Transform player = spawnedBuildPlayers[_currentPlayerIndex];
         if (player.TryGetComponent(out BuildPlayerMovement buildPlayerMovement))
         {
             buildPlayerMovement.GivePlayerTurn();
             player.GetChild(0).gameObject.SetActive(true);
         }
-        
+    }
+
+    private void ConnectDevice(InputDevice device, int i)
+    {
+        if (spawnedBuildPlayers[i].TryGetComponent(out PlayerInput playerInput))
+        {
+            playerInput.SwitchCurrentControlScheme(device);
+        }
+    }
+    private void SpawnPlayer(int i)
+    {
+        Transform spawnedPlayer = Instantiate(buildPlayerPrefabs[i], Vector3.zero, Quaternion.identity, playerFolder);
+        spawnedBuildPlayers.Add(spawnedPlayer);     
     }
 
     private void ConnectPlayerDevice(PlayerInput playerInput, InputDevice inputDevice)

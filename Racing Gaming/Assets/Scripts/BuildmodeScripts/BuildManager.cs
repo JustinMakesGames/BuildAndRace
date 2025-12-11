@@ -131,8 +131,11 @@ public class BuildManager : MonoBehaviour
         {
             if (!isInRaceScene)
             {
-                BuildGameplay.Instance.SaveBuild(spawnedTrackTiles, spawnedObjects);
-                SceneManager.LoadScene("RaceScene");
+                //BuildGameplay.Instance.SaveBuild(spawnedTrackTiles, spawnedObjects);
+                //SceneManager.LoadScene("RaceScene");
+                FinishHandling.Instance.SetTracktiles(spawnedTrackTiles, spawnedObjects);
+                PropSpawnManager.Instance.SetVariables(spawnedObjects);
+                PropSpawnManager.Instance.SetPropBuildMode();
             }
 
             else
@@ -173,6 +176,11 @@ public class BuildManager : MonoBehaviour
         RotateDeathTrigger(connectionPointIndex);
         WaypointBuildHandler.Instance.MakeWaypointFolder(_shownTracktile.GetComponent<TracktileHandler>().GetWaypointFolder(), connectionPointIndex);
         SpawnNewTile(connectionPointIndex);
+    }
+
+    public void SendDataToPropSpawner()
+    {
+        PropInGameSpawner.Instance.LoadProps(spawnedObjects);
     }
 
     public void Rotate()
