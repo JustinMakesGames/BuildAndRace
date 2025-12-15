@@ -11,7 +11,7 @@ public class CharacterSelectionHandling : MonoBehaviour, IPressButton
         {
             menuPlayerHandler.SetCarStats(carStats);
             menuPlayerHandler.CloseSelection();
-            MenuManager.Instance.AddPlayerSelection(player);
+            MenuManager.Instance.AddPlayerSelection(player, carStats);
         }
 
         

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BuildGameplay : MonoBehaviour
@@ -14,6 +15,9 @@ public class BuildGameplay : MonoBehaviour
     public float[] positionsX;
     public float[] positionsY;
     public float[] positionsZ;
+    public float[] eulerAnglesX;
+    public float[] eulerAnglesY;
+    public float[] eulerAnglesZ;
 
     [SerializeField] private List<TrackTile> tiles = new List<TrackTile>();
     [SerializeField] private bool shouldLoad;
@@ -38,6 +42,7 @@ public class BuildGameplay : MonoBehaviour
         List<int> trackTileConnectionPointList = new List<int>();
         List<int> propIndexes = new List<int>();
         List<Vector3> positions = new List<Vector3>();
+        List<Vector3> eulerAngles = new List<Vector3>();
         
 
         for (int i = 0; i < trackTileList.Count; i++)
@@ -51,6 +56,7 @@ public class BuildGameplay : MonoBehaviour
         {
             propIndexes.Add(props[i].prop.index);
             positions.Add(props[i].position);
+            eulerAngles.Add(props[i].rotation);
         }
 
         trackTiles = trackTileIndexes.ToArray();
@@ -62,6 +68,9 @@ public class BuildGameplay : MonoBehaviour
         positionsX = new float[positions.Count];
         positionsY = new float[positions.Count];
         positionsZ = new float[positions.Count];
+        eulerAnglesX = new float[eulerAngles.Count];
+        eulerAnglesY = new float[eulerAngles.Count];
+        eulerAnglesZ = new float[eulerAngles.Count];
 
 
         for (int i = 0; i < positions.Count; i++)
@@ -69,6 +78,9 @@ public class BuildGameplay : MonoBehaviour
             positionsX[i] = positions[i].x;
             positionsY[i] = positions[i].y;
             positionsZ[i] = positions[i].z;
+            eulerAnglesX[i] = eulerAngles[i].x;
+            eulerAnglesY[i] = eulerAngles[i].y;
+            eulerAnglesZ[i] = eulerAngles[i].z;
         }
 
 

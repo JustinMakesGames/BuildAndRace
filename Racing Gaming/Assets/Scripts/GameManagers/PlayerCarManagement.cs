@@ -28,16 +28,17 @@ public class PlayerCarManagement : MonoBehaviour
         }
     }
 
-    public void SetPlayers(List<InputDevice> players)
+    public void SetPlayers(List<InputDevice> players, List<CarStats> carStats)
     {
         print("This function is being called.");
         for (int i = 0; i < players.Count; i++)
         {
-            carFolder.GetChild(i).GetComponent<ArcadeCarController>().SetPlayer(PlayerState.Player);
-            carFolder.GetChild(i).GetComponent<PlayerInput>().enabled = true;
-            carFolder.GetChild(i).GetComponent<PlayerInput>().SwitchCurrentControlScheme(players[i]);
-
+            var car = carFolder.GetChild(i);
+            car.GetComponent<ArcadeCarController>().SetPlayer(PlayerState.Player);
+            car.GetComponent<PlayerInput>().enabled = true;
+            car.GetComponent<PlayerInput>().SwitchCurrentControlScheme(players[i]);
             playableCars.Add(carFolder.GetChild(i));
+            car.GetComponent<ArcadeCarController>().SetVariables(carStats[i]);
         }
 
         HandleCameras();

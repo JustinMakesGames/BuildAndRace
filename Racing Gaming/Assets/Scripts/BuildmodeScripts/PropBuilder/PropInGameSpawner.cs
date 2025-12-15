@@ -8,6 +8,7 @@ public class PropInGameSpawner : MonoBehaviour
 
     [SerializeField] private List<PropScriptableObject> allProps = new List<PropScriptableObject>();
     [SerializeField] private List<Vector3> positions = new List<Vector3>();
+    [SerializeField] private List<Vector3> eulerAngles = new List<Vector3>();
 
     private List<GameObject> tracktiles = new List<GameObject>();
     private List<int> _propIndexes = new List<int>();
@@ -32,6 +33,7 @@ public class PropInGameSpawner : MonoBehaviour
         for (int i = 0; i < newData.positionsX.Length; i++)
         {
             positions.Add(new Vector3(newData.positionsX[i], newData.positionsY[i], newData.positionsZ[i]));
+            eulerAngles.Add(new Vector3(newData.eulerAnglesX[i], newData.eulerAnglesY[i], newData.eulerAnglesZ[i]));
         }
 
         SpawnTheProps();
@@ -68,6 +70,7 @@ public class PropInGameSpawner : MonoBehaviour
     {
         Transform prop = Instantiate(propScriptableObject.propGameObject, Vector3.zero, Quaternion.identity, tracktile.transform).transform;
         prop.localPosition = positions[index];
+        prop.localEulerAngles = eulerAngles[index];
         _currentPropPerTracktile++;
     }
 }

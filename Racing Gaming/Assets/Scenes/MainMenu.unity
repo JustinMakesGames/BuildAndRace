@@ -619,6 +619,7 @@ MonoBehaviour:
   characterSelectScreen: {fileID: 1557302558}
   characterSelectionFolder: {fileID: 1016812979}
   selectedPlayers: []
+  selectedCars: []
   gameModeSelectScreen: {fileID: 1265336180}
   gameModeSelectCursorFolder: {fileID: 1913038145}
 --- !u!114 &334238104
@@ -1815,7 +1816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1626195f062b29549a613b4d147d1594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSelectionHandling
-  carStats: {fileID: 11400000, guid: 5af02162ee6dfe040a2268e51ac317b7, type: 2}
+  carStats: {fileID: 11400000, guid: 8e18db74e4789284295f0c061b4d114b, type: 2}
 --- !u!114 &1214096157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2941,7 +2942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1626195f062b29549a613b4d147d1594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSelectionHandling
-  carStats: {fileID: 11400000, guid: 5af02162ee6dfe040a2268e51ac317b7, type: 2}
+  carStats: {fileID: 11400000, guid: 2e8d28feb5f829f4a8fd4fb6890452e2, type: 2}
 --- !u!114 &1524356991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3695,7 +3696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1626195f062b29549a613b4d147d1594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSelectionHandling
-  carStats: {fileID: 11400000, guid: 5af02162ee6dfe040a2268e51ac317b7, type: 2}
+  carStats: {fileID: 11400000, guid: 37d16e3d02dc08d4c902c32bb81643fa, type: 2}
 --- !u!114 &1990573174
 MonoBehaviour:
   m_ObjectHideFlags: 0

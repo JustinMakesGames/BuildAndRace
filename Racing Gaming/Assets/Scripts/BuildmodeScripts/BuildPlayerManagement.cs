@@ -95,5 +95,11 @@ public class BuildPlayerManagement : MonoBehaviour
 
     }
 
+    public void RemovePlayerTurn()
+    {
+        var playerMovement = spawnedBuildPlayers[_currentPlayerIndex].GetComponent<BuildPlayerMovement>();
+        playerMovement.RemovePlayerTurn();
+    }
+
     
 }

@@ -24,6 +24,11 @@ public class PropBuilderPlayerMovement : MonoBehaviour
     private Transform _cam;
 
     private bool _isPlayerTurn;
+
+    [Header("Handle Rotation")]
+    [SerializeField] private float rotationSpeed;
+    private bool _isRotating;
+    private float _yaw;
     
 
     private void Awake()
@@ -40,7 +45,7 @@ public class PropBuilderPlayerMovement : MonoBehaviour
 
     public void MoveNextTracktile(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.performed  && _isPlayerTurn)
         {
             PropSpawnManager.Instance.SetNextTracktile();
         }
@@ -48,11 +53,26 @@ public class PropBuilderPlayerMovement : MonoBehaviour
 
     public void MovePreviousTracktile(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.performed && _isPlayerTurn)
         {
             PropSpawnManager.Instance.SetPreviousTracktile();
         }
     }
+
+    public void RotateInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            _isRotating = true;
+        }
+
+        if (context.canceled)
+        {
+            _isRotating = false;
+        }
+    }
+
+
    
     public void SetPlayerTurn()
     {
@@ -64,6 +84,14 @@ public class PropBuilderPlayerMovement : MonoBehaviour
         _isPlayerTurn = true;
     }
 
+    public void DisablePlayerTurn()
+    {
+        print("Disable player turn");
+        buildCanvas.SetActive(false);
+        propCanvas.SetActive(false);
+
+        _isPlayerTurn = false;
+    }
     public void SetProp(Transform currentProp)
     {
         this.currentProp = currentProp;
@@ -81,6 +109,7 @@ public class PropBuilderPlayerMovement : MonoBehaviour
         if (!_isPlayerTurn) return;
         
         HandlePropMovement();
+        RotateProp();
     }
 
     private void HandlePropMovement()
@@ -114,7 +143,10 @@ public class PropBuilderPlayerMovement : MonoBehaviour
                 currentProp.position = hit.point;
 
 
-                currentProp.up = hit.normal;
+                Quaternion surfaceRotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+                Quaternion yawRotation = Quaternion.AngleAxis(_yaw, hit.normal);
+
+                currentProp.rotation = yawRotation * surfaceRotation;
             }
             else
             {
@@ -126,6 +158,15 @@ public class PropBuilderPlayerMovement : MonoBehaviour
         {
 
             return;
+        }
+    }
+
+    private void RotateProp()
+    {
+        if (_isRotating)
+        {
+            print("is rotating");
+            _yaw += rotationSpeed * Time.deltaTime;
         }
     }
 

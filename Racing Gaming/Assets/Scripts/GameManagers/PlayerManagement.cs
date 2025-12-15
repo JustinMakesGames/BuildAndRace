@@ -44,7 +44,7 @@ public class PlayerManagement : MonoBehaviour
 
         else if (scene.name == raceScene)
         {
-            PlayerCarManagement.Instance.SetPlayers(players);
+            PlayerCarManagement.Instance.SetPlayers(players, carStats);
         }
     }
 

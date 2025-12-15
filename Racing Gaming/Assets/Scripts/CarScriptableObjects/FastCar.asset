@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f76d668c891a9044a84f2b43198f832, type: 3}
+  m_Name: FastCar
+  m_EditorClassIdentifier: Assembly-CSharp::CarStats
+  motorModel: {fileID: 0}
+  carIndex: 0
+  maxSpeed: 80
+  accelerationSpeed: 900
+  steeringSpeed: 10

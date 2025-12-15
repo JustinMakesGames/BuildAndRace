@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f76d668c891a9044a84f2b43198f832, type: 3}
   m_Name: NormalCar
   m_EditorClassIdentifier: Assembly-CSharp::CarStats
+  motorModel: {fileID: 0}
   carIndex: 0
-  maxSpeed: 0
-  accelerationSpeed: 0
-  steeringSpeed: 0
+  maxSpeed: 60
+  accelerationSpeed: 1500
+  steeringSpeed: 15

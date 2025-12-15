@@ -12,6 +12,9 @@ public class BuildData
     public float[] positionsX;
     public float[] positionsY;
     public float[] positionsZ;
+    public float[] eulerAnglesX;
+    public float[] eulerAnglesY;
+    public float[] eulerAnglesZ;
 
     public BuildData(BuildGameplay buildGameplay)
     {
@@ -22,6 +25,9 @@ public class BuildData
         positionsX = buildGameplay.positionsX;
         positionsY = buildGameplay.positionsY;
         positionsZ = buildGameplay.positionsZ;
+        eulerAnglesX = buildGameplay.eulerAnglesX;
+        eulerAnglesY = buildGameplay.eulerAnglesY;
+        eulerAnglesZ = buildGameplay.eulerAnglesZ;
 
     }
 }

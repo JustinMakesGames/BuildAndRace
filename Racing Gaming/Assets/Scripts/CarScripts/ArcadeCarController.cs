@@ -101,6 +101,19 @@ public class ArcadeCarController : MonoBehaviour
     [Header("TeleporterHandling")]
     public CinemachineFollow cameraFollow;
 
+    [Header("Handle Car Hit")]
+    [SerializeField] private Transform motorModel;
+    [SerializeField] private float hitTime;
+    [SerializeField] private float rotateSpeed;
+    [SerializeField] private float motorDampingValue;
+    private bool _isHit;
+
+    [Header("Upright Stabilization")]
+    [SerializeField] private float uprightStrength = 20f;
+    [SerializeField] private float uprightDamping = 5f;
+    [SerializeField] private float maxUprightAngle = 60f;
+
+
 
     public void SetVerhicleOn()
     {
@@ -133,6 +146,7 @@ public class ArcadeCarController : MonoBehaviour
         {
             GetComponent<PlayerCarController>().enabled = true;
             GetComponent<AICarController>().enabled = false;
+            
         }
 
         else
@@ -140,6 +154,8 @@ public class ArcadeCarController : MonoBehaviour
             GetComponent<PlayerCarController>().enabled = false;
             GetComponent<AICarController>().enabled = true;
         }
+
+        this.state = state;
     }
     private void Update()
     {
@@ -148,6 +164,7 @@ public class ArcadeCarController : MonoBehaviour
         HandleDrifting();
         HandleGravity();
         BoostHandling();
+        RotateMotorHit();
     }
 
     private void FixedUpdate()
@@ -157,7 +174,14 @@ public class ArcadeCarController : MonoBehaviour
         SteeringHandling();
         SideDrag();
         ChargeDriftingBoost();
+        StabilizeUpright();
+    }
 
+    public void SetVariables(CarStats stats)
+    {
+        maxSpeed = stats.maxSpeed;
+        accelerationSpeed = stats.accelerationSpeed;
+        steeringStrength = stats.steeringSpeed;
     }
 
     //Make Random Variables
@@ -170,7 +194,7 @@ public class ArcadeCarController : MonoBehaviour
 
     public void SetInput(float accelerationInput, float steeringInput)
     {
-        if (!canDrive) return;
+        if (!canDrive || _isHit) return;
         _accelerationInput = accelerationInput;
         _steeringInput = steeringInput;
 
@@ -307,6 +331,7 @@ public class ArcadeCarController : MonoBehaviour
 
     private void CheckForDeceleration()
     {
+        if (_isHit) return;
 
         if (_accelerationInput == 0 || currentCarLocalVelocity.z > maxSpeed)
         {
@@ -492,6 +517,68 @@ public class ArcadeCarController : MonoBehaviour
 
         // Smooth rotation for stability
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * 5f);
+    }
+
+    public void HandleMotorHit()
+    {
+        if (_isHit) return;
+
+        StartCoroutine(HandleHitTime());
+    }
+
+    private IEnumerator HandleHitTime()
+    {
+        _isHit = true;
+        carRB.linearDamping = motorDampingValue;
+        _steeringInput = 0;
+        yield return new WaitForSeconds(hitTime);
+        _isHit = false;
+        motorModel.localEulerAngles = Vector3.zero;
+    }
+
+    private void RotateMotorHit()
+    {
+        if (_isHit)
+        {
+            motorModel.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+        }
+    }
+
+    private void StabilizeUpright()
+    {
+        // Desired up direction (anti-gravity aware)
+        Vector3 desiredUp = -_gravityDirection;
+
+        // Current up
+        Vector3 currentUp = transform.up;
+
+        // Axis needed to rotate currentUp to desiredUp
+        Vector3 correctionAxis = Vector3.Cross(currentUp, desiredUp);
+
+        float angle = Vector3.Angle(currentUp, desiredUp);
+
+        // Allow some tilt, but stop extreme flipping
+        if (angle > maxUprightAngle)
+        {
+            // Remove yaw influence (VERY important)
+            correctionAxis = Vector3.ProjectOnPlane(correctionAxis, transform.up);
+
+            // Counteract angular velocity except yaw
+            Vector3 angVel = carRB.angularVelocity;
+            Vector3 angVelNoYaw = Vector3.ProjectOnPlane(angVel, transform.up);
+
+            carRB.AddTorque(
+                correctionAxis.normalized * uprightStrength * angle
+                - angVelNoYaw * uprightDamping,
+                ForceMode.Acceleration
+            );
+        }
+    }
+
+
+    public PlayerState ReturnPlayerState()
+    {
+        return state;
     }
 
 }

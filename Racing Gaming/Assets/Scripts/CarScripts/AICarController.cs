@@ -57,6 +57,14 @@ public class AICarController : MonoBehaviour
     private Vector3 _previousPosition;
     private bool _isReversing;
 
+    [Header("ItemBox Targeting")]
+    [SerializeField] private float itemDetectDistance = 20f;
+    [SerializeField] private float itemDetectRadius = 1.5f;
+    [SerializeField] private LayerMask itemLayer;
+
+    private Transform _itemTarget;
+    private bool _hasItemTarget;
+
     private void Start()
     {
         _carController = GetComponent<ArcadeCarController>();
@@ -92,6 +100,7 @@ public class AICarController : MonoBehaviour
     {
         DrawWayPointLines();
         CheckWayPointsDistance();
+        HandleItemBoxTargeting();
         HandleMiniWayPoints();
         HandleReversing();
         HandleAccelerating();
@@ -143,13 +152,54 @@ public class AICarController : MonoBehaviour
         }
 
         // Apply avoidance offset
-        float avoidanceStrength = 10f; // lateral movement
+        float avoidanceStrength = 10f;
         Vector3 offset = transform.right * _avoidanceDir * avoidanceStrength;
 
-        _destination = transform.position + dirToWayPoint * miniWayPointDistance + offset;
+        // 🔹 ItemBox override
+        if (_hasItemTarget && _itemTarget != null)
+        {
+            _destination = _itemTarget.position + offset;
+            Debug.DrawLine(transform.position, _destination, Color.magenta);
+            return;
+        }
 
-        // Optional: draw destination line
+        // 🔹 Default waypoint destination
+        _destination = transform.position + dirToWayPoint * miniWayPointDistance + offset;
         Debug.DrawLine(transform.position, _destination, Color.blue);
+
+    }
+
+    private void HandleItemBoxTargeting()
+    {
+        if (_isReversing) return;
+
+        RaycastHit hit;
+        Vector3 origin = transform.position + Vector3.up;
+
+        if (Physics.SphereCast(
+            origin,
+            itemDetectRadius,
+            transform.forward,
+            out hit,
+            itemDetectDistance,
+            itemLayer))
+        {
+            if (hit.collider.CompareTag("ItemBox"))
+            {
+                Vector3 dirToItem = (hit.transform.position - transform.position).normalized;
+
+                // Must be in front of the car
+                if (Vector3.Dot(transform.forward, dirToItem) > 0.25f)
+                {
+                    _itemTarget = hit.transform;
+                    _hasItemTarget = true;
+                    return;
+                }
+            }
+        }
+
+        _hasItemTarget = false;
+        _itemTarget = null;
     }
 
     private void HandleReversing()

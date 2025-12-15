@@ -13,7 +13,12 @@ public class TrackTileButtonHandler : MonoBehaviour, ISelectHandler
         if (TryGetComponent(out Button button))
         {
             button.onClick.AddListener(BuildManager.Instance.GetSpawnNewTileInput);
-            if (isFinishTile) return;
+            if (isFinishTile) 
+            {
+                button.onClick.AddListener(BuildPlayerManagement.Instance.RemovePlayerTurn);
+                return;
+
+            } 
             button.onClick.AddListener(BuildPlayerManagement.Instance.GiveTurnToNextPlayer);
         }
     }

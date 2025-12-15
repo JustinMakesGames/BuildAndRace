@@ -15,6 +15,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private List<Transform> players = new List<Transform>();
     [SerializeField] private List<Transform> playerSelectionCursors = new List<Transform>();
     [SerializeField] private Transform playerCursorFolder;
+    
     [Header("Main Menu")]
     [SerializeField] private Transform menu;
     [SerializeField] private Transform menuSelectionFolder;
@@ -24,6 +25,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject characterSelectScreen;
     [SerializeField] private GameObject characterSelectionFolder;
     [SerializeField] private List<Transform> selectedPlayers = new List<Transform>();
+    [SerializeField] private List<CarStats> selectedCars = new List<CarStats>();
     private bool _isInCharacterSelectScreen;
 
     [Header("Build Mode Screen")]
@@ -50,9 +52,7 @@ public class MenuManager : MonoBehaviour
         {
             playerSelectionCursors[i].gameObject.SetActive(true);
 
-            players[i].GetComponent<MenuPlayerHandler>().SetPlayerUI(characterSelectionFolder.transform, i, playerSelectionCursors[i]);
-
-            
+            players[i].GetComponent<MenuPlayerHandler>().SetPlayerUI(characterSelectionFolder.transform, i, playerSelectionCursors[i]);       
         }
     }
 
@@ -88,21 +88,30 @@ public class MenuManager : MonoBehaviour
 
     }
 
-    public void AddPlayerSelection(Transform player)
+    public void AddPlayerSelection(Transform player, CarStats carStats)
     {
         selectedPlayers.Add(player);
+        selectedCars.Add(carStats);
 
         if (selectedPlayers.Count >= _currentPlayerCount)
         {
+
             StartCoroutine(WaitForSelection());
         }
     }
+
+    
 
     private IEnumerator WaitForSelection()
     {
         yield return new WaitForSeconds(1);
         MoveUIScreens(gameModeSelectScreen, gameModeSelectCursorFolder);
         CancelPlayerSelectedButton();
+        
+        if (TryGetComponent(out PlayerManagement playerManagement))
+        {
+            playerManagement.
+        }
     }
 
     private void CancelPlayerSelectedButton()

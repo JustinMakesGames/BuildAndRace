@@ -13,7 +13,6 @@ public class PropSpawnManager : MonoBehaviour
     [SerializeField] private Transform currentTrackTile;
     [SerializeField] private LayerMask colliderMask;
     private int _trackTileIndex;
-    private int _previousTracktileIndex;
     private Transform _spawnCollider; 
 
 
@@ -43,7 +42,10 @@ public class PropSpawnManager : MonoBehaviour
 
     public void SetVariables(List<GameObject> trackTiles)
     {
-        this.trackTiles = trackTiles;
+        for (int i = 0; i < trackTiles.Count; i++)
+        {
+            this.trackTiles.Add(trackTiles[i]);
+        }
         this.trackTiles.RemoveAt(this.trackTiles.Count - 1);
 
         for (int i = 0; i < playerFolder.childCount; i++)
@@ -57,8 +59,6 @@ public class PropSpawnManager : MonoBehaviour
         SetTracktile(trackTiles[_trackTileIndex].transform);
         SetPlayer();
         SetCamera();
-        
-
     }
 
     public void SetPlayer()
@@ -76,8 +76,7 @@ public class PropSpawnManager : MonoBehaviour
         print("Next tracktile");
         if (_trackTileIndex + 1 >= trackTiles.Count) return;
         _trackTileIndex++;
-        SetPropBuildMode();
-        prop.transform.position = ReturnSpawnPosition();
+        MovePropToTile();
     }
 
     public void SetPreviousTracktile()
@@ -85,13 +84,21 @@ public class PropSpawnManager : MonoBehaviour
         print("Previous tracktile");
         if (_trackTileIndex - 1 < 0) return;
         _trackTileIndex--;
+        MovePropToTile();
+        
+    }
+
+    private void MovePropToTile()
+    {
         SetPropBuildMode();
+        prop.transform.rotation = currentTrackTile.rotation;
         prop.transform.position = ReturnSpawnPosition();
     }
 
     public void SetTracktile(Transform tracktile)
     {
         currentTrackTile = tracktile;
+        _spawnCollider = currentTrackTile.GetComponent<TracktileHandler>().ReturnSpawnCollider();
 
     } 
 
@@ -118,11 +125,23 @@ public class PropSpawnManager : MonoBehaviour
     }
     private Vector3 ReturnSpawnPosition()
     {
-        _spawnCollider = currentTrackTile
-         .GetComponent<TracktileHandler>()
+        currentTrackTile.TryGetComponent(out TracktileHandler trackTileHandler);
+
+        _spawnCollider = trackTileHandler
          .ReturnSpawnCollider();
 
-        Vector3 rayStart = _spawnCollider.GetComponent<Collider>().bounds.center;
+        Vector3 rayStart = Vector3.zero;
+
+        if (trackTileHandler.ReturnSpawnPosition() != null)
+        {
+            rayStart = trackTileHandler.ReturnSpawnPosition().position;
+        }
+
+        else
+        {
+            rayStart = _spawnCollider.GetComponent<Collider>().bounds.center;
+        }
+        
 
         Vector3 spawnPosition = _spawnCollider.GetComponent<Collider>().ClosestPoint(rayStart) + currentTrackTile.up * 10f;
         if (Physics.Raycast(spawnPosition, -currentTrackTile.up, out RaycastHit hit, Mathf.Infinity, colliderMask))
@@ -145,6 +164,16 @@ public class PropSpawnManager : MonoBehaviour
         Transform spawnedProp = Instantiate(prop, prop.transform.position, prop.transform.rotation, currentTrackTile).transform;
 
         propTracktileManager.AddProp(spawnedProp.GetComponent<PropHandler>().propScriptableObject, spawnedProp.localPosition, spawnedProp.localEulerAngles);
+
+        ChangePlayerTurn();
+    }
+
+    private void ChangePlayerTurn()
+    {
+        var oldPlayer = currentPlayer.GetComponent<PropBuilderPlayerMovement>();
+        oldPlayer.DisablePlayerTurn();
+        _playerIndex = (_playerIndex >= _players.Count - 1) ? 0 : _playerIndex + 1;
+        SetPropBuildMode();
     }
 
     

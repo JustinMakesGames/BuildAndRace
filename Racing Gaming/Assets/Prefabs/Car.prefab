@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 7469205902048090540}
   - component: {fileID: 6044911514195730120}
   - component: {fileID: 6033817569790457256}
+  - component: {fileID: 6649170738461477425}
   m_Layer: 7
   m_Name: Car
   m_TagString: Player
@@ -579,7 +580,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  restLength: 1
+  restLength: 0.5
   dampStiffness: 3000
   springStiffness: 30000
   springTravel: 0.5
@@ -626,6 +627,10 @@ MonoBehaviour:
   shouldRandomizeValues: 0
   canDrive: 1
   cameraFollow: {fileID: 0}
+  motorModel: {fileID: 483269118295291401}
+  hitTime: 2
+  rotateSpeed: 300
+  motorDampingValue: 20
 --- !u!54 &5900071378268209900
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -742,6 +747,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ce3d52d3-652f-40cf-872a-7c26eadcc82b
     m_ActionName: 'BuildMode/CameraRotate[/Mouse/delta,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6649170738461477425}
+        m_TargetAssemblyTypeName: ItemPlayerHandler, Assembly-CSharp
+        m_MethodName: ItemUseInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e0e6773b-0426-47ba-9e01-6d6341418346
+    m_ActionName: 'Player/ItemUse[/Keyboard/leftShift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
@@ -788,6 +809,11 @@ MonoBehaviour:
   checkInterval: 2
   maxPositionDistance: 5
   reverseInterval: 2
+  itemDetectDistance: 25
+  itemDetectRadius: 2
+  itemLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!114 &6305537314429515060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,6 +906,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DeathplanePlayerHandler
   deathPlanes: []
   respawnPosition: {fileID: 0}
+--- !u!114 &6649170738461477425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4234713079018324115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d31caab3d645964a80cc1c2f49c4888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPlayerHandler
+  itemImage: {fileID: 5065681068632153119}
+  sprites: []
+  rouletteInterval: 3
+  itemScriptableObject: {fileID: 0}
+  minTimeInput: 0.5
+  maxTimeInput: 5
 --- !u!1 &4286372262411761428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,6 +1823,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7622826473218514315, guid: fc49f03013e14a04a9af09d372554318, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622826473218514315, guid: fc49f03013e14a04a9af09d372554318, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622826473218514315, guid: fc49f03013e14a04a9af09d372554318, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1805,6 +1861,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7606094991795044953, guid: fc49f03013e14a04a9af09d372554318, type: 3}
   m_PrefabInstance: {fileID: 3424233655258546580}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5065681068632153119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7622826473218514315, guid: fc49f03013e14a04a9af09d372554318, type: 3}
+  m_PrefabInstance: {fileID: 3424233655258546580}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!114 &7112682694221193616 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5561947069691781124, guid: fc49f03013e14a04a9af09d372554318, type: 3}

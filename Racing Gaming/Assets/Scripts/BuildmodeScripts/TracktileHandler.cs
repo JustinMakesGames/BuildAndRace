@@ -18,6 +18,7 @@ public class TracktileHandler : MonoBehaviour
 
     [SerializeField] private Transform deathFolder;
     [SerializeField] private Transform spawnCollider;
+    [SerializeField] private Transform spawnPosition;
 
     //Setters
     public void SetConnectedPoint(Transform connectedPoint)
@@ -89,5 +90,10 @@ public class TracktileHandler : MonoBehaviour
     public Transform ReturnSpawnCollider()
     {
         return spawnCollider;
+    }
+
+    public Transform ReturnSpawnPosition()
+    {
+        return spawnPosition;
     }
 }
