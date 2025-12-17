@@ -17756,6 +17756,63 @@ PrefabInstance:
       addedObject: {fileID: 242562788}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfea43e4753e68c4289a4fde5fa96d8d, type: 3}
+--- !u!1001 &4955641283232128436
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4996090654134486655, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629074394122132677, guid: cdecea323f483e649938e64e37b4241e, type: 3}
+      propertyPath: m_Name
+      value: RacetrackRampDown
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cdecea323f483e649938e64e37b4241e, type: 3}
 --- !u!4 &6176235145315466555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 743830889229357145, guid: 7d507ab0c0e23f841b2087d0bf884f46, type: 3}
@@ -18369,3 +18426,4 @@ SceneRoots:
   - {fileID: 1020041830}
   - {fileID: 1200900847}
   - {fileID: 1371310556}
+  - {fileID: 4955641283232128436}

@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlphaTexture:
-        m_Texture: {fileID: 2800000, guid: ac7fc946df62e574e9e9ad60e3606b9d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0de81acbdab0828419fd5742ff8a8e00, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -136,9 +136,11 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+    - _StepSpeed: 2
     - _Surface: 0
     - _Tiling: -0.03
     - _Tiling_light: 0.05
+    - _Timescale: 2
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
@@ -146,12 +148,13 @@ Material:
     - _BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Base_color: {r: 0, g: 0, b: 0, a: 1}
-    - _Color: {r: 0.0073424703, g: 0.111532345, b: 0.14150941, a: 1}
+    - _Color: {r: 1, g: 0.58961695, b: 0, a: 1}
     - _Direction: {r: 0, g: -2.5, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightColor: {r: 0, g: 0.49019623, b: 1, a: 1}
     - _Offset: {r: 0.2, g: 0, b: 0, a: 0}
     - _Pattern_color: {r: 0, g: 0.4135797, b: 1, a: 1}
+    - _PixelSize: {r: 200, g: 200, b: 0, a: 0}
     - _Secundary_Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 17.26, g: -22.9, b: 0, a: 0}
