@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f76d668c891a9044a84f2b43198f832, type: 3}
   m_Name: FastCar
   m_EditorClassIdentifier: Assembly-CSharp::CarStats
-  motorModel: {fileID: 0}
+  motorModel: {fileID: 5723298751033588627, guid: 3cda7f330676e3947ab89832c8649186, type: 3}
   carIndex: 0
   maxSpeed: 80
   accelerationSpeed: 900

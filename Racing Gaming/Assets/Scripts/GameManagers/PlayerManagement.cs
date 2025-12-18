@@ -1,12 +1,15 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayerManagement : MonoBehaviour
 {
+    public static PlayerManagement Instance;
+
     [SerializeField] private List<InputDevice> players = new List<InputDevice>();
-    [SerializeField] private Dictionary<Transform, CarStats> playerCars = new Dictionary<Transform, CarStats>(); //Player with car
+    [SerializeField] private List<CarStats> carStatsList = new List<CarStats>();
 
     //Build Mode Management
     [SerializeField] private string buildScene;
@@ -14,25 +17,34 @@ public class PlayerManagement : MonoBehaviour
     //Race Scene Management
     [SerializeField] private string raceScene;
 
+    private void Awake()
+    {
+        if (Instance != this)
+        {
+            Instance = this;
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     private void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoad;
     }
-    public void PlayerJoined(PlayerInput playerInput)
+    
+
+    public void SelectPlayerCar(InputDevice player, CarStats carStats)
     {
-        if (SceneManager.GetActiveScene().name == buildScene) return;
-        players.Add(playerInput.user.pairedDevices[0]);
- 
+        players.Add(player);
+        carStatsList.Add(carStats);
     }
 
-    public void SelectPlayerCar(Transform player, CarStats carStats)
+    public void RemovePlayerCar(int index)
     {
-        playerCars.Add(player, carStats);
-    }
-
-    public void RemovePlayerCar(Transform player)
-    {
-        playerCars.Remove(player);
+        players.RemoveAt(index);
+        carStatsList.RemoveAt(index);
     }
 
     private void OnSceneLoad(Scene scene, LoadSceneMode loadSceneMode) 
@@ -44,7 +56,7 @@ public class PlayerManagement : MonoBehaviour
 
         else if (scene.name == raceScene)
         {
-            PlayerCarManagement.Instance.SetPlayers(players, carStats);
+            PlayerCarManagement.Instance.SetPlayers(players, carStatsList);
         }
     }
 

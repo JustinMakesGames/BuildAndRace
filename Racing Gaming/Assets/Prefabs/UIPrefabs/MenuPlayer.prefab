@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6469631458140075952}
   - component: {fileID: 7371424430738371863}
   - component: {fileID: 7832113511708027719}
+  - component: {fileID: 6680083688755993511}
   m_Layer: 0
   m_Name: MenuPlayer
   m_TagString: Untagged
@@ -158,6 +159,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9eb8e8b7-4eb5-4307-9646-240631b94e02
+    m_ActionName: 'Player/NextButton[/Keyboard/2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 96240859-75c6-48be-b0b8-e6540bbc2a50
+    m_ActionName: 'Player/PreviousButton[/Keyboard/1]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI
@@ -180,3 +189,15 @@ MonoBehaviour:
   playerCursor: {fileID: 0}
   carStats: {fileID: 0}
   selectionAnimator: {fileID: 0}
+--- !u!114 &6680083688755993511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612685824273184117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83bcd72aafa86e74b94ae5b5853d5f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMotorRotationHandling

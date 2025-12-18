@@ -310,6 +310,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 96240859-75c6-48be-b0b8-e6540bbc2a50
     m_ActionName: Player/PreviousButton
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3439432573299658494}
+        m_TargetAssemblyTypeName: BuildPlayerMovement, Assembly-CSharp
+        m_MethodName: SwitchNextTab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f8efb3cc-e295-48ec-a3f0-1efb1b702c30
+    m_ActionName: 'Player/NextTab[/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3439432573299658494}
+        m_TargetAssemblyTypeName: BuildPlayerMovement, Assembly-CSharp
+        m_MethodName: SwitchPreviousTab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bf7d9834-52f1-4e41-8747-db696a1f1003
+    m_ActionName: 'Player/PreviousTab[/Keyboard/leftArrow]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -332,6 +364,9 @@ MonoBehaviour:
   mouseCameraSpeed: 20
   scrollSpeed: 2
   _scrollInput: 0
+  tabsFolder: {fileID: 7909226566944103861}
+  _eventSystem: {fileID: 4164539099255923768}
+  verticalOffset: 15
 --- !u!114 &3043504215174834191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,6 +499,11 @@ GameObject:
 --- !u!224 &6144550813885610176 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1292267492779490133, guid: 6e174ce803fbb9e488e253486d78e0d9, type: 3}
+  m_PrefabInstance: {fileID: 4948006941128049557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &7909226566944103861 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2984177570608832032, guid: 6e174ce803fbb9e488e253486d78e0d9, type: 3}
   m_PrefabInstance: {fileID: 4948006941128049557}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9052914706435675221

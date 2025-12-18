@@ -71,6 +71,11 @@ public class MenuManager : MonoBehaviour
             playerHandler.SetPlayer(_currentPlayerCount);
         }
 
+        if (playerInput.TryGetComponent(out PlayerMotorRotationHandling motorRotationHandling))
+        {
+            motorRotationHandling.SetIndex(_currentPlayerCount);
+        }
+
         if (_currentPlayerCount == 0)
         {
             MoveUIScreens(menu, menuSelectionFolder);
@@ -110,7 +115,7 @@ public class MenuManager : MonoBehaviour
         
         if (TryGetComponent(out PlayerManagement playerManagement))
         {
-            playerManagement.
+            
         }
     }
 

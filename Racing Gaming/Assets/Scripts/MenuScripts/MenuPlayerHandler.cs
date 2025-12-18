@@ -118,6 +118,11 @@ public class MenuPlayerHandler : MonoBehaviour
     {
         playerCursor.position = _selections[_currentLocationIndex].GetChild(playerIndex).position;
         _selectedButton = _selections[_currentLocationIndex].GetComponent<IPressButton>();
+
+        if (_selections[_currentLocationIndex].TryGetComponent(out IHandleSelection handleSelection))
+        {
+            handleSelection.OnSelected(transform);
+        }
     }
 
     public void SetCarStats(CarStats stats)

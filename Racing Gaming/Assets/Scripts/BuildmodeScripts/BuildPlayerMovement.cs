@@ -1,6 +1,9 @@
+using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
+
 public class BuildPlayerMovement : MonoBehaviour
 {
     [SerializeField] private CinemachineOrbitalFollow cameraRotating;
@@ -15,14 +18,37 @@ public class BuildPlayerMovement : MonoBehaviour
 
     private bool _isPlayerTurn;
 
+    //Handle Tabs
+    [SerializeField] private Transform tabsFolder;
+    [SerializeField] private MultiplayerEventSystem _eventSystem;
+    [SerializeField] private float verticalOffset;
+    private List<Transform> _tabs = new List<Transform>();
+    private int _currentTabIndex;
+
+    private Transform _currentTab;
+    private Transform _previousTab;
+
+    private void Awake()
+    {
+        for (int i = 0; i < tabsFolder.childCount; i++)
+        {
+            _tabs.Add(tabsFolder.GetChild(i));
+        }
+
+        
+    }
+
     private void Start()
     {
         cameraRotating = GameObject.FindGameObjectWithTag("CinemachineCamera").GetComponent<CinemachineOrbitalFollow>();
+        HandleNewTab();
     }
     private void LateUpdate()
     {
         HandleCameraRotation();
     }
+
+    
     public void RotateCamera(InputAction.CallbackContext context)
     {
         if (!_isPlayerTurn) return;
@@ -76,6 +102,50 @@ public class BuildPlayerMovement : MonoBehaviour
         {
             BuildManager.Instance.RemovePiece();
         }
+    }
+
+    public void SwitchNextTab(InputAction.CallbackContext context)
+    {
+        if (!_isPlayerTurn) return;
+        if (context.started && _currentTabIndex + 1 < _tabs.Count)
+        {
+            _currentTabIndex++;
+            HandleNewTab();
+        }
+    }
+
+    public void SwitchPreviousTab(InputAction.CallbackContext context)
+    {
+        if (!_isPlayerTurn) return;
+        if (context.started && _currentTabIndex - 1 >= 0)
+        {
+            _currentTabIndex--;
+            HandleNewTab();
+        }
+    }
+
+    private void HandleNewTab()
+    {
+        _currentTab = _tabs[_currentTabIndex];
+        var tabScript = _currentTab.GetComponent<TabsManagement>();
+
+        GameObject gamePage = tabScript.ReturnGamepage();
+        GameObject selectedButton = tabScript.ReturnSelectedButton();
+        gamePage.SetActive(true);
+        _eventSystem.SetSelectedGameObject(selectedButton);
+
+        _currentTab.position += new Vector3(0, verticalOffset, 0);
+
+        if (_previousTab == null)
+        {
+            _previousTab = _currentTab;
+            return;
+        }
+        _previousTab.GetComponent<TabsManagement>().ReturnGamepage().SetActive(false);
+        _previousTab.position -= new Vector3(0, verticalOffset, 0);
+
+        _previousTab = _currentTab;
+        
     }
 
     public void GivePlayerTurn()

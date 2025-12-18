@@ -36,6 +36,7 @@ public class BuildPlayerManagement : MonoBehaviour
         _hasPlayersSpawned = true;
         for (int i = 0; i < players.Count; i++)
         {
+            print(players[i].name);
             SpawnPlayer(i);
             ConnectDevice(players[i], i);
             
