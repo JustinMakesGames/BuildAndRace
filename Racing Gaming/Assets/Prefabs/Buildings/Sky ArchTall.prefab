@@ -144,6 +144,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1858813384929911899, guid: 6c4acabe4247f534486f7adc02cff9eb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f8707709a478c4498280524ce9bcf14, type: 2}
+    - target: {fileID: 1858813384929911899, guid: 6c4acabe4247f534486f7adc02cff9eb, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7eb8e87d7d7584c4d97249d66014b227, type: 2}
     - target: {fileID: 8000035890750723299, guid: 6c4acabe4247f534486f7adc02cff9eb, type: 3}
       propertyPath: m_Name
       value: Sky arch bottom (1)
