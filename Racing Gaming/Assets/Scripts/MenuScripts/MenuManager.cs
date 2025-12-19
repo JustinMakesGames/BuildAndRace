@@ -52,15 +52,15 @@ public class MenuManager : MonoBehaviour
         {
             playerSelectionCursors[i].gameObject.SetActive(true);
 
-            players[i].GetComponent<MenuPlayerHandler>().SetPlayerUI(characterSelectionFolder.transform, i, playerSelectionCursors[i]);       
+            players[i].GetComponent<MenuPlayerHandler>().SetPlayerUI(characterSelectScreen.transform, characterSelectionFolder.transform, i, playerSelectionCursors[i]);       
         }
     }
 
-    public void ShowPlayerOneSelectionScreen(Transform selectFolder)
+    public void ShowPlayerOneSelectionScreen(Transform menuScreen, Transform selectFolder)
     {
         playerSelectionCursors[0].gameObject.SetActive(true);
 
-        players[0].GetComponent<MenuPlayerHandler>().SetPlayerUI(selectFolder, 0, playerSelectionCursors[0]);
+        players[0].GetComponent<MenuPlayerHandler>().SetPlayerUI(menuScreen, selectFolder, 0, playerSelectionCursors[0]);
     }
     public void PlayerJoined(PlayerInput playerInput)
     {
@@ -85,7 +85,7 @@ public class MenuManager : MonoBehaviour
         {
             playerSelectionCursors[_currentPlayerCount].gameObject.SetActive(true);
 
-            playerHandler.SetPlayerUI(characterSelectionFolder.transform, _currentPlayerCount,
+            playerHandler.SetPlayerUI(characterSelectScreen.transform, characterSelectionFolder.transform, _currentPlayerCount,
                 playerSelectionCursors[_currentPlayerCount]);
             
         }
@@ -125,7 +125,7 @@ public class MenuManager : MonoBehaviour
         {
             if (player.TryGetComponent(out MenuPlayerHandler playerHandler))
             {
-                playerHandler.CancelHandling();
+                playerHandler.CancelMotorSelection();
             }
         }
     }
@@ -139,7 +139,7 @@ public class MenuManager : MonoBehaviour
             screen.gameObject.SetActive(isMenuScreen);
         }
 
-        ShowPlayerOneSelectionScreen(cursorSelectFolder);
+        ShowPlayerOneSelectionScreen(menuScreen, cursorSelectFolder);
     }
 
     public void HandleSelectionScreen()
@@ -150,7 +150,7 @@ public class MenuManager : MonoBehaviour
         {
             if (players[i].TryGetComponent(out MenuPlayerHandler playerHandler))
             {
-                playerHandler.SetPlayerUI(characterSelectionFolder.transform, i, playerSelectionCursors[i]);
+                playerHandler.SetPlayerUI(characterSelectScreen.transform, characterSelectionFolder.transform, i, playerSelectionCursors[i]);
             }
         }
     }

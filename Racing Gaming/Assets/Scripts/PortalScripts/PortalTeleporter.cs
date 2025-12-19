@@ -11,11 +11,6 @@ public class PortalTeleporter : MonoBehaviour
     // Track which players have already teleported so we don't double teleport
     private HashSet<Transform> teleportedPlayers = new HashSet<Transform>();
 
-    private void Awake()
-    {
-        
-    }
-
     private void Start()
     {
         receiver = GameObject.FindGameObjectWithTag("Receiver").transform;
