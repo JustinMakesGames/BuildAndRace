@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
@@ -15,6 +16,7 @@ public class PropBuilderPlayerMovement : MonoBehaviour
     
     [Header("Handle Movement")]
     [SerializeField] private float moveSpeed;
+    [SerializeField] private Transform camPosition;
     private Vector2 _movement;
 
     [Header("Handle Tracktile")]
@@ -29,11 +31,21 @@ public class PropBuilderPlayerMovement : MonoBehaviour
     [SerializeField] private float rotationSpeed;
     private bool _isRotating;
     private float _yaw;
-    
+
+    [Header("Handle Camera Movement")]
+    [SerializeField] private CinemachineOrbitalFollow cameraRotating;
+    [SerializeField] private float controllerCameraSpeed;
+    [SerializeField] private float mouseCameraSpeed;
+    private float _cameraSpeed;
+    private Vector2 _cameraInput;
+
+
 
     private void Awake()
     {
         _cam = Camera.main.transform;
+        GameObject.FindGameObjectWithTag("CinemachineCamera").TryGetComponent(out CinemachineOrbitalFollow orbitalFollow);
+        cameraRotating = orbitalFollow;
     }
 
     
@@ -57,6 +69,40 @@ public class PropBuilderPlayerMovement : MonoBehaviour
         {
             PropSpawnManager.Instance.SetPreviousTracktile();
         }
+    }
+
+    public void RotateCamera(InputAction.CallbackContext context)
+    {
+        if (!_isPlayerTurn) return;
+        _cameraInput = context.ReadValue<Vector2>();
+
+        InputDevice device = context.control.device;
+
+        if (device is Gamepad)
+        {
+            _cameraSpeed = controllerCameraSpeed;
+        }
+
+        else
+        {
+            _cameraSpeed = mouseCameraSpeed;
+        }
+
+
+    }
+
+    private void LateUpdate()
+    {
+        HandleCameraRotation();
+    }
+
+    private void HandleCameraRotation()
+    {
+        cameraRotating.HorizontalAxis.Value += _cameraInput.x * _cameraSpeed * Time.deltaTime;
+        cameraRotating.VerticalAxis.Value += _cameraInput.y * _cameraSpeed * Time.deltaTime;
+
+        cameraRotating.VerticalAxis.Value = Mathf.Clamp(cameraRotating.VerticalAxis.Value,
+            cameraRotating.VerticalAxis.Range.x, cameraRotating.VerticalAxis.Range.y);
     }
 
     public void RotateInput(InputAction.CallbackContext context)
@@ -92,9 +138,10 @@ public class PropBuilderPlayerMovement : MonoBehaviour
 
         _isPlayerTurn = false;
     }
-    public void SetProp(Transform currentProp)
+    public void SetProp(Transform currentProp, Transform camPosition)
     {
         this.currentProp = currentProp;
+        this.camPosition = camPosition;
     }
 
     public void SetTracktile(Transform tracktile, Transform spawnCollider)
@@ -145,8 +192,12 @@ public class PropBuilderPlayerMovement : MonoBehaviour
 
                 Quaternion surfaceRotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
                 Quaternion yawRotation = Quaternion.AngleAxis(_yaw, hit.normal);
+                Quaternion yawRotationCamPosition = Quaternion.AngleAxis(0, hit.normal);
 
                 currentProp.rotation = yawRotation * surfaceRotation;
+
+                camPosition.position = currentProp.position;
+                camPosition.rotation = yawRotationCamPosition * surfaceRotation;
             }
             else
             {

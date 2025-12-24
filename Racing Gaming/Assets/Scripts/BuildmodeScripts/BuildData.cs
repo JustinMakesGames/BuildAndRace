@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class BuildData
 {
+    public string levelName;
     public int[] trackTiles;
     public int[] trackTileConnectionPoints;
 
@@ -18,6 +19,7 @@ public class BuildData
 
     public BuildData(BuildGameplay buildGameplay)
     {
+        levelName = buildGameplay.levelName;
         trackTiles = buildGameplay.trackTiles;
         trackTileConnectionPoints = buildGameplay.trackTileConnectionPoints;
         tracktilePropAmount = buildGameplay.propAmountPerTracktile;

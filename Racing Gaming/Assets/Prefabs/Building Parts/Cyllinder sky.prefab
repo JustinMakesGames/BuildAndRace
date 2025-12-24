@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5043869942276622121}
   - component: {fileID: 820748801424509698}
   - component: {fileID: 583851312898805193}
+  - component: {fileID: 8893924772185661758}
   m_Layer: 0
   m_Name: Cyllinder sky
-  m_TagString: Untagged
+  m_TagString: TrackCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,3 +90,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8893924772185661758
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4297376714838147739}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 52.51103, y: 25.18649, z: 22.574772}
+  m_Center: {x: 0, y: 12.593245, z: 0}

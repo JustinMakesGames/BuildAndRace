@@ -8,6 +8,7 @@ public class BuildGameplay : MonoBehaviour
 {
 
     public static BuildGameplay Instance;
+    public string levelName;
     public int[] trackTiles;
     public int[] trackTileConnectionPoints;
     public int[] propAmountPerTracktile;
@@ -36,6 +37,10 @@ public class BuildGameplay : MonoBehaviour
         if (shouldLoad) LoadBuild();
     }
 
+    public void SetLevelName(string levelName)
+    {
+        this.levelName = levelName;
+    }
     public void SaveBuild(List<TrackTile> trackTileList, List<GameObject> trackTileGameObjects, List<PropPlacement> props, List<int> propAmountPerTracktile)
     {
         List<int> trackTileIndexes = new List<int>();
@@ -84,12 +89,16 @@ public class BuildGameplay : MonoBehaviour
         }
 
 
-        BuildSaveSystem.SaveBuild(this);
+        BuildSaveSystem.SaveBuild(this, levelName);
     }
 
     private void LoadBuild()
     {
-        BuildData buildData = BuildSaveSystem.LoadBuild();
+        LevelData levelData = SaveLevelName.LoadBuild();
+
+        string[] levelNames = levelData.levelNames;
+        int index = levelData.levelIndex;
+        BuildData buildData = BuildSaveSystem.LoadBuild(levelNames[index]);
 
         if (buildData == null) return;
 

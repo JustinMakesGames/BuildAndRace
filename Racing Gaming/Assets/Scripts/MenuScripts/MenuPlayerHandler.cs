@@ -169,11 +169,5 @@ public class MenuPlayerHandler : MonoBehaviour
     {
         _hasSelected = true;
         selectionAnimator.SetTrigger("StopAnimation");
-    }
-
-
-
-    
-
-    
+    }   
 }

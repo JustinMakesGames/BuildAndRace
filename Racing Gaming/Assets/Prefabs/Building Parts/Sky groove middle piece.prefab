@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5853433930083209105}
   - component: {fileID: 8012722242907244209}
   - component: {fileID: 3563641037848748444}
+  - component: {fileID: 5621747329377747830}
   m_Layer: 0
   m_Name: Sky groove middle piece
-  m_TagString: Untagged
+  m_TagString: TrackCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,3 +90,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5621747329377747830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418140279757165043}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 37.3471, y: 2.4864247, z: 27.85221}
+  m_Center: {x: 0, y: 1.24321, z: 0}

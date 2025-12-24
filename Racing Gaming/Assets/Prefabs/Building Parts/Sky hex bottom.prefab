@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6629009390301002404}
   - component: {fileID: 8433078418571585697}
   - component: {fileID: 102866276362401094}
+  - component: {fileID: -2370637929213535753}
   m_Layer: 0
   m_Name: Sky hex bottom
-  m_TagString: Untagged
+  m_TagString: TrackCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,3 +90,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-2370637929213535753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7090588445237169722}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 38.895863, y: 17.287535, z: 36.562542}
+  m_Center: {x: 0, y: 8.643767, z: 0}

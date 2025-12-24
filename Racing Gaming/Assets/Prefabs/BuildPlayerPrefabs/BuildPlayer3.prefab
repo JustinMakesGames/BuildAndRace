@@ -172,6 +172,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6254970592078518568}
+        m_TargetAssemblyTypeName: PropBuilderPlayerMovement, Assembly-CSharp
+        m_MethodName: RotateCamera
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6b444451-8a00-4d00-a97e-f47457f736a8
     m_ActionName: 'Player/Look[/Mouse/delta,/Touchscreen/delta,/Pen/delta]'
   - m_PersistentCalls:
@@ -388,7 +400,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   moveSpeed: 20
+  camPosition: {fileID: 0}
   rotationSpeed: 200
+  cameraRotating: {fileID: 0}
+  controllerCameraSpeed: 200
+  mouseCameraSpeed: 20
 --- !u!1001 &5250064632388985488
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ TagManager:
   - Prop
   - ItemBox
   - MotorSpawns
+  - BlackScreen
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,7 @@ public class PropSpawnManager : MonoBehaviour
 
     //Handle Player
     [SerializeField] private CinemachineCamera cam;
+    [SerializeField] private Transform camPosition;
     [SerializeField] private Transform currentPlayer;
     [SerializeField] private Transform playerFolder;
     private List<Transform> _players = new List<Transform>();
@@ -67,7 +68,7 @@ public class PropSpawnManager : MonoBehaviour
         var propBuilderMovement = currentPlayer.GetComponent<PropBuilderPlayerMovement>();
 
         propBuilderMovement.SetPlayerTurn();
-        propBuilderMovement.SetProp(prop.transform);
+        propBuilderMovement.SetProp(prop.transform, camPosition);
         propBuilderMovement.SetTracktile(currentTrackTile, _spawnCollider);
     }
 
@@ -121,7 +122,8 @@ public class PropSpawnManager : MonoBehaviour
 
     public void SetCamera()
     {
-        cam.Target.TrackingTarget = prop.transform;
+        cam.Target.TrackingTarget = camPosition;
+        camPosition.position = prop.transform.position;
     }
     private Vector3 ReturnSpawnPosition()
     {
@@ -174,6 +176,12 @@ public class PropSpawnManager : MonoBehaviour
         oldPlayer.DisablePlayerTurn();
         _playerIndex = (_playerIndex >= _players.Count - 1) ? 0 : _playerIndex + 1;
         SetPropBuildMode();
+    }
+
+    public void EndPlayerTurns()
+    {
+        var player = currentPlayer.GetComponent<PropBuilderPlayerMovement>();
+        player.DisablePlayerTurn();
     }
 
     

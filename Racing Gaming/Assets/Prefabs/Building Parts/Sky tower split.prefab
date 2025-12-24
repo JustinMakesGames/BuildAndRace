@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5234997172892429378}
   - component: {fileID: 3013665542568781662}
   - component: {fileID: 8316296392239154898}
+  - component: {fileID: -4004062016375257855}
   m_Layer: 0
   m_Name: Sky tower split
-  m_TagString: Untagged
+  m_TagString: TrackCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,3 +91,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-4004062016375257855
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8364022192768386296}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 56.18976, y: 28.722366, z: 27.928495}
+  m_Center: {x: 16.985714, y: 14.361181, z: 0.5594492}

@@ -25,7 +25,11 @@ public class PropInGameSpawner : MonoBehaviour
     }
     public void LoadProps(List<GameObject> tracktiles)
     {
-        BuildData newData = BuildSaveSystem.LoadBuild();
+        LevelData levelData = SaveLevelName.LoadBuild();
+        string[] levelNames = levelData.levelNames;
+        int index = levelData.levelIndex;
+
+        BuildData newData = BuildSaveSystem.LoadBuild(levelNames[index]);
         this.tracktiles = tracktiles;
         _propIndexes = newData.propIndexes.ToList();
         _propAmountPerTracktile = newData.tracktilePropAmount.ToList();

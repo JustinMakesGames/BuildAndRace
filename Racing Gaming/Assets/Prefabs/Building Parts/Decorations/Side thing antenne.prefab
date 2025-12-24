@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8021006044449520622}
   - component: {fileID: 6198305667958573921}
   - component: {fileID: 6268938979639106611}
+  - component: {fileID: 8085562611242425103}
   m_Layer: 0
   m_Name: Side thing antenne
-  m_TagString: Untagged
+  m_TagString: TrackCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,3 +90,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8085562611242425103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279221953068107995}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.7604706, y: 39.464798, z: 1.6198374}
+  m_Center: {x: 1.3802353, y: 19.732399, z: 0}

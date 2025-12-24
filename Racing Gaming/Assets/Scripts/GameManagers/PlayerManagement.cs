@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerManagement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerManagement : MonoBehaviour
 
     //Race Scene Management
     [SerializeField] private string raceScene;
+    [SerializeField] private Animator blackScreenAnimator;
 
     private void Awake()
     {
@@ -58,6 +60,7 @@ public class PlayerManagement : MonoBehaviour
         {
             PlayerCarManagement.Instance.SetPlayers(players, carStatsList);
         }
+        blackScreenAnimator.SetTrigger("BlackScreenOut");
     }
 
 

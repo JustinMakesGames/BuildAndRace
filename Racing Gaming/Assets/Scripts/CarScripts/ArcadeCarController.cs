@@ -113,6 +113,10 @@ public class ArcadeCarController : MonoBehaviour
     [SerializeField] private float uprightDamping = 5f;
     [SerializeField] private float maxUprightAngle = 60f;
 
+    private bool _isPaused;
+
+  
+
 
 
     public void SetVerhicleOn()
@@ -162,13 +166,14 @@ public class ArcadeCarController : MonoBehaviour
         CheckIfGrounded();
         CalculateCarVelocity();
         HandleDrifting();
-        HandleGravity();
         BoostHandling();
         RotateMotorHit();
     }
 
     private void FixedUpdate()
     {
+        if (_isPaused) return;
+        HandleGravity();
         CheckSuspension();
         MoveCheck();
         SteeringHandling();
@@ -573,6 +578,16 @@ public class ArcadeCarController : MonoBehaviour
                 ForceMode.Acceleration
             );
         }
+    }
+
+    public void Pause()
+    {
+        _isPaused = true;
+    }
+
+    public void Unpause()
+    {
+        _isPaused = false;
     }
 
 

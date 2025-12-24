@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MenuManager : MonoBehaviour
@@ -36,6 +37,13 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(Instance.gameObject);
+            Instance = this;
+        }
+
         if (Instance == null)
         {
             Instance = this;
@@ -44,7 +52,15 @@ public class MenuManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-  
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+
 
     public void ShowPlayerSelectScreen()
     {

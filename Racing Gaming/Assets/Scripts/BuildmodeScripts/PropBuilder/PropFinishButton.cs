@@ -14,6 +14,7 @@ public class PropFinishButton : MonoBehaviour, ISelectHandler
     public void FinishProps()
     {
         FinishHandling.Instance.SetProps();
-        FinishHandling.Instance.FinishBuild();
+        PropSpawnManager.Instance.EndPlayerTurns();
+        SaveBuilderHandler.Instance.OpenCanvas();
     }
 }

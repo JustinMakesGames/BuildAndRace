@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.InputSystem.UI;
 
 public class RaceManager : MonoBehaviour
 {
@@ -15,6 +17,11 @@ public class RaceManager : MonoBehaviour
     [Header("Finish Handling")]
     [SerializeField] private GameObject resultScreen;
     [SerializeField] private List<TMP_Text> results = new List<TMP_Text>();
+
+    [Header("Menu Handling")]
+    [SerializeField] private GameObject menu;
+    [SerializeField] private MultiplayerEventSystem eventSystem;
+    [SerializeField] private GameObject button;
 
 
     private void Awake()
@@ -63,8 +70,15 @@ public class RaceManager : MonoBehaviour
         resultScreen.GetComponent<Animator>().SetTrigger("ResultsOutAnimation");
         yield return new WaitForSeconds(4);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-
+        HandleResultsOptions();
     }
+
+    private void HandleResultsOptions()
+    {
+        menu.SetActive(true);
+        eventSystem.SetSelectedGameObject(null);
+        eventSystem.SetSelectedGameObject(button);
+    }
+
+    
 }

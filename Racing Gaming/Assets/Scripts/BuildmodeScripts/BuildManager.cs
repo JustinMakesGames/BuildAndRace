@@ -42,7 +42,10 @@ public class BuildManager : MonoBehaviour
     //Check Colliders
     [SerializeField] private List<Transform> colliderTransforms = new List<Transform>();
 
-    
+    [Header("Spawn Renderer")]
+    [SerializeField] private Material previewMaterial;
+
+
 
     private void Awake()
     {
@@ -52,7 +55,7 @@ public class BuildManager : MonoBehaviour
             Instance = this;
         }
 
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         _previousConnectionTile = starterConnectionTile;
         
     }
@@ -81,7 +84,47 @@ public class BuildManager : MonoBehaviour
         }
 
         GetNewColliders();
+        ShowSpawnRenderer();
         
+    }
+
+    private void ShowSpawnRenderer()
+    {
+        Renderer[] renderers = _shownTracktile.GetComponentsInChildren<Renderer>();
+        
+
+        foreach (Renderer r in renderers)
+        {
+            Material[] materials = r.materials;
+            Material[] newMaterials = new Material[materials.Length + 1];
+
+            for (int i = 0; i < materials.Length; i++)
+            {
+                newMaterials[i] = materials[i];
+            }
+
+            newMaterials[newMaterials.Length - 1] = previewMaterial;
+            r.materials = newMaterials;
+        }
+    }
+
+    private void ShowNormalRenderer()
+    {
+        Renderer[] renderers = _shownTracktile.GetComponentsInChildren<Renderer>();
+
+
+        foreach (Renderer r in renderers)
+        {
+            Material[] materials = r.materials;
+            Material[] newMaterials = new Material[materials.Length - 1];
+
+            for (int i = 0; i < newMaterials.Length; i++)
+            {
+                newMaterials[i] = materials[i];
+            }
+
+            r.materials = newMaterials;
+        }
     }
 
     private void GetNewColliders()
@@ -125,7 +168,8 @@ public class BuildManager : MonoBehaviour
         _shownTracktile.GetComponent<TracktileHandler>().SetConnectedPoint(_previousConnectionTile);
         _shownTracktile.GetComponent<TracktileHandler>().SetConnectionPointIndex(_currentConnectionIndex);
         _shownTracktile.transform.parent = trackFolder;
-        
+
+        ShowNormalRenderer();
 
         if (_shownTracktile.GetComponent<TracktileHandler>().CheckIfFinishLine())
         {

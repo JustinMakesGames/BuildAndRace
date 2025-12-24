@@ -3,9 +3,9 @@ using System.IO;
 
 public static class BuildSaveSystem
 {
-    private static string path = Application.persistentDataPath + "/saveData.json";
-    public static void SaveBuild(BuildGameplay build)
+    public static void SaveBuild(BuildGameplay build, string levelName)
     {
+        string path = Application.persistentDataPath + $"/{levelName}.json";
         BuildData data = new BuildData(build);
 
         string json = JsonUtility.ToJson(data, true);
@@ -14,8 +14,9 @@ public static class BuildSaveSystem
         Debug.Log("Saved Data");
     }
 
-    public static BuildData LoadBuild()
+    public static BuildData LoadBuild(string levelName)
     {
+        string path = Application.persistentDataPath + $"/{levelName}.json";
         if (!File.Exists(path))
         {
             Debug.Log("No save file found at: " + path);

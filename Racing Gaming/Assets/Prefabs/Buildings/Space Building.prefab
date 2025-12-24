@@ -43,9 +43,10 @@ GameObject:
   - component: {fileID: 449498477419490599}
   - component: {fileID: 6175723180056881188}
   - component: {fileID: 7760052055757301182}
+  - component: {fileID: 881713037148975022}
   m_Layer: 0
   m_Name: Space Building
-  m_TagString: Untagged
+  m_TagString: TrackCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +152,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &881713037148975022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7794894156621251892}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 190.53722, y: 81.90769, z: 190.53722}
+  m_Center: {x: 0.0000076293945, y: 40.953846, z: -0.0000076293945}
 --- !u!1001 &682578133992233626
 PrefabInstance:
   m_ObjectHideFlags: 0
