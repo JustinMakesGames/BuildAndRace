@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8246388536270232607}
   - component: {fileID: 3296494759251372470}
+  - component: {fileID: 3983137889167767661}
   m_Layer: 0
   m_Name: Sky Square O
   m_TagString: TrackCollider
@@ -58,6 +59,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!205 &3983137889167767661
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011221598969397206}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.001
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7154138733610916710}
+    - renderer: {fileID: 4393293801879869751}
+    - renderer: {fileID: 5785097149321092466}
+    - renderer: {fileID: 5961108869529166655}
+    - renderer: {fileID: 8085782705472526828}
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7154138733610916710}
+    - renderer: {fileID: 4393293801879869751}
+  - screenRelativeHeight: 0
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1001 &92709862050842021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,6 +152,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 488981707214119808, guid: 626784e4c57ce0041a1a33c64186a694, type: 3}
   m_PrefabInstance: {fileID: 92709862050842021}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &5785097149321092466 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5837109406656878807, guid: 626784e4c57ce0041a1a33c64186a694, type: 3}
+  m_PrefabInstance: {fileID: 92709862050842021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &307830439480557324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,6 +214,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b691a36773a5d6844b65ab4d2342f7db, type: 3}
+--- !u!23 &5961108869529166655 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6268938979639106611, guid: b691a36773a5d6844b65ab4d2342f7db, type: 3}
+  m_PrefabInstance: {fileID: 307830439480557324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7716342535889011938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8021006044449520622, guid: b691a36773a5d6844b65ab4d2342f7db, type: 3}
@@ -244,6 +286,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1964068167776967132, guid: cdc0143cc088bc34398c164997a7c97f, type: 3}
   m_PrefabInstance: {fileID: 1707317233795690180}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &8085782705472526828 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7460181436824598312, guid: cdc0143cc088bc34398c164997a7c97f, type: 3}
+  m_PrefabInstance: {fileID: 1707317233795690180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4155960457976791593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306,6 +353,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1043320965416937551, guid: 57526c8336c0e1540b149e5027ca2b4c, type: 3}
   m_PrefabInstance: {fileID: 4155960457976791593}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &4393293801879869751 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 384192915418602270, guid: 57526c8336c0e1540b149e5027ca2b4c, type: 3}
+  m_PrefabInstance: {fileID: 4155960457976791593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7251209027262719891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -366,5 +418,10 @@ PrefabInstance:
 --- !u!4 &4975338772128052749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2425905769002176926, guid: d7ef510babef9354caf29ea3f154f83f, type: 3}
+  m_PrefabInstance: {fileID: 7251209027262719891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7154138733610916710 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 570236928962886901, guid: d7ef510babef9354caf29ea3f154f83f, type: 3}
   m_PrefabInstance: {fileID: 7251209027262719891}
   m_PrefabAsset: {fileID: 0}
