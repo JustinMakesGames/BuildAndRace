@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MenuPlayerHandler : MonoBehaviour
 {
+    //Sliders on character selectscreen
+    public Slider maxSpeedSlider;
+    public Slider accelerationSlider;
+    public Slider handlingSlider;
+
     [SerializeField] private Transform menuScreen;
     [SerializeField] private Transform selectionFolder;
     [SerializeField] private int playerIndex;
@@ -123,6 +129,10 @@ public class MenuPlayerHandler : MonoBehaviour
         {
             _isPlayerOne = true;
         }
+
+        maxSpeedSlider = SelectStatsSelectFolder.Instance.SetMaxSpeedSlider(playerIndex);
+        accelerationSlider = SelectStatsSelectFolder.Instance.SetAccelerationSlider(playerIndex);
+        handlingSlider = SelectStatsSelectFolder.Instance.SetHandlingSlider(playerIndex);
     } 
     public void SetPlayerUI(Transform menuScreen, Transform selectionFolder, int playerIndex, Transform playerCursor)
     {
@@ -147,6 +157,13 @@ public class MenuPlayerHandler : MonoBehaviour
     {
         yield return null;
         _canSelect = true;
+    }
+
+    public void SetSliders(int maxSpeed, int acceleration, int handling)
+    {
+        maxSpeedSlider.value = maxSpeed;
+        accelerationSlider.value = acceleration;
+        handlingSlider.value = handling;
     }
 
     private void SetPosition()

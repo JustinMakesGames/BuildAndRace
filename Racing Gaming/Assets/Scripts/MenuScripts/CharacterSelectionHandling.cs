@@ -1,18 +1,29 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CharacterSelectionHandling : MonoBehaviour, IPressButton, IHandleSelection
 {
 
     [SerializeField] private CarStats carStats;
+    [SerializeField] private Slider maxSpeedSlider;
+    [SerializeField] private Slider accelerationSlider;
+    [SerializeField] private Slider steeringSlider;
 
     public void OnSelected(Transform player)
     {
         if (player.TryGetComponent(out PlayerMotorRotationHandling playerScript))
         {
             playerScript.SetMotor(carStats.motorModel);
+            
         }
-     }
+
+        if (player.TryGetComponent(out MenuPlayerHandler menuPlayerHandler))
+        {
+            menuPlayerHandler.SetSliders(carStats.maxSpeedSlider, carStats.accelerationSlider, carStats.steeringSlider);
+        }
+        
+    }
     public void Press(Transform player)
     { 
         

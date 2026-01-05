@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8277439c2cb6c04396b31c7c7731247, type: 3}
-  m_Name: CornerRoad
+  m_Name: 3FinishRoad
   m_EditorClassIdentifier: Assembly-CSharp::TrackTile
-  trackTile: {fileID: 8488505533020346332, guid: c6e924e7b6b6be8499e6f36370e5d904, type: 3}
-  index: 1
+  trackTile: {fileID: 5879871799421254736, guid: d3209c19f4b33c14ba06c68455abe993, type: 3}
+  index: 3

@@ -3,6 +3,8 @@ using UnityEngine;
 public class SpikeballHandling : MonoBehaviour, IItemUse
 {
 
+    public int UseAmount { get; set; } = 1;
+
     [SerializeField] private GameObject spikeball;
     public void UseItem(Transform car)
     {

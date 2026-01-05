@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8277439c2cb6c04396b31c7c7731247, type: 3}
-  m_Name: RampRoad
+  m_Name: 0StraightRoad
   m_EditorClassIdentifier: Assembly-CSharp::TrackTile
-  trackTile: {fileID: 3210331426439552330, guid: 9cecf8a7cd50830448c734434e204788, type: 3}
-  index: 2
+  trackTile: {fileID: 5879871799421254736, guid: 24064adae671f984cae169c634ec7660, type: 3}
+  index: 0

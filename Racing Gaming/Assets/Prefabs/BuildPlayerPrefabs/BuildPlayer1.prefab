@@ -336,12 +336,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3043504215174834191}
+        m_TargetAssemblyTypeName: PropBuilderPlayerMovement, Assembly-CSharp
+        m_MethodName: SwitchNextTab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f8efb3cc-e295-48ec-a3f0-1efb1b702c30
     m_ActionName: 'Player/NextTab[/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3439432573299658494}
         m_TargetAssemblyTypeName: BuildPlayerMovement, Assembly-CSharp
+        m_MethodName: SwitchPreviousTab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3043504215174834191}
+        m_TargetAssemblyTypeName: PropBuilderPlayerMovement, Assembly-CSharp
         m_MethodName: SwitchPreviousTab
         m_Mode: 0
         m_Arguments:
@@ -405,6 +429,9 @@ MonoBehaviour:
   cameraRotating: {fileID: 0}
   controllerCameraSpeed: 200
   mouseCameraSpeed: 20
+  tabsFolder: {fileID: 2036399328452981332}
+  _eventSystem: {fileID: 4164539099255923768}
+  verticalOffset: 15
 --- !u!1001 &4948006941128049557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -530,9 +557,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5303807334939451843}
     m_Modifications:
+    - target: {fileID: 233700368202041474, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3214735403762566223, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
       propertyPath: m_Name
       value: PropCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214735403762566223, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3808258215801567589, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
       propertyPath: m_Pivot.x
@@ -622,6 +657,11 @@ PrefabInstance:
 --- !u!1 &1164007541480966235 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7891726321923611662, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
+  m_PrefabInstance: {fileID: 9052914706435675221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2036399328452981332 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7052874031720736257, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
   m_PrefabInstance: {fileID: 9052914706435675221}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &5295053787907665200 stripped

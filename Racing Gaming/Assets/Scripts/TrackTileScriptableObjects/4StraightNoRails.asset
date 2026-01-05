@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8277439c2cb6c04396b31c7c7731247, type: 3}
-  m_Name: StraightRoad
+  m_Name: 4StraightNoRails
   m_EditorClassIdentifier: Assembly-CSharp::TrackTile
-  trackTile: {fileID: 5879871799421254736, guid: 24064adae671f984cae169c634ec7660, type: 3}
-  index: 0
+  trackTile: {fileID: 5879871799421254736, guid: b952561f7874e5241b871162dd2c7214, type: 3}
+  index: 4

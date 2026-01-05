@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -39,6 +40,16 @@ public class PropBuilderPlayerMovement : MonoBehaviour
     private float _cameraSpeed;
     private Vector2 _cameraInput;
 
+    [Header("Handle Tabs")]
+    [SerializeField] private Transform tabsFolder;
+    [SerializeField] private MultiplayerEventSystem _eventSystem;
+    [SerializeField] private float verticalOffset;
+    private List<Transform> _tabs = new List<Transform>();
+    private int _currentTabIndex;
+
+    private Transform _currentTab;
+    private Transform _previousTab;
+
 
 
     private void Awake()
@@ -46,6 +57,11 @@ public class PropBuilderPlayerMovement : MonoBehaviour
         _cam = Camera.main.transform;
         GameObject.FindGameObjectWithTag("CinemachineCamera").TryGetComponent(out CinemachineOrbitalFollow orbitalFollow);
         cameraRotating = orbitalFollow;
+
+        for (int i = 0; i < tabsFolder.childCount; i++)
+        {
+            _tabs.Add(tabsFolder.GetChild(i));
+        }
     }
 
     
@@ -126,7 +142,7 @@ public class PropBuilderPlayerMovement : MonoBehaviour
         buildCanvas.SetActive(false);
         propCanvas.SetActive(true);
 
-        eventSystem.SetSelectedGameObject(firstButton);
+        HandleNewTab();
         _isPlayerTurn = true;
     }
 
@@ -221,7 +237,47 @@ public class PropBuilderPlayerMovement : MonoBehaviour
         }
     }
 
+    public void SwitchNextTab(InputAction.CallbackContext context)
+    {
+        if (!_isPlayerTurn) return;
+        if (context.started && _currentTabIndex + 1 < _tabs.Count)
+        {
+            _currentTabIndex++;
+            HandleNewTab();
+        }
+    }
 
+    public void SwitchPreviousTab(InputAction.CallbackContext context)
+    {
+        if (!_isPlayerTurn) return;
+        if (context.started && _currentTabIndex - 1 >= 0)
+        {
+            _currentTabIndex--;
+            HandleNewTab();
+        }
+    }
 
+    private void HandleNewTab()
+    {
+        _currentTab = _tabs[_currentTabIndex];
+        var tabScript = _currentTab.GetComponent<TabsManagement>();
 
+        GameObject gamePage = tabScript.ReturnGamepage();
+        GameObject selectedButton = tabScript.ReturnSelectedButton();
+        gamePage.SetActive(true);
+        _eventSystem.SetSelectedGameObject(selectedButton);
+
+        _currentTab.position += new Vector3(0, verticalOffset, 0);
+
+        if (_previousTab == null || _previousTab == _currentTab)
+        {
+            _previousTab = _currentTab;
+            return;
+        }
+        _previousTab.GetComponent<TabsManagement>().ReturnGamepage().SetActive(false);
+        _previousTab.position -= new Vector3(0, verticalOffset, 0);
+
+        _previousTab = _currentTab;
+
+    }
 }

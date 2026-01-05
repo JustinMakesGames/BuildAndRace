@@ -405,6 +405,9 @@ MonoBehaviour:
   cameraRotating: {fileID: 0}
   controllerCameraSpeed: 200
   mouseCameraSpeed: 20
+  tabsFolder: {fileID: 8649904875911032309}
+  _eventSystem: {fileID: 4164539099255923768}
+  verticalOffset: 15
 --- !u!1001 &990005920513426209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -416,6 +419,10 @@ PrefabInstance:
     - target: {fileID: 320410359705697431, guid: 6e174ce803fbb9e488e253486d78e0d9, type: 3}
       propertyPath: m_Name
       value: BuildCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 703292405759696359, guid: 6e174ce803fbb9e488e253486d78e0d9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1292267492779490133, guid: 6e174ce803fbb9e488e253486d78e0d9, type: 3}
       propertyPath: m_Pivot.x
@@ -525,6 +532,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5303807334939451843}
     m_Modifications:
+    - target: {fileID: 233700368202041474, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3214735403762566223, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
       propertyPath: m_Name
       value: PropCanvas
@@ -579,15 +590,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3808258215801567589, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3808258215801567589, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3808258215801567589, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3808258215801567589, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -627,5 +638,10 @@ GameObject:
 --- !u!1 &8390063653353248762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7891726321923611662, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
+  m_PrefabInstance: {fileID: 1867433877397703668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &8649904875911032309 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7052874031720736257, guid: 013a08ac4a49cd14baab3571339ab19b, type: 3}
   m_PrefabInstance: {fileID: 1867433877397703668}
   m_PrefabAsset: {fileID: 0}

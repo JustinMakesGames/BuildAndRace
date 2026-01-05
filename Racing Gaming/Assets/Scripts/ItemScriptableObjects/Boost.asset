@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd15dde8c261c5546b2b716559d1add0, type: 3}
-  m_Name: Apple
+  m_Name: Boost
   m_EditorClassIdentifier: Assembly-CSharp::ItemScriptableObject
-  itemObject: {fileID: 2996600336412495958, guid: 6151852cdc58daa4d8784059abb0d2e9, type: 3}
+  itemObject: {fileID: 2996600336412495958, guid: 154f5b57aa9793f4985e3836317db698, type: 3}
   itemSprite: {fileID: 21300000, guid: 3ab4ce8dfa1d3094988634dd8ad8c27f, type: 3}

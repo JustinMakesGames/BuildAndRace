@@ -17,3 +17,6 @@ MonoBehaviour:
   maxSpeed: 50
   accelerationSpeed: 2000
   steeringSpeed: 20
+  maxSpeedSlider: 10
+  accelerationSlider: 100
+  steeringSlider: 60

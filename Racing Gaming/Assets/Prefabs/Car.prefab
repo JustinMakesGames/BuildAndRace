@@ -2059,7 +2059,7 @@ MonoBehaviour:
   maxSteeringStrength: 20
   driftDragCoefficient: 5
   driftDragCoefficientMultiplier: 1
-  gravityForce: 9.81
+  gravityForce: 20
   boostAccelerationSpeed: 3000
   boostMaxSpeed: 100
   cameraBoostFOV: 80
@@ -2191,7 +2191,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.59247005, y: 0.6, z: 2.6378999}
+  m_Size: {x: 1.5, y: 0.6, z: 2.6378999}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7469205902048090540
 MonoBehaviour:

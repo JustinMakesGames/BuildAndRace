@@ -8,4 +8,7 @@ public class CarStats : ScriptableObject
     public float maxSpeed;
     public float accelerationSpeed;
     public float steeringSpeed;
+    public int maxSpeedSlider;
+    public int accelerationSlider;
+    public int steeringSlider;
 }

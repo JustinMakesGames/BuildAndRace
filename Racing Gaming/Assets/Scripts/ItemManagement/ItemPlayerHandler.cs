@@ -30,6 +30,9 @@ public class ItemPlayerHandler : MonoBehaviour
     [SerializeField] private float maxTimeInput;
     private PlayerState _playerState;
 
+    //Item use amount
+    private int _currentUseAmount;
+
     public void ItemUseInput(InputAction.CallbackContext context)
     {
         if (context.started && _canUseItem)
@@ -40,8 +43,17 @@ public class ItemPlayerHandler : MonoBehaviour
 
     private void HandleUsingItem()
     {
-        UseItem();
+
+        _currentUseAmount++;
         _itemUse.UseItem(transform);
+
+        if (_currentUseAmount < _itemUse.UseAmount)
+        {
+            HandleCPU();
+            return;
+        }
+        
+        UseItem();
         Destroy(_itemObject);
     }
 
@@ -50,6 +62,7 @@ public class ItemPlayerHandler : MonoBehaviour
         _canUseItem = false;
         _hasItem = false;
         itemImage.sprite = null;
+        _currentUseAmount = 0;
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -2,5 +2,6 @@ using UnityEngine;
 
 public interface IItemUse
 {
-    public void UseItem(Transform car);
+    public int UseAmount { get; set; }
+    public void UseItem(Transform motor);
 }
