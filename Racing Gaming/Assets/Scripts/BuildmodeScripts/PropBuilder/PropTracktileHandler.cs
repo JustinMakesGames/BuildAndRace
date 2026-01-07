@@ -25,6 +25,12 @@ public class PropTracktileManager : MonoBehaviour
         _propAmount++;
     }
 
+    public void RemoveProp()
+    {
+        propPlacements.RemoveAt(propPlacements.Count - 1);
+        _propAmount--;
+    }
+
     public List<PropPlacement> GetProp()
     {
         return propPlacements;

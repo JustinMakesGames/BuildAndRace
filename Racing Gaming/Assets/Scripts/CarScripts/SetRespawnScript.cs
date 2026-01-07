@@ -11,6 +11,7 @@ public class SetRespawnScript : MonoBehaviour
             SetDeathPlanes();
             
             other.GetComponent<DeathplanePlayerHandler>().SetDeathPlane(deathPlanes);
+            other.GetComponent<RespawnScript>().SetRespawnPosition(transform);
         }
     }
 

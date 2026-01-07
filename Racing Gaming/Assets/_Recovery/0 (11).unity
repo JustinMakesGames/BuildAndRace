@@ -1650,7 +1650,7 @@ PrefabInstance:
       objectReference: {fileID: 1382699457}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_ActionId
@@ -1665,10 +1665,6 @@ PrefabInstance:
       value: 7207871c-c5ef-4edf-b87c-3488ed5911b5
       objectReference: {fileID: 0}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
-      value: 36a669a0-2854-4de5-a1bb-199340f052a5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_ActionName
       value: 'Player/Pause[/Keyboard/escape]'
       objectReference: {fileID: 0}
@@ -1681,15 +1677,7 @@ PrefabInstance:
       value: 'UIMode/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
       objectReference: {fileID: 0}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
-      value: 'Player/Respawn[/Keyboard/r]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
@@ -1697,23 +1685,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1892360015}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1892360027}
-    - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
@@ -1721,23 +1697,11 @@ PrefabInstance:
       value: PauseInput
       objectReference: {fileID: 0}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RespawnInput
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PauseMenuHandling, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: RespawnScript, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811739464320120402, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2936680079493529648, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
@@ -2076,10 +2040,6 @@ PrefabInstance:
       propertyPath: cameraFollow
       value: 
       objectReference: {fileID: 1177652830}
-    - target: {fileID: 7030110263020077107, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: gravityForce
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7117356539833417627, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.000061035156
@@ -2719,17 +2679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cdd68772ddcb2f41a9845feaa505f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuHandling
---- !u!114 &1892360027 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7387439158156808117, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-  m_PrefabInstance: {fileID: 1116743453}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7ca2ffa95549a64583df65e545f6490, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RespawnScript
 --- !u!114 &1893521169 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8104479459766207060, guid: ecb829b157e18f241b6239a194012933, type: 3}

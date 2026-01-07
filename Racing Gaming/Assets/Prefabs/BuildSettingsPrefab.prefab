@@ -90,6 +90,7 @@ MonoBehaviour:
   starterConnectionTile: {fileID: 6813650222119282852}
   colliderTransforms: []
   previewMaterial: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!1 &2836379919768535767
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +152,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f58428b98a34654585ba24b4e05a2c1, type: 2}
   - {fileID: 11400000, guid: 5d2e9b28a17776b498f50eb0c182d884, type: 2}
   - {fileID: 11400000, guid: 58d4424bd6a911d408cb6e8d4e1676b2, type: 2}
+  - {fileID: 11400000, guid: b7340d2296871cf4cb6282a8ca107bfc, type: 2}
   shouldLoad: 0
 --- !u!1 &2865774115804944888
 GameObject:

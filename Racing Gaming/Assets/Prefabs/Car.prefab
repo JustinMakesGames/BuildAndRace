@@ -192,7 +192,7 @@ Transform:
   m_GameObject: {fileID: 331649156295223321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -0.3, z: 0.5}
+  m_LocalPosition: {x: 0.4, y: -1, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -312,7 +312,7 @@ Transform:
   m_GameObject: {fileID: 657293651777932402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -0.3, z: -1}
+  m_LocalPosition: {x: -0.4, y: -1, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1671,7 +1671,7 @@ Transform:
   m_GameObject: {fileID: 3125766202004918472}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -0.3, z: -0.5}
+  m_LocalPosition: {x: -0.4, y: -1, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1808,7 +1808,7 @@ Transform:
   m_GameObject: {fileID: 3614760245908365396}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -0.3, z: 0.5}
+  m_LocalPosition: {x: -0.4, y: -1, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1835,6 +1835,7 @@ GameObject:
   - component: {fileID: 6033817569790457256}
   - component: {fileID: 6649170738461477425}
   - component: {fileID: 2914190372948826219}
+  - component: {fileID: 1445990060976614381}
   m_Layer: 7
   m_Name: Car
   m_TagString: Player
@@ -1994,6 +1995,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9ffc6bfa-fdf3-4b8f-b9ac-fcd3b0ab87d5
     m_ActionName: Player/Pause
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1445990060976614381}
+        m_TargetAssemblyTypeName: RespawnScript, Assembly-CSharp
+        m_MethodName: RespawnInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 36a669a0-2854-4de5-a1bb-199340f052a5
+    m_ActionName: Player/Respawn
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
@@ -2028,7 +2045,7 @@ MonoBehaviour:
   restLength: 0.5
   dampStiffness: 3000
   springStiffness: 30000
-  springTravel: 0.5
+  springTravel: 1
   wheelRadius: 0.33
   currentCarLocalVelocity: {x: 0, y: 0, z: 0}
   velocityRatio: 0
@@ -2278,6 +2295,18 @@ MonoBehaviour:
   eventSystem: {fileID: 8140286343346561676}
   firstButton: {fileID: 952280258820825508}
   cars: []
+--- !u!114 &1445990060976614381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4234713079018324115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ca2ffa95549a64583df65e545f6490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RespawnScript
 --- !u!1 &4286372262411761428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,7 +2332,7 @@ Transform:
   m_GameObject: {fileID: 4286372262411761428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -0.3, z: 1}
+  m_LocalPosition: {x: 0.4, y: -1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2334,7 +2363,7 @@ Transform:
   m_GameObject: {fileID: 5020329115125859206}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -0.3, z: -0.5}
+  m_LocalPosition: {x: 0.4, y: -1, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2733,7 +2762,7 @@ Transform:
   m_GameObject: {fileID: 7437444131261640751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -0.3, z: 1}
+  m_LocalPosition: {x: -0.4, y: -1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3258,7 +3287,7 @@ Transform:
   m_GameObject: {fileID: 8565064135679015659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -0.3, z: -1}
+  m_LocalPosition: {x: 0.4, y: -1, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

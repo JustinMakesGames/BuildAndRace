@@ -2040,14 +2040,6 @@ PrefabInstance:
       propertyPath: shouldLoad
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1119720265028054266, guid: d13431878f281a441a204259b0f224c3, type: 3}
-      propertyPath: tiles.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1119720265028054266, guid: d13431878f281a441a204259b0f224c3, type: 3}
-      propertyPath: 'tiles.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b7340d2296871cf4cb6282a8ca107bfc, type: 2}
     - target: {fileID: 2445935455641000991, guid: d13431878f281a441a204259b0f224c3, type: 3}
       propertyPath: m_Name
       value: BuildSettingsPrefab
@@ -2056,10 +2048,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6378715942671960917, guid: d13431878f281a441a204259b0f224c3, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 949419425}
     - target: {fileID: 6378715942671960917, guid: d13431878f281a441a204259b0f224c3, type: 3}
       propertyPath: epic
       value: 

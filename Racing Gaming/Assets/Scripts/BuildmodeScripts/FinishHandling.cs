@@ -27,6 +27,7 @@ public class FinishHandling : MonoBehaviour
 
     public void SetProps()
     {
+        props.Clear();
         for (int i = 0; i < trackTileObjects.Count; i++)
         {
             List<PropPlacement> propPlacements = trackTileObjects[i].GetComponent<PropTracktileManager>().GetProp();

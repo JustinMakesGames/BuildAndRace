@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -45,6 +46,9 @@ public class BuildManager : MonoBehaviour
     [Header("Spawn Renderer")]
     [SerializeField] private Material previewMaterial;
 
+    [Header("Camera")]
+    [SerializeField] private CinemachineCamera cam;
+
 
 
     private void Awake()
@@ -60,6 +64,10 @@ public class BuildManager : MonoBehaviour
         
     }
 
+    public void SetCameraTracker()
+    {
+        cam.Target.TrackingTarget = cameraTracker;
+    }
     public void ShowNewTile(TrackTile tile, bool hasNewTile)
     {
         DeleteOldTile(hasNewTile);

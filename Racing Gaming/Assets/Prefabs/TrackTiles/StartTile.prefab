@@ -483,6 +483,8 @@ MonoBehaviour:
   colliderFolder: {fileID: 4772875501914408860}
   waypointFolder: {fileID: 6768244285296932780}
   deathFolder: {fileID: 8850998451662903097}
+  spawnCollider: {fileID: 0}
+  spawnPosition: {fileID: 0}
 --- !u!1 &6545906282070229617
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +598,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5552539996071564081, guid: ddc7a68963e5ef441b221db5f544d9ea, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afa8f9884d465949a9e1450eab7db1d, type: 2}
     - target: {fileID: -760315080204454117, guid: ddc7a68963e5ef441b221db5f544d9ea, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -604,6 +610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BetterStraight
       objectReference: {fileID: 0}
+    - target: {fileID: 1886411600693390671, guid: ddc7a68963e5ef441b221db5f544d9ea, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f6bb31c9df05151459be09205b3dbae8, type: 2}
     - target: {fileID: 7495770646470606266, guid: ddc7a68963e5ef441b221db5f544d9ea, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

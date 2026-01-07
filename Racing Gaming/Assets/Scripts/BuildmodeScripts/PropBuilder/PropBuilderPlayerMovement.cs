@@ -71,6 +71,14 @@ public class PropBuilderPlayerMovement : MonoBehaviour
         _movement = context.ReadValue<Vector2>();     
     }
 
+    public void GoBack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            PropSpawnManager.Instance.GoBack();
+        }
+    }
+
     public void MoveNextTracktile(InputAction.CallbackContext context)
     {
         if (context.performed  && _isPlayerTurn)

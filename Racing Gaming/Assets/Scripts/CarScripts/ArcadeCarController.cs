@@ -243,10 +243,10 @@ public class ArcadeCarController : MonoBehaviour
     //Handles the gravity
     private void HandleGravity()
     {
-        if (_isGrounded)
-        {
+        //if (_isGrounded)
+        //{
             _gravityDirection = -transform.up;
-        }
+        //}
 
         carRB.AddForce(_gravityDirection * gravityForce, ForceMode.Acceleration);
     }
@@ -580,6 +580,7 @@ public class ArcadeCarController : MonoBehaviour
         }
     }
 
+
     public void Pause()
     {
         _isPaused = true;
@@ -595,6 +596,7 @@ public class ArcadeCarController : MonoBehaviour
     {
         return state;
     }
+
 
 }
 

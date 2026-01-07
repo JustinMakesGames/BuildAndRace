@@ -30,6 +30,9 @@ public class PropSpawnManager : MonoBehaviour
     [SerializeField] private GameObject prop;
     [SerializeField] private GameObject propPrefab;
 
+    [SerializeField] private List<GameObject> spawnedProps = new List<GameObject>();
+    [SerializeField] private List<PropTracktileManager> propTracktileManagers = new List<PropTracktileManager>();
+
 
 
 
@@ -43,6 +46,8 @@ public class PropSpawnManager : MonoBehaviour
 
     public void SetVariables(List<GameObject> trackTiles)
     {
+        this.trackTiles.Clear();
+        _players.Clear();
         for (int i = 0; i < trackTiles.Count; i++)
         {
             this.trackTiles.Add(trackTiles[i]);
@@ -167,8 +172,34 @@ public class PropSpawnManager : MonoBehaviour
 
         propTracktileManager.AddProp(spawnedProp.GetComponent<PropHandler>().propScriptableObject, spawnedProp.localPosition, spawnedProp.localEulerAngles);
 
+        spawnedProps.Add(spawnedProp.gameObject);
+        propTracktileManagers.Add(propTracktileManager);
         ChangePlayerTurn();
     }
+
+    public void GoBack()
+    {
+
+        if (spawnedProps.Count == 0)
+        {
+            BuildManager.Instance.SetCameraTracker();
+            currentPlayer.GetComponent<PropBuilderPlayerMovement>().DisablePlayerTurn();
+            BuildPlayerManagement.Instance.GiveTurnToNextPlayer();
+            return;
+        }
+        GameObject deletedProp = spawnedProps[spawnedProps.Count - 1];
+
+        PropTracktileManager propTracktileManager = propTracktileManagers[propTracktileManagers.Count - 1];
+        SetTracktile(propTracktileManager.transform);
+        prop.transform.position = deletedProp.transform.position;
+
+        propTracktileManager.RemoveProp();
+        propTracktileManagers.RemoveAt(propTracktileManagers.Count - 1);
+        spawnedProps.Remove(deletedProp);
+        Destroy(deletedProp);
+    }
+
+
 
     private void ChangePlayerTurn()
     {
