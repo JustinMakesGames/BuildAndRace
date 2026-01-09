@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 170d572a943ff744fa69581b60f96ca3, type: 3}
-  m_Name: Finish
+  m_Name: 2Ramp
   m_EditorClassIdentifier: Assembly-CSharp::PropScriptableObject
-  propGameObject: {fileID: 4420031066314462233, guid: d3e78ae97cbaca245bc130bfb697e06d, type: 3}
-  index: 1
+  propGameObject: {fileID: 6878665704639005239, guid: ba9bffe6ef1a500499cb240177110d95, type: 3}
+  index: 2

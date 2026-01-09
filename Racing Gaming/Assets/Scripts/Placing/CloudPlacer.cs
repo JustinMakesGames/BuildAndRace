@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
@@ -84,4 +84,4 @@ public class CloudPlacerEditor : EditorWindow
 
         Debug.Log($"Placed {count} clouds in a circular area.");
     }
-}
+}*/

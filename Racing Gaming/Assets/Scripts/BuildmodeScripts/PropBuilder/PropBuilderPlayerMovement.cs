@@ -49,6 +49,7 @@ public class PropBuilderPlayerMovement : MonoBehaviour
 
     private Transform _currentTab;
     private Transform _previousTab;
+    private float _originalYPosition;
 
 
 
@@ -62,6 +63,8 @@ public class PropBuilderPlayerMovement : MonoBehaviour
         {
             _tabs.Add(tabsFolder.GetChild(i));
         }
+
+        _originalYPosition = _tabs[0].position.y;
     }
 
     
@@ -268,6 +271,7 @@ public class PropBuilderPlayerMovement : MonoBehaviour
     private void HandleNewTab()
     {
         _currentTab = _tabs[_currentTabIndex];
+        _originalYPosition = _currentTab.position.y;
         var tabScript = _currentTab.GetComponent<TabsManagement>();
 
         GameObject gamePage = tabScript.ReturnGamepage();
@@ -283,7 +287,7 @@ public class PropBuilderPlayerMovement : MonoBehaviour
             return;
         }
         _previousTab.GetComponent<TabsManagement>().ReturnGamepage().SetActive(false);
-        _previousTab.position -= new Vector3(0, verticalOffset, 0);
+        _previousTab.position = new Vector3(_previousTab.position.x, _originalYPosition, _previousTab.position.z);
 
         _previousTab = _currentTab;
 

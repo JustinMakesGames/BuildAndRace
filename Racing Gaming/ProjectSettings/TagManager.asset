@@ -29,8 +29,8 @@ TagManager:
   - ColliderMask
   - ItemBox
   - Wall
-  - 
-  - 
+  - Ramp
+  - StopCollider
   - 
   - 
   - 

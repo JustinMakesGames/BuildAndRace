@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 170d572a943ff744fa69581b60f96ca3, type: 3}
-  m_Name: Cube
+  m_Name: 0Items
   m_EditorClassIdentifier: Assembly-CSharp::PropScriptableObject
   propGameObject: {fileID: 5031963071890746175, guid: ccdabe185ae8e9241923c8831c7c5c78, type: 3}
   index: 0

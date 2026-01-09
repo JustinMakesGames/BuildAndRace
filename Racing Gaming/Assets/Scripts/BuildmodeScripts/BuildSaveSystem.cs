@@ -29,4 +29,14 @@ public static class BuildSaveSystem
         Debug.Log("Loaded Savedata");
         return data;
     }
+
+    public static void DeleteBuild(string levelName)
+    {
+        string path = Application.persistentDataPath + $"{levelName}.json";
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+    }
 }

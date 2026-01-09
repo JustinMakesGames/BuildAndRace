@@ -72,6 +72,7 @@ public class ArcadeCarController : MonoBehaviour
     [Header("Gravity")]
     [SerializeField] private float gravityForce;
     private Vector3 _gravityDirection;
+    private Vector3 _previousGravityDirection;
 
     [Header("Boost")]
     [SerializeField] private float boostAccelerationSpeed;
@@ -114,6 +115,14 @@ public class ArcadeCarController : MonoBehaviour
     [SerializeField] private float maxUprightAngle = 60f;
 
     private bool _isPaused;
+
+    [Header("Overwrite Ramp")]
+    [SerializeField] private LayerMask rampGround;
+    [SerializeField] private LayerMask stopCollider;
+    [Header("Air Respawn")]
+    
+    [SerializeField] private float endAirTime;
+    private float _airTime;
 
   
 
@@ -168,6 +177,7 @@ public class ArcadeCarController : MonoBehaviour
         HandleDrifting();
         BoostHandling();
         RotateMotorHit();
+        HandleAirTime();
     }
 
     private void FixedUpdate()
@@ -180,6 +190,7 @@ public class ArcadeCarController : MonoBehaviour
         SideDrag();
         ChargeDriftingBoost();
         StabilizeUpright();
+        
     }
 
     public void SetVariables(CarStats stats)
@@ -243,12 +254,44 @@ public class ArcadeCarController : MonoBehaviour
     //Handles the gravity
     private void HandleGravity()
     {
-        //if (_isGrounded)
-        //{
-            _gravityDirection = -transform.up;
-        //}
+        if (_isGrounded)
+        {
+            if (_gravityDirection != -transform.up)
+            {
+                _previousGravityDirection = _gravityDirection;
+                _gravityDirection = -transform.up;
+
+                ReprojectVelocityToNewGravity();
+            }
+
+
+        }
 
         carRB.AddForce(_gravityDirection * gravityForce, ForceMode.Acceleration);
+    }
+
+    private void ReprojectVelocityToNewGravity()
+    {
+        Vector3 velocity = carRB.linearVelocity;
+
+        // Extract forward speed in OLD orientation
+        Vector3 oldForward = Vector3.ProjectOnPlane(transform.forward, -_previousGravityDirection).normalized;
+        float forwardSpeed = Vector3.Dot(velocity, oldForward);
+
+        // Build NEW forward direction
+        Vector3 newForward = Vector3.ProjectOnPlane(transform.forward, -_gravityDirection).normalized;
+
+        // Keep sideways velocity
+        Vector3 sideways = Vector3.Project(velocity, transform.right);
+
+        // Keep vertical velocity relative to gravity
+        Vector3 vertical = Vector3.Project(velocity, -_gravityDirection);
+
+        // Rebuild velocity
+        carRB.linearVelocity =
+            newForward * forwardSpeed +
+            sideways +
+            vertical;
     }
 
     //Calculates the charging of the driftingboost depending on how far the player is drifting to the direction they are going.
@@ -321,6 +364,11 @@ public class ArcadeCarController : MonoBehaviour
         else
         {
             _isGrounded = false;
+        }
+
+        if (!_isGrounded)
+        {
+
         }
     }
 
@@ -403,23 +451,21 @@ public class ArcadeCarController : MonoBehaviour
             
             float maxDistance = restLength + springTravel;
 
+            if (Physics.Raycast(wheelRaycasts[i].position, -wheelRaycasts[i].up, out hit, maxDistance + wheelRadius, stopCollider))
+            {
+                _isWheelGrounded[i] = false;
+                continue;
+            }
+
+            if (Physics.Raycast(wheelRaycasts[i].position, -wheelRaycasts[i].up, out hit, maxDistance + wheelRadius, rampGround))
+            {
+                HandleSuspension(i, maxDistance, hit);
+                continue;
+            }
+
             if (Physics.Raycast(wheelRaycasts[i].position, -wheelRaycasts[i].up, out hit, maxDistance + wheelRadius, groundLayer))
             {
-                float currentSpringLength = hit.distance - wheelRadius;
-                float springCompression = (restLength - currentSpringLength) / springTravel;
-
-                float springVelocity = Vector3.Dot(carRB.GetPointVelocity(wheelRaycasts[i].position), wheelRaycasts[i].up);
-                float dampForce = dampStiffness * springVelocity;
-                float springForce = springStiffness * springCompression;
-
-                float netForce = springForce - dampForce;
-
-                carRB.AddForceAtPosition(netForce * hit.normal, wheelRaycasts[i].position);
-
-
-
-                _isWheelGrounded[i] = true;
-                Debug.DrawLine(wheelRaycasts[i].position, wheelRaycasts[i].position + -wheelRaycasts[i].up * (maxDistance + wheelRadius), Color.green);
+                HandleSuspension(i, maxDistance, hit);
             }
 
             else
@@ -428,6 +474,25 @@ public class ArcadeCarController : MonoBehaviour
                 Debug.DrawLine(wheelRaycasts[i].position, wheelRaycasts[i].position + -wheelRaycasts[i].up * (maxDistance + wheelRadius), Color.red);
             }
         }
+    }
+
+    private void HandleSuspension(int i, float maxDistance, RaycastHit hit)
+    {
+        float currentSpringLength = hit.distance - wheelRadius;
+        float springCompression = (restLength - currentSpringLength) / springTravel;
+
+        float springVelocity = Vector3.Dot(carRB.GetPointVelocity(wheelRaycasts[i].position), wheelRaycasts[i].up);
+        float dampForce = dampStiffness * springVelocity;
+        float springForce = springStiffness * springCompression;
+
+        float netForce = springForce - dampForce;
+
+        carRB.AddForceAtPosition(netForce * hit.normal, wheelRaycasts[i].position);
+
+
+
+        _isWheelGrounded[i] = true;
+        Debug.DrawLine(wheelRaycasts[i].position, wheelRaycasts[i].position + -wheelRaycasts[i].up * (maxDistance + wheelRadius), Color.green);
     }
 
 
@@ -578,6 +643,33 @@ public class ArcadeCarController : MonoBehaviour
                 ForceMode.Acceleration
             );
         }
+    }
+
+    private void HandleAirTime()
+    {
+        if (!_isGrounded)
+        {
+            _airTime += Time.deltaTime;
+
+            if (_airTime > endAirTime)
+            {
+                if (TryGetComponent(out RespawnScript respawnScript))
+                {
+                    _airTime = 0;
+                    respawnScript.Respawn();
+                }
+            }
+        }
+
+        else
+        {
+            _airTime = 0;
+        }
+    }
+
+    public void SetGravity(Vector3 direction)
+    {
+        _gravityDirection = direction;
     }
 
 

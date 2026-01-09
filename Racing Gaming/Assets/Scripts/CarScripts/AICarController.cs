@@ -210,7 +210,10 @@ public class AICarController : MonoBehaviour
 
             if (_checkTime > checkInterval)
             {
-                _isReversing = true;
+                if (TryGetComponent(out RespawnScript respawnScript))
+                {
+                    respawnScript.Respawn();
+                }
             }
         }
 

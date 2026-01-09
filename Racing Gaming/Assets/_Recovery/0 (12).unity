@@ -231,9 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PropInGameSpawner
   allProps:
   - {fileID: 11400000, guid: efee5b5c46c7432478592910c3921c50, type: 2}
-  - {fileID: 11400000, guid: 6ae21eacdae8f6f46875a8e18cebf238, type: 2}
   - {fileID: 11400000, guid: 4b53a7ced3078ee45868798558f71436, type: 2}
-  - {fileID: 11400000, guid: 67b15973997ad7647981aa032c10826a, type: 2}
   positions: []
   eulerAngles: []
 --- !u!4 &108611218
@@ -1455,10 +1453,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1710135695}
-    - target: {fileID: 1404738155176641240, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: beginRespawnPosition
-      value: 
-      objectReference: {fileID: 1273776176}
     - target: {fileID: 1411823727254539166, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -1579,10 +1573,6 @@ PrefabInstance:
       propertyPath: wayPointFolder
       value: 
       objectReference: {fileID: 707785835}
-    - target: {fileID: 2025041969066610161, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: beginRespawnPosition
-      value: 
-      objectReference: {fileID: 1273776176}
     - target: {fileID: 2152746172860737939, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -1779,10 +1769,6 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3312656187344940886, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: beginRespawnPosition
-      value: 
-      objectReference: {fileID: 1273776176}
     - target: {fileID: 3353127269239881579, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -1863,10 +1849,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -2492.8
       objectReference: {fileID: 0}
-    - target: {fileID: 4449294735725689757, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: beginRespawnPosition
-      value: 
-      objectReference: {fileID: 1273776176}
     - target: {fileID: 4525917244008950688, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -2119,10 +2101,6 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7387439158156808117, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: beginRespawnPosition
-      value: 
-      objectReference: {fileID: 1273776176}
     - target: {fileID: 7434481158740284507, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -2131,18 +2109,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7564306983700321039, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: beginRespawnPosition
-      value: 
-      objectReference: {fileID: 1273776176}
     - target: {fileID: 7708573435317715461, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 327187202}
-    - target: {fileID: 7741421541014421641, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: beginRespawnPosition
-      value: 
-      objectReference: {fileID: 1273776176}
     - target: {fileID: 7748875420966110002, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -2247,10 +2217,6 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8627719396234527798, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
-      propertyPath: beginRespawnPosition
-      value: 
-      objectReference: {fileID: 1273776176}
     - target: {fileID: 8729497533820268413, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -2390,11 +2356,6 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7292306956326799857, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
   m_PrefabInstance: {fileID: 1116743453}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1273776176 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2052455055588533525, guid: d13431878f281a441a204259b0f224c3, type: 3}
-  m_PrefabInstance: {fileID: 1289392917}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1289392917
 PrefabInstance:

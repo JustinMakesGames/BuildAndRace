@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoostItem
   boostType:
     boostTypeName: BoostItem
-    boostEndTime: 5
+    boostEndTime: 2
     boostTime: 0
     boostParticles: {fileID: 0}

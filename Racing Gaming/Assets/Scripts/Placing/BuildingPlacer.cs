@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
@@ -198,4 +198,4 @@ public class BuildingPlacer : EditorWindow
         return Mathf.Abs(position.x - areaCenter.x) <= boundarySize.x * 0.5f &&
                Mathf.Abs(position.z - areaCenter.z) <= boundarySize.y * 0.5f;
     }
-}
+}*/
