@@ -22,6 +22,8 @@ uint index = 0;
 //Macro's
 #define APPLY_BRIGHTNESS(color, brightness, alphaValue) (color *= float4(color.rgb * brightness, alphaValue));
 //Functions
+
+
 float2 tileUv(float2 uv, float scale)
 {
     uv *= scale;
@@ -73,6 +75,7 @@ float4 frag(Interpolators input) : SV_TARGET {
     //sampling the grayscale texture.
     half4 colorMap = SAMPLE_TEXTURE2D(_ColorMap, sampler_ColorMap, input.uv);
     return float4(color, 1);
+
 }
 
 
