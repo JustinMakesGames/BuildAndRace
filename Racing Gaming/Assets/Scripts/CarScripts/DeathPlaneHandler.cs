@@ -10,10 +10,14 @@ public class DeathPlaneHandler : MonoBehaviour
         {
             if (!other.TryGetComponent(out DeathplanePlayerHandler deathPlayerHandler)) return;
             if (!IsDeathPlane(deathPlayerHandler)) return;
-
-            other.transform.position = _respawnScriptTransform.position;
-            other.transform.rotation = _respawnScriptTransform.rotation;
-            other.transform.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+            
+            if (other.TryGetComponent(out Rigidbody rb))
+            {
+                rb.position = _respawnScriptTransform.position;
+                rb.rotation = _respawnScriptTransform.rotation;
+                rb.linearVelocity = Vector3.zero;
+            }
+            
         }
     }
 

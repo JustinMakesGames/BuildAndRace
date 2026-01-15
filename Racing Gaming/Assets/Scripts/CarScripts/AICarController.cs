@@ -206,15 +206,24 @@ public class AICarController : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, _previousPosition) < maxPositionDistance && !_isReversing)
         {
-            _checkTime += Time.deltaTime;
-
-            if (_checkTime > checkInterval)
+            if (TryGetComponent(out RespawnScript respawnScript))
             {
-                if (TryGetComponent(out RespawnScript respawnScript))
+                if (!respawnScript.CanRespawn())
                 {
+                    _checkTime = 0;
+                    return;
+                }
+                _checkTime += Time.deltaTime;
+
+                if (_checkTime > checkInterval)
+                {
+                    _checkTime = 0;
                     respawnScript.Respawn();
+
                 }
             }
+
+                
         }
 
         else

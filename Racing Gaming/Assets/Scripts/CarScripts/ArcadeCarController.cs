@@ -598,12 +598,19 @@ public class ArcadeCarController : MonoBehaviour
 
     private IEnumerator HandleHitTime()
     {
-        _isHit = true;
-        carRB.linearDamping = motorDampingValue;
-        _steeringInput = 0;
-        yield return new WaitForSeconds(hitTime);
-        _isHit = false;
-        motorModel.localEulerAngles = Vector3.zero;
+        if (TryGetComponent(out RespawnScript respawnScript))
+        {
+            respawnScript.SetRespawnOff();
+            _isHit = true;
+
+            carRB.linearDamping = motorDampingValue;
+            _steeringInput = 0;
+            yield return new WaitForSeconds(hitTime);
+            _isHit = false;
+            motorModel.localEulerAngles = Vector3.zero;
+            respawnScript.SetRespawn();
+        }
+        
     }
 
     private void RotateMotorHit()

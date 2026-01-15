@@ -5,9 +5,10 @@ public class RespawnScript : MonoBehaviour
 {
     [SerializeField] private Transform beginRespawnPosition;
     private Transform _respawnPosition;
+    private bool _canRespawn;
     public void RespawnInput(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && _canRespawn)
         {
             Respawn();
         }
@@ -21,11 +22,12 @@ public class RespawnScript : MonoBehaviour
     public void Respawn()
     {
         if (!_respawnPosition) return;
-        transform.position = _respawnPosition.position;
-        transform.rotation = _respawnPosition.rotation;
+        
 
         if (TryGetComponent(out Rigidbody rb))
         {
+            rb.position = _respawnPosition.position;
+            rb.rotation = _respawnPosition.rotation;
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
@@ -39,5 +41,20 @@ public class RespawnScript : MonoBehaviour
     public void SetRespawnPosition(Transform respawnPosition)
     {
         _respawnPosition = respawnPosition;
+    }
+
+    public void SetRespawn()
+    {
+        _canRespawn = true;
+    }
+
+    public void SetRespawnOff()
+    {
+        _canRespawn = false;
+    }
+
+    public bool CanRespawn()
+    {
+        return _canRespawn;
     }
 }

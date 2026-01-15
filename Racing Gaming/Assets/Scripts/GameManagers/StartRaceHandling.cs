@@ -60,6 +60,7 @@ public class StartRaceHandling : MonoBehaviour
         {
             car.GetComponent<ArcadeCarController>().SetVerhicleOn();
             car.GetComponent<StartBoostBehaviour>().GiveBoost();
+            car.GetComponent<RespawnScript>().SetRespawn();
         }
     }
 }
