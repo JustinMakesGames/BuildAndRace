@@ -1,9 +1,9 @@
-Shader "Custom/PortalTest"
+Shader"Custom/PortalTest"
 {
     Properties
     {
-        [MainColor] _BaseColor("Base Color", Color) = (1, 1, 1, 1)
-        [MainTexture] _BaseMap("Base Map", 2D) = "white"
+        _Speed("Degrees per frame or something", float ) = 100
+        _Pivot("Pivot position", Vector) = (0, 0, 0, 0)
     }
 
     SubShader
@@ -14,7 +14,12 @@ Shader "Custom/PortalTest"
         {
             HLSLPROGRAM
 
-            #include "Assets/Materials/ShaderGraphs/CustomShaders/PortalShader.hlsl";
+            #pragma vertex vert
+            #pragma fragment frag
+
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Assets/Materials/ShaderGraphs/CustomShaders/PortalTest.hlsl"
+            
             ENDHLSL
         }
     }
