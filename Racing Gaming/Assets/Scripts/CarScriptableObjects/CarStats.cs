@@ -4,6 +4,7 @@ using UnityEngine;
 public class CarStats : ScriptableObject
 {
     public GameObject motorModel;
+    public int motorModelIndex;
     public int carIndex;
     public float maxSpeed;
     public float accelerationSpeed;

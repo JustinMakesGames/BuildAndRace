@@ -2819,7 +2819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 579e544d375d63245bd4de5b9271587b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackTileButtonHandler
-  trackTile: {fileID: 11400000, guid: 58d4424bd6a911d408cb6e8d4e1676b2, type: 2}
+  trackTile: {fileID: 11400000, guid: eef88b3da85c5be46b5b387788f0a22b, type: 2}
   isFinishTile: 0
 --- !u!114 &6040597231390982744
 MonoBehaviour:

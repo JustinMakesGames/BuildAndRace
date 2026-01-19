@@ -124,6 +124,9 @@ public class ArcadeCarController : MonoBehaviour
     [SerializeField] private float endAirTime;
     private float _airTime;
 
+    [Header("Bike Model")]
+    [SerializeField] private Transform bikeModelsFolder;
+
   
 
 
@@ -694,6 +697,24 @@ public class ArcadeCarController : MonoBehaviour
     public PlayerState ReturnPlayerState()
     {
         return state;
+    }
+
+    public void SetBikeModel(int index)
+    {
+        for (int i = 0; i < bikeModelsFolder.childCount; i++)
+        {
+            if (i == index)
+            {
+                bikeModelsFolder.GetChild(index).gameObject.SetActive(true);
+
+            }
+
+            else
+            {
+                bikeModelsFolder.GetChild(i).gameObject.SetActive(false);
+            }
+
+        }
     }
 
 

@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -31,14 +32,26 @@ public class PlayerCarManagement : MonoBehaviour
     public void SetPlayers(List<InputDevice> players, List<CarStats> carStats)
     {
         print("This function is being called.");
-        for (int i = 0; i < players.Count; i++)
+        for (int i = 0; i < carFolder.childCount; i++)
         {
             var car = carFolder.GetChild(i);
-            car.GetComponent<ArcadeCarController>().SetPlayer(PlayerState.Player);
-            car.GetComponent<PlayerInput>().enabled = true;
-            car.GetComponent<PlayerInput>().SwitchCurrentControlScheme(players[i]);
-            playableCars.Add(carFolder.GetChild(i));
-            car.GetComponent<ArcadeCarController>().SetVariables(carStats[i]);
+            if (i < players.Count)
+            {
+                
+                car.GetComponent<ArcadeCarController>().SetPlayer(PlayerState.Player);
+                car.GetComponent<PlayerInput>().enabled = true;
+                car.GetComponent<PlayerInput>().SwitchCurrentControlScheme(players[i]);
+                playableCars.Add(carFolder.GetChild(i));
+                car.GetComponent<ArcadeCarController>().SetVariables(carStats[i]);
+                car.GetComponent<ArcadeCarController>().SetBikeModel(carStats[i].motorModelIndex);
+            }
+
+            else
+            {
+                int randomBike = Random.Range(0, 2);
+                car.GetComponent<ArcadeCarController>().SetBikeModel(randomBike);
+            }
+            
         }
 
         HandleCameras();

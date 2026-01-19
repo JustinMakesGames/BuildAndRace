@@ -73,7 +73,7 @@ public class BuildPlayerMovement : MonoBehaviour
     private void HandleCameraRotation()
     {
         cameraRotating.HorizontalAxis.Value += _cameraInput.x * _cameraSpeed * Time.deltaTime;
-        cameraRotating.VerticalAxis.Value += _cameraInput.y * _cameraSpeed * Time.deltaTime;
+        cameraRotating.VerticalAxis.Value -= _cameraInput.y * _cameraSpeed * Time.deltaTime;
 
         cameraRotating.VerticalAxis.Value = Mathf.Clamp(cameraRotating.VerticalAxis.Value,
             cameraRotating.VerticalAxis.Range.x, cameraRotating.VerticalAxis.Range.y);
