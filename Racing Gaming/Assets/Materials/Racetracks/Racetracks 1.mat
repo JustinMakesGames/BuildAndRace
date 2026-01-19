@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlphaTexture:
-        m_Texture: {fileID: 2800000, guid: 0de81acbdab0828419fd5742ff8a8e00, type: 3}
+        m_Texture: {fileID: 2800000, guid: 564ef1e5e36e6464b97f6a4136334c83, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -157,7 +157,7 @@ Material:
     - _PixelSize: {r: 200, g: 200, b: 0, a: 0}
     - _Secundary_Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tiling: {r: 17.26, g: -22.9, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2796320664918037176

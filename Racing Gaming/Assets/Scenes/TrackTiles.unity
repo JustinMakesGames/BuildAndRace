@@ -1828,6 +1828,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1298445329}
     m_Modifications:
+    - target: {fileID: 2067085856009656835, guid: f9600bf3659c4bb4e8075761637955ca, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ab81f34418c78534cbe49aad58fd3972, type: 2}
     - target: {fileID: 3638975020072365528, guid: f9600bf3659c4bb4e8075761637955ca, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -8768,7 +8772,8 @@ PrefabInstance:
       value: RacetrackCorner (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 223595388903586104, guid: f9600bf3659c4bb4e8075761637955ca, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9600bf3659c4bb4e8075761637955ca, type: 3}
@@ -15905,7 +15910,7 @@ PrefabInstance:
     - target: {fileID: 2067085856009656835, guid: f9600bf3659c4bb4e8075761637955ca, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9727ef8d31f3ea8449cfe842e9629850, type: 2}
+      objectReference: {fileID: 2100000, guid: ab81f34418c78534cbe49aad58fd3972, type: 2}
     - target: {fileID: 3638975020072365528, guid: f9600bf3659c4bb4e8075761637955ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1016.3939
