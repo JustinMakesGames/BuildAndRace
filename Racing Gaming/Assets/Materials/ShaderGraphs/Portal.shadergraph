@@ -1427,8 +1427,8 @@
     "m_ObjectId": "52a51155d26d445b8c96dbee56edbc52",
     "m_Title": "Color adjustment",
     "m_Position": {
-        "x": -1459.0,
-        "y": 134.99996948242188
+        "x": -1459.0001220703125,
+        "y": 134.99993896484376
     }
 }
 
@@ -2137,7 +2137,7 @@
     "m_Title": "Polar Coordinate circle thingy",
     "m_Position": {
         "x": -2301.0,
-        "y": 91.99998474121094
+        "y": 92.00006103515625
     }
 }
 
@@ -2812,7 +2812,7 @@
     "m_Title": "UV Twirl and rotation",
     "m_Position": {
         "x": -3352.0,
-        "y": -382.0
+        "y": -381.99993896484377
     }
 }
 

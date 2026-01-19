@@ -55,7 +55,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 11e83679c3b942647b13cd4355dde972, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a97448ee5fcea57469eb75cbc6a70484, type: 2}
+      objectReference: {fileID: 2100000, guid: f6bb31c9df05151459be09205b3dbae8, type: 2}
+    - target: {fileID: -6683024545531813849, guid: 11e83679c3b942647b13cd4355dde972, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afa8f9884d465949a9e1450eab7db1d, type: 2}
     - target: {fileID: -4673868211963509519, guid: 11e83679c3b942647b13cd4355dde972, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -64,6 +68,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4afa8f9884d465949a9e1450eab7db1d, type: 2}
+    - target: {fileID: -4421290644801415937, guid: 11e83679c3b942647b13cd4355dde972, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a97448ee5fcea57469eb75cbc6a70484, type: 2}
     - target: {fileID: -2092662835174925750, guid: 11e83679c3b942647b13cd4355dde972, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -76,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RacetrackLoop (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2898248916983619263, guid: 11e83679c3b942647b13cd4355dde972, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a97448ee5fcea57469eb75cbc6a70484, type: 2}
     - target: {fileID: 4245042297973285853, guid: 11e83679c3b942647b13cd4355dde972, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
