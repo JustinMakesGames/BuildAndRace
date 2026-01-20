@@ -45,5 +45,6 @@ public class LevelName : MonoBehaviour
     {
         this.index = index;
         SaveLevelName.SaveLevel(this);
+        print(index);
     }
 }

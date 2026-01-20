@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class SwitchPages : MonoBehaviour, IPressButton
 {
-    [SerializeField] private Transform nextPage;
-    [SerializeField] private Transform selectionFolder;
+    [SerializeField] protected Transform nextPage;
+    [SerializeField] protected Transform selectionFolder;
 
     
     public virtual void Press(Transform player)

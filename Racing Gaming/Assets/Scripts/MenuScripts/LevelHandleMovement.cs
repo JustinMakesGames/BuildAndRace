@@ -8,17 +8,13 @@ public class LevelHandleMovement : MonoBehaviour
 
     public void NextScreen()
     {
-        int previousIndex = index;
         index++;
-        levelSelectScreen.GetChild(previousIndex).gameObject.SetActive(false);
-        levelSelectScreen.GetChild(index).gameObject.SetActive(true);
+        SelectPlayModeHandling.Instance.SetSelectedFolder(levelSelectScreen.GetChild(index));
     }
 
     public void PreviousScreen()
     {
-        int previousIndex = index;
         index--;
-        levelSelectScreen.GetChild(previousIndex).gameObject.SetActive(false);
-        levelSelectScreen.GetChild(index).gameObject.SetActive(true);
+        SelectPlayModeHandling.Instance.SetSelectedFolder(levelSelectScreen.GetChild(index));
     }
 }
