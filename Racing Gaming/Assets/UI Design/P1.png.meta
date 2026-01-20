@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6b3bbe59c0e9f7b40a6364fffcd6e55c
+guid: 73dd4188779169d4e984c0a1dee76d9e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slider Button Test_0
+      name: P1_0
       rect:
         serializedVersion: 2
-        x: 55
-        y: 27
-        width: 890
-        height: 446
+        x: 0
+        y: 0
+        width: 2000
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fcbdd0daab40ea46bb29cc1363ef733
-      internalID: 53697143
+      spriteID: e1fbd08da26056d4d9bac6238f4b4e3e
+      internalID: -430539307
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 65dc3cdc5fc6b3540891708314492c32
+    spriteID: d6439005d2bf1d1459c3176f2781140b
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Slider Button Test_0: 53697143
+      P1_0: -430539307
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
