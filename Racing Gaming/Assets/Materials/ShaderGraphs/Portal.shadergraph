@@ -1427,8 +1427,8 @@
     "m_ObjectId": "52a51155d26d445b8c96dbee56edbc52",
     "m_Title": "Color adjustment",
     "m_Position": {
-        "x": -1459.0,
-        "y": 134.99998474121095
+        "x": -1457.0,
+        "y": 134.99996948242188
     }
 }
 
@@ -2137,7 +2137,7 @@
     "m_Title": "Polar Coordinate circle thingy",
     "m_Position": {
         "x": -2301.0,
-        "y": 92.0
+        "y": 91.99996948242188
     }
 }
 
@@ -2343,10 +2343,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1184.9998779296875,
-            "y": 345.0,
-            "width": 207.99993896484376,
-            "height": 326.0
+            "x": -1182.0,
+            "y": 345.0000305175781,
+            "width": 208.0,
+            "height": 325.9999694824219
         }
     },
     "m_Slots": [
@@ -2812,7 +2812,7 @@
     "m_Title": "UV Twirl and rotation",
     "m_Position": {
         "x": -3352.0,
-        "y": -381.9999694824219
+        "y": -382.0
     }
 }
 
@@ -3432,10 +3432,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1434.0,
-            "y": 432.0,
-            "width": 208.0001220703125,
-            "height": 302.00006103515627
+            "x": -1432.0,
+            "y": 431.9999694824219,
+            "width": 208.0,
+            "height": 301.9999694824219
         }
     },
     "m_Slots": [

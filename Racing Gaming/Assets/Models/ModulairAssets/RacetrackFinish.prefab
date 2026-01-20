@@ -52,10 +52,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 3d1a915888d46eb49bad1b97f9df6936, type: 2}
+    - target: {fileID: -4050003465085577830, guid: 1976ea3803beb0443a4b9dd31344b25c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f6bb31c9df05151459be09205b3dbae8, type: 2}
     - target: {fileID: 919132149155446097, guid: 1976ea3803beb0443a4b9dd31344b25c, type: 3}
       propertyPath: m_Name
       value: RacetrackFinish
       objectReference: {fileID: 0}
+    - target: {fileID: 3794603754582192040, guid: 1976ea3803beb0443a4b9dd31344b25c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a97448ee5fcea57469eb75cbc6a70484, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 1976ea3803beb0443a4b9dd31344b25c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a97448ee5fcea57469eb75cbc6a70484, type: 2}
+    - target: {fileID: 8023896981024107169, guid: 1976ea3803beb0443a4b9dd31344b25c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afa8f9884d465949a9e1450eab7db1d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

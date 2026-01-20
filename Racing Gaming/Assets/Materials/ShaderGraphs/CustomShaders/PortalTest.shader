@@ -3,10 +3,11 @@ Shader"Custom/PortalTest"
     Properties
     {
         _Speed("Degrees per frame or something", float ) = 100
-        _Test("Test", float ) = 0
+        _Test("Test", Range(0, 5) ) = 0
         _Strength("Twirl strength", Range (0, 1000)) = 0 
         _Pivot("Pivot position", Vector) = (0, 0, 0, 0)
         _Color("Color", Color) = (1, 1, 1, 1)
+        _HoleSize("Portal hole size", Range (0, 10)) = 0
 
     }
 

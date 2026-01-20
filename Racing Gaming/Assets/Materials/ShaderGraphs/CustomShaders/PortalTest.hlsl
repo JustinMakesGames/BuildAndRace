@@ -16,6 +16,7 @@ float2 _Pivot;
 float _Strength;
 float _Test;
 float _Color;
+float _HoleSize;
 CBUFFER_END
 
 //variables
@@ -62,6 +63,11 @@ float OneMinus(float x)
     return x = 1 - x;
 }
 
+float VoronoiNoise()
+{
+    return 0;
+}
+
 Varyings vert(Attributes IN)
 {
     Varyings OUT;
@@ -70,13 +76,25 @@ Varyings vert(Attributes IN)
     return OUT;
 }
 
+struct Input
+{
+    float3 worldPos;
+};
+
 half4 frag(Varyings IN) : SV_Target
 {
+    float2 centeredUv = IN.uv * 2 - 1;
     float2 polarUv = toPolar(IN.uv, _Pivot);
-    //float polarColor = frac(polarUv);
-    //float2 rotatedUv = rotateUv(IN.uv, _Pivot, _Time.y * _Speed);
-    //float2 twirledUv = twirlUv(IN.uv, _Pivot, _Strength);
-    float2 portalBounds = OneMinus(polarUv.y * _Test);
-    float3 color = float3(1 * portalBounds, 0);
-    return half4(color, 1);
+    float2 twirledUv = twirlUv(IN.uv, _Pivot, _Strength);
+    float portalMask = OneMinus(polarUv.y);
+    portalMask = 1 - smoothstep(0.5, _Test, length(centeredUv));
+    float color = twirledUv * portalMask;
+    float holeMask = pow(polarUv.y, _HoleSize);
+    float2 nUv = noise(IN.uv);
+    color *= holeMask;
+    
+    float strength = 10;
+    color *= strength;
+    
+    return half4(color, color, color, 1);
 }
