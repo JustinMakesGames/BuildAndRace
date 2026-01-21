@@ -41832,6 +41832,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2632998897256006746, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: boostParticles
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3267910022593757744, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -41852,6 +41856,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6052595572185057570, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: boostParticles
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6212990554185002558, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
       propertyPath: 'imageSprites.Array.data[1]'
       value: 
@@ -41860,9 +41868,17 @@ PrefabInstance:
       propertyPath: 'imageSprites.Array.data[2]'
       value: 
       objectReference: {fileID: -349986110, guid: bd781f7c6e388af48b81f967d0ebf199, type: 3}
+    - target: {fileID: 7069996292905741189, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: boostParticles
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7448164543217057179, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239993674024992590, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: boostParticles
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8582392551873227088, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
       propertyPath: m_AnchorMax.y

@@ -1734,10 +1734,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f337cbfa85ac874bb753ea120e5d386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TracktileHandler
-  trackTile: {fileID: 11400000, guid: 0876031255f90d44ca888305593beb18, type: 2}
+  trackTile: {fileID: 11400000, guid: 2294a5eded9ebae45be54d6f15c9041d, type: 2}
   connectionPoints:
-  - {fileID: 4454527550870905113}
   - {fileID: 7797949635908014873}
+  - {fileID: 4454527550870905113}
   cameraPoint: {fileID: 628979430526304969}
   isFinishLine: 0
   colliderFolder: {fileID: 8310188972067487823}

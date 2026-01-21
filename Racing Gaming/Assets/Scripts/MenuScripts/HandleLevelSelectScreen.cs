@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HandleLevelSelectScreen : MonoBehaviour
@@ -23,6 +24,8 @@ public class HandleLevelSelectScreen : MonoBehaviour
         int times = 0;
         levelSelectScreen.SetActive(true);
         LevelData levelData = SaveLevelName.LoadBuild();
+
+        if (levelData == null) yield break;
 
         _levels = levelData.levelNames;
 

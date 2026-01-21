@@ -2239,6 +2239,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5793088134526949215, guid: d10d20aea89cac244aee4eb54c1d42d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5808822944021499753, guid: d10d20aea89cac244aee4eb54c1d42d4, type: 3}
       propertyPath: blackScreenAnimator
       value: 
