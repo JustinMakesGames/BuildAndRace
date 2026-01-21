@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Unity.Cinemachine;
+using System.Runtime.CompilerServices;
 
 [Serializable]
 public struct BoostType
@@ -80,6 +81,7 @@ public class ArcadeCarController : MonoBehaviour
     [SerializeField] private float cameraBoostFOV;
     [SerializeField] private float cameraFOVSpeed;
     [SerializeField] private CinemachineCamera cam;
+    [SerializeField] private GameObject boostParticles;
     private float _normalAccelerationSpeed;
     private float _normalMaxSpeed;
     private float _normalSteeringSpeed;
@@ -107,6 +109,7 @@ public class ArcadeCarController : MonoBehaviour
     [SerializeField] private float hitTime;
     [SerializeField] private float rotateSpeed;
     [SerializeField] private float motorDampingValue;
+    [SerializeField] private ParticleSystem hitParticles;
     private bool _isHit;
 
     [Header("Upright Stabilization")]
@@ -126,6 +129,11 @@ public class ArcadeCarController : MonoBehaviour
 
     [Header("Bike Model")]
     [SerializeField] private Transform bikeModelsFolder;
+    [SerializeField] private Transform bikeModel;
+    [SerializeField] private float steeringRotationModel;
+    [SerializeField] private float bikeModelRotationSpeed;
+    private float _rotationModel;
+    private Vector3 _endBikeModelRotation;
 
   
 
@@ -181,6 +189,7 @@ public class ArcadeCarController : MonoBehaviour
         BoostHandling();
         RotateMotorHit();
         HandleAirTime();
+        HandleMotorRotation();
     }
 
     private void FixedUpdate()
@@ -217,6 +226,25 @@ public class ArcadeCarController : MonoBehaviour
         _accelerationInput = accelerationInput;
         _steeringInput = steeringInput;
 
+    }
+
+    private void HandleMotorRotation()
+    {
+        _endBikeModelRotation = new Vector3(bikeModel.localEulerAngles.x, bikeModel.localEulerAngles.y, _rotationModel);
+        bikeModel.localEulerAngles = Vector3.Lerp(bikeModel.localEulerAngles, _endBikeModelRotation, bikeModelRotationSpeed * Time.deltaTime);
+
+        switch (_steeringInput)
+        {
+            case > 0:
+                _rotationModel = -steeringRotationModel;
+                break;
+            case 0:
+                _rotationModel = 0;
+                break;
+            case < 0:
+                _rotationModel = steeringRotationModel;
+                break;
+        }
     }
 
     public void StartDriftInput()
@@ -509,6 +537,9 @@ public class ArcadeCarController : MonoBehaviour
         accelerationSpeed = boostAccelerationSpeed;
         maxSpeed = boostMaxSpeed;
 
+        if (!boostParticles) return;
+        boostParticles.SetActive(true);
+
     }
 
     //Handle the feeling of the boost.
@@ -539,6 +570,9 @@ public class ArcadeCarController : MonoBehaviour
 
         if (cam == null) return;
         StartCoroutine(ReturnCameraFOV());
+
+        if (!boostParticles) return;
+        boostParticles.SetActive(false);
 
     }
 
@@ -603,6 +637,7 @@ public class ArcadeCarController : MonoBehaviour
     {
         if (TryGetComponent(out RespawnScript respawnScript))
         {
+            hitParticles.Play();
             respawnScript.SetRespawnOff();
             _isHit = true;
 
@@ -706,6 +741,7 @@ public class ArcadeCarController : MonoBehaviour
             if (i == index)
             {
                 bikeModelsFolder.GetChild(index).gameObject.SetActive(true);
+                bikeModel = bikeModelsFolder.GetChild(index);
 
             }
 

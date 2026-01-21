@@ -18,10 +18,7 @@ public class CharacterSelectionHandling : MonoBehaviour, IPressButton, IHandleSe
             
         }
 
-        if (player.TryGetComponent(out MenuPlayerHandler menuPlayerHandler))
-        {
-            menuPlayerHandler.SetSliders(carStats.maxSpeedSlider, carStats.accelerationSlider, carStats.steeringSlider);
-        }
+       
         
     }
     public void Press(Transform player)
