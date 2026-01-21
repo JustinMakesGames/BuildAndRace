@@ -41832,6 +41832,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3267910022593757744, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570560852737492623, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610746511964214537, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5113915702747876343, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304257558327887070, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212990554185002558, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: 'imageSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2134576993, guid: 3141987ad4f54e345ae29fc65c751fdf, type: 3}
+    - target: {fileID: 6212990554185002558, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: 'imageSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -349986110, guid: bd781f7c6e388af48b81f967d0ebf199, type: 3}
+    - target: {fileID: 7448164543217057179, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582392551873227088, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8949665174453619112, guid: 8ddb4ae025aa65d45a37ac52c58729dc, type: 3}
       propertyPath: m_Name
       value: RaceScene
