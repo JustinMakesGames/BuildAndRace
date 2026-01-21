@@ -2446,6 +2446,22 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2279492660660631336, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279492660660631336, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279492660660631336, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279492660660631336, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -540
+      objectReference: {fileID: 0}
     - target: {fileID: 2411557152774748816, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: sliderMultiplier
       value: 0.4
@@ -2641,6 +2657,22 @@ PrefabInstance:
     - target: {fileID: 3452755766638327187, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_FirstSelected
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516847153343192642, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516847153343192642, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516847153343192642, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1440
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516847153343192642, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -540
       objectReference: {fileID: 0}
     - target: {fileID: 3601904590830022479, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_RaycastTarget
@@ -2880,6 +2912,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5980387829757115199, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048170771639302293, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6087758500172935051, guid: 30bd5a5020576ae4186c971586396a17, type: 3}
