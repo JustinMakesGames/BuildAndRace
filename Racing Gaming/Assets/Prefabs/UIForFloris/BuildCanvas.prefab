@@ -523,7 +523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CORNER
+  m_text: CORNER L
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e66655dae41d8a44bff7e82b90db66b, type: 2}
   m_sharedMaterial: {fileID: 5904886235746275760, guid: 2e66655dae41d8a44bff7e82b90db66b, type: 2}
@@ -1011,7 +1011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &755764582102735795
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1030,7 +1030,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -1.2166, y: 0}
-  m_SizeDelta: {x: 1917.1726, y: 205}
+  m_SizeDelta: {x: 9999, y: 205}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &6734097412307540331
 CanvasRenderer:
@@ -1445,7 +1445,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: -9100
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -1662,9 +1662,9 @@ RectTransform:
   - {fileID: 2884452283507827318}
   m_Father: {fileID: 8776227385045561017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1437.8794, y: -102.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &327909068276162848
@@ -2414,9 +2414,9 @@ RectTransform:
   - {fileID: 3052062953673409180}
   m_Father: {fileID: 8776227385045561017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 479.29315, y: -102.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4028621287983846213
@@ -3507,7 +3507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CORNER
+  m_text: CORNER R
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e66655dae41d8a44bff7e82b90db66b, type: 2}
   m_sharedMaterial: {fileID: 5904886235746275760, guid: 2e66655dae41d8a44bff7e82b90db66b, type: 2}
