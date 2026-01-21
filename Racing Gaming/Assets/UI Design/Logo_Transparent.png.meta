@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6b51fc0dbda192246ac8d387fdc0fed5
+guid: e3ca27dd0668ab54e984bdf8a4b1ee14
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,12 +69,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -97,12 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bike1UI_2
+      name: Logo_Transparent_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
+        width: 3300
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a83298100faa3a04582409ff509629e8
-      internalID: 1755523078
+      spriteID: a21849155f21c98439dfdfd056665008
+      internalID: -242953475
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f2087441e2f7b5241aabdb802fbfc3c6
+    spriteID: 098d2259f1b97c244a2a6403b641d9a0
     internalID: 0
     vertices: []
     indices: 
@@ -134,12 +134,17 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Bike1UI_0: 1959675542
-      Bike1UI_1: 1720178331
-      Bike1UI_2: 1755523078
-      Bike1UI_3: 65818455
-      Bike1UI_4: -414983900
-      Bike1UI_5: -1128096050
+      Logo_Transparent_0: -242953475
+      Logo_Transparent_1: -1845447303
+      Logo_Transparent_10: -156126867
+      Logo_Transparent_2: -1091617293
+      Logo_Transparent_3: 617935507
+      Logo_Transparent_4: 965002312
+      Logo_Transparent_5: -258693752
+      Logo_Transparent_6: -321510430
+      Logo_Transparent_7: 292097349
+      Logo_Transparent_8: 1960333642
+      Logo_Transparent_9: 1069625456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
