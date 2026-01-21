@@ -48,3 +48,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00d08184222dc77468825bc53dda0f61, type: 2}
   imageSprites:
   - {fileID: 1150533054, guid: 4b55d44ee26e83c4bb5ddfd507b8097f, type: 3}
+  - {fileID: 2134576993, guid: 3141987ad4f54e345ae29fc65c751fdf, type: 3}
+  - {fileID: 664832100, guid: bd781f7c6e388af48b81f967d0ebf199, type: 3}

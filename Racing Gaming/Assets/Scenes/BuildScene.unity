@@ -92733,9 +92733,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2041686543777665068, guid: 5bfa338a7e448f24fb8fad6c1f250e18, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2288515937736361259, guid: 5bfa338a7e448f24fb8fad6c1f250e18, type: 3}
       propertyPath: m_Name
       value: BuildScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420074834729059926, guid: 5bfa338a7e448f24fb8fad6c1f250e18, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2885744510497659124, guid: 5bfa338a7e448f24fb8fad6c1f250e18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -92776,6 +92784,14 @@ PrefabInstance:
     - target: {fileID: 2885744510497659124, guid: 5bfa338a7e448f24fb8fad6c1f250e18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333626366674146367, guid: 5bfa338a7e448f24fb8fad6c1f250e18, type: 3}
+      propertyPath: far clip plane
+      value: 7500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791173056446435342, guid: 5bfa338a7e448f24fb8fad6c1f250e18, type: 3}
+      propertyPath: Lens.FarClipPlane
+      value: 7500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

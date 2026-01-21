@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boost
   m_EditorClassIdentifier: Assembly-CSharp::ItemScriptableObject
   itemObject: {fileID: 2996600336412495958, guid: 154f5b57aa9793f4985e3836317db698, type: 3}
-  itemSprite: {fileID: 21300000, guid: 3ab4ce8dfa1d3094988634dd8ad8c27f, type: 3}
+  itemSprite: {fileID: 1150533054, guid: 4b55d44ee26e83c4bb5ddfd507b8097f, type: 3}

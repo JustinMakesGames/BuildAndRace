@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Spike
   m_EditorClassIdentifier: Assembly-CSharp::ItemScriptableObject
   itemObject: {fileID: 2996600336412495958, guid: 6151852cdc58daa4d8784059abb0d2e9, type: 3}
-  itemSprite: {fileID: 21300000, guid: edd392af0f64af745b41f4c8c90ce46d, type: 3}
+  itemSprite: {fileID: 664832100, guid: bd781f7c6e388af48b81f967d0ebf199, type: 3}

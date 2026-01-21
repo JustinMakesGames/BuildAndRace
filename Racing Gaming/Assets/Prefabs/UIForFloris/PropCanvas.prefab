@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TabsManagement
   gamePage: {fileID: 8697226485738524037}
-  selectedButton: {fileID: 0}
+  selectedButton: {fileID: 3494230115629734167}
 --- !u!1 &2511899688208547834
 GameObject:
   m_ObjectHideFlags: 0

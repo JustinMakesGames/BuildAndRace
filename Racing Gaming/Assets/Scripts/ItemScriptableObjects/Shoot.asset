@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Shoot
   m_EditorClassIdentifier: Assembly-CSharp::ItemScriptableObject
   itemObject: {fileID: 8605811283425134003, guid: 696014bdeadfd1f4abae635441e5063b, type: 3}
-  itemSprite: {fileID: 21300000, guid: 7588e18f128b01a4b9ad2d52f122aa8b, type: 3}
+  itemSprite: {fileID: 2134576993, guid: 3141987ad4f54e345ae29fc65c751fdf, type: 3}

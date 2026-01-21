@@ -140,8 +140,7 @@ public class ArcadeCarController : MonoBehaviour
 
 
     public void SetVerhicleOn()
-    {
-        
+    {      
         canDrive = true;
     }
 
@@ -230,21 +229,30 @@ public class ArcadeCarController : MonoBehaviour
 
     private void HandleMotorRotation()
     {
-        _endBikeModelRotation = new Vector3(bikeModel.localEulerAngles.x, bikeModel.localEulerAngles.y, _rotationModel);
-        bikeModel.localEulerAngles = Vector3.Lerp(bikeModel.localEulerAngles, _endBikeModelRotation, bikeModelRotationSpeed * Time.deltaTime);
-
         switch (_steeringInput)
         {
             case > 0:
                 _rotationModel = -steeringRotationModel;
                 break;
-            case 0:
-                _rotationModel = 0;
-                break;
             case < 0:
                 _rotationModel = steeringRotationModel;
                 break;
+            default:
+                _rotationModel = 0;
+                break;
         }
+
+        Quaternion targetRotation = Quaternion.Euler(
+            bikeModel.localEulerAngles.x,
+            bikeModel.localEulerAngles.y,
+            _rotationModel
+        );
+
+        bikeModel.localRotation = Quaternion.Lerp(
+            bikeModel.localRotation,
+            targetRotation,
+            bikeModelRotationSpeed * Time.deltaTime
+        );
     }
 
     public void StartDriftInput()
