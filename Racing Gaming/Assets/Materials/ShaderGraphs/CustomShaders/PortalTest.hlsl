@@ -1,3 +1,14 @@
+//properties
+CBUFFER_START(UnityPerMaterial)
+float _Speed;
+float2 _Pivot;
+float _Strength;
+float _Test;
+float _Color;
+float _HoleSize;
+CBUFFER_END
+
+//structs
 struct Attributes
 {
     float4 positionOS : POSITION;
@@ -10,14 +21,6 @@ struct Varyings
     float2 uv : TEXCOORD0;
 };
 
-CBUFFER_START(UnityPerMaterial)
-float _Speed;
-float2 _Pivot;
-float _Strength;
-float _Test;
-float _Color;
-float _HoleSize;
-CBUFFER_END
 
 //variables
 static const float two_pi = 6.28318530718;
@@ -63,9 +66,19 @@ float OneMinus(float x)
     return x = 1 - x;
 }
 
-float VoronoiNoise()
+float rand(float3 vec)
 {
-    return 0;
+    //convert vec3d to scalar 1d with dot.
+    float random = dot(vec, float3(12.9898, 78.233, 37.719));
+    //take fraction of random so value isnt too high.
+    random = frac(random);
+    return random;
+}
+
+float Noise() 
+{
+    //float randomColor = rand(stuff.worldPos);
+    return randomColor;
 }
 
 Varyings vert(Attributes IN)
@@ -75,11 +88,6 @@ Varyings vert(Attributes IN)
     OUT.uv = IN.uv;
     return OUT;
 }
-
-struct Input
-{
-    float3 worldPos;
-};
 
 half4 frag(Varyings IN) : SV_Target
 {
@@ -95,6 +103,6 @@ half4 frag(Varyings IN) : SV_Target
     
     float strength = 10;
     color *= strength;
-    
-    return half4(color, color, color, 1);
+    float randomColor = Noise();
+    return half4(randomColor, randomColor, randomColor, 1);
 }
