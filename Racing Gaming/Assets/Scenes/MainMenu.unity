@@ -666,6 +666,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6625494909880323684, guid: 3072de15775b15c45b2726211c2ef56f, type: 3}
   m_PrefabInstance: {fileID: 1308722748}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &706288798 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5098483306950768575, guid: d10d20aea89cac244aee4eb54c1d42d4, type: 3}
+  m_PrefabInstance: {fileID: 6496869549984249257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &729533484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6625494909880323684, guid: 3072de15775b15c45b2726211c2ef56f, type: 3}
@@ -1743,6 +1748,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1569442906149511666, guid: d10d20aea89cac244aee4eb54c1d42d4, type: 3}
+      propertyPath: nextPage
+      value: 
+      objectReference: {fileID: 706288798}
     - target: {fileID: 1667865949746068097, guid: d10d20aea89cac244aee4eb54c1d42d4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
